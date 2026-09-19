@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="480" viewBox="0 0 1040 480" font-family="'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', -apple-system, sans-serif">
+  <!-- 背景 -->
+  <rect x="0" y="0" width="1040" height="480" fill="#ffffff"/>
+
+  <!-- 標題 -->
+  <text x="520" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1f2937">商品列表頁格式化前後對照</text>
+
+  <!-- 欄標籤 -->
+  <text x="255" y="78" text-anchor="middle" font-size="15" font-weight="600" fill="#6b7280">改版前，原始值</text>
+  <text x="785" y="78" text-anchor="middle" font-size="15" font-weight="600" fill="#6b7280">改版後，格式化呈現</text>
+
+  <!-- 左側面板 -->
+  <rect x="60" y="98" width="390" height="330" rx="10" fill="#fef2f2" stroke="#fca5a5" stroke-width="1.5"/>
+
+  <text x="80" y="130" font-size="14" font-weight="600" fill="#7f1d1d">價格</text>
+  <text x="80" y="152" font-size="15" font-family="Menlo, Consolas, monospace" fill="#7f1d1d">199</text>
+  <text x="80" y="174" font-size="15" font-family="Menlo, Consolas, monospace" fill="#7f1d1d">19900</text>
+
+  <line x1="80" y1="196" x2="420" y2="196" stroke="#fca5a5" stroke-width="1"/>
+
+  <text x="80" y="220" font-size="14" font-weight="600" fill="#7f1d1d">上架狀態</text>
+  <text x="80" y="242" font-size="15" font-family="Menlo, Consolas, monospace" fill="#7f1d1d">1</text>
+  <text x="80" y="264" font-size="15" font-family="Menlo, Consolas, monospace" fill="#7f1d1d">0</text>
+
+  <line x1="80" y1="286" x2="420" y2="286" stroke="#fca5a5" stroke-width="1"/>
+
+  <text x="80" y="310" font-size="14" font-weight="600" fill="#7f1d1d">圖片</text>
+  <rect x="80" y="322" width="80" height="80" rx="6" fill="#fee2e2" stroke="#fca5a5" stroke-dasharray="4 3"/>
+  <text x="120" y="368" text-anchor="middle" font-size="12" fill="#b91c1c">無縮圖</text>
+
+  <text x="250" y="410" text-anchor="middle" font-size="12.5" fill="#991b1b">裸數字與 0/1 狀態值，使用者無法一眼判讀</text>
+
+  <!-- 中央箭頭 -->
+  <line x1="450" y1="263" x2="590" y2="263" stroke="#9ca3af" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- 右側面板 -->
+  <rect x="590" y="98" width="390" height="330" rx="10" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+
+  <text x="610" y="130" font-size="14" font-weight="600" fill="#14532d">價格</text>
+  <text x="610" y="152" font-size="15" font-family="Menlo, Consolas, monospace" fill="#14532d">NT$199</text>
+  <text x="610" y="174" font-size="15" font-family="Menlo, Consolas, monospace" fill="#14532d">NT$19,900</text>
+
+  <line x1="610" y1="196" x2="950" y2="196" stroke="#86efac" stroke-width="1"/>
+
+  <text x="610" y="220" font-size="14" font-weight="600" fill="#14532d">上架狀態</text>
+  <rect x="610" y="232" width="70" height="26" rx="13" fill="#22c55e"/>
+  <text x="645" y="250" text-anchor="middle" font-size="12" fill="#ffffff">已上架</text>
+  <rect x="690" y="232" width="70" height="26" rx="13" fill="#9ca3af"/>
+  <text x="725" y="250" text-anchor="middle" font-size="12" fill="#ffffff">已下架</text>
+
+  <line x1="610" y1="286" x2="950" y2="286" stroke="#86efac" stroke-width="1"/>
+
+  <text x="610" y="310" font-size="14" font-weight="600" fill="#14532d">圖片</text>
+  <rect x="610" y="322" width="80" height="80" rx="6" fill="#dcfce7" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="650" y="368" text-anchor="middle" font-size="12" fill="#166534">縮圖</text>
+
+  <text x="785" y="410" text-anchor="middle" font-size="12.5" fill="#166534">貨幣格式、徽章狀態與縮圖，掃視即可判讀</text>
+
+  <!-- 底部說明 -->
+  <text x="520" y="452" text-anchor="middle" font-size="13" fill="#6b7280">來源：Day 06 money()、badge()、formatStateUsing()、ImageColumn 的格式化設定</text>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#9ca3af"/>
+    </marker>
+  </defs>
+</svg>

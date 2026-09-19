@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="560" viewBox="0 0 1040 560" font-family="'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', -apple-system, sans-serif">
+  <!-- 背景 -->
+  <rect x="0" y="0" width="1040" height="560" fill="#ffffff"/>
+
+  <!-- 標題 -->
+  <text x="520" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1f2937">固定選項下拉選單 vs 關聯欄位下拉選單</text>
+
+  <!-- 欄標籤 -->
+  <text x="255" y="78" text-anchor="middle" font-size="15" font-weight="600" fill="#6b7280">Day 4，固定選項（category）</text>
+  <text x="785" y="78" text-anchor="middle" font-size="15" font-weight="600" fill="#6b7280">Day 9，關聯欄位（customer_id）</text>
+
+  <!-- 左側流程鏈 -->
+  <rect x="90" y="100" width="330" height="60" rx="10" fill="#fef2f2" stroke="#fca5a5" stroke-width="1.5"/>
+  <text x="255" y="125" text-anchor="middle" font-size="13.5" font-weight="700" fill="#7f1d1d">選項來源</text>
+  <text x="255" y="146" text-anchor="middle" font-size="12" fill="#374151">程式碼裡寫死的 options() 陣列</text>
+
+  <line x1="255" y1="160" x2="255" y2="192" stroke="#9ca3af" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="90" y="192" width="330" height="60" rx="10" fill="#fef2f2" stroke="#fca5a5" stroke-width="1.5"/>
+  <text x="255" y="217" text-anchor="middle" font-size="13.5" font-weight="700" fill="#7f1d1d">畫面顯示</text>
+  <text x="255" y="238" text-anchor="middle" font-size="12" fill="#374151">寵物飼料 / 寵物玩具 / 清潔用品</text>
+
+  <line x1="255" y1="252" x2="255" y2="284" stroke="#9ca3af" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="90" y="284" width="330" height="60" rx="10" fill="#fee2e2" stroke="#ef4444" stroke-width="2"/>
+  <text x="255" y="309" text-anchor="middle" font-size="13.5" font-weight="700" fill="#7f1d1d">儲存值</text>
+  <text x="255" y="330" text-anchor="middle" font-size="12" fill="#374151">選項字串本身，例如 food</text>
+
+  <text x="255" y="380" text-anchor="middle" font-size="12.5" fill="#991b1b">像一份印好的問卷，選項在印刷那一刻就固定</text>
+
+  <!-- 右側流程鏈 -->
+  <rect x="620" y="100" width="330" height="60" rx="10" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+  <text x="785" y="125" text-anchor="middle" font-size="13.5" font-weight="700" fill="#14532d">選項來源</text>
+  <text x="785" y="146" text-anchor="middle" font-size="12" fill="#374151">relationship() 即時查詢客戶資料表</text>
+
+  <line x1="785" y1="160" x2="785" y2="192" stroke="#9ca3af" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="620" y="192" width="330" height="60" rx="10" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+  <text x="785" y="217" text-anchor="middle" font-size="13.5" font-weight="700" fill="#14532d">畫面顯示</text>
+  <text x="785" y="238" text-anchor="middle" font-size="12" fill="#374151">客戶資料表的 name 欄位，例如店名</text>
+
+  <line x1="785" y1="252" x2="785" y2="284" stroke="#9ca3af" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="620" y="284" width="330" height="60" rx="10" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
+  <text x="785" y="309" text-anchor="middle" font-size="13.5" font-weight="700" fill="#14532d">儲存值</text>
+  <text x="785" y="330" text-anchor="middle" font-size="12" fill="#374151">客戶資料表的主鍵 id，例如 7</text>
+
+  <text x="785" y="380" text-anchor="middle" font-size="12.5" fill="#166534">像即時翻著另一本名冊，隨資料增減自動變化</text>
+
+  <!-- 底部分歧標註 -->
+  <rect x="90" y="410" width="860" height="90" rx="10" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.5"/>
+  <text x="520" y="436" text-anchor="middle" font-size="14" font-weight="700" fill="#78350f">兩者的分歧點</text>
+  <text x="520" y="460" text-anchor="middle" font-size="12.5" fill="#374151">選項來源：程式碼寫死的陣列，對照，即時查詢的關聯資料表</text>
+  <text x="520" y="482" text-anchor="middle" font-size="12.5" fill="#374151">儲存值：選項字串本身，對照，關聯資料的主鍵</text>
+
+  <!-- 底部說明 -->
+  <text x="520" y="530" text-anchor="middle" font-size="13" fill="#6b7280">來源：Day 4 Select::make('category')->options([...]) 與 Day 9 Select::make('customer_id')->relationship('customer', 'name')</text>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#9ca3af"/>
+    </marker>
+  </defs>
+</svg>

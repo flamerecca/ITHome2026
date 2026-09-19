@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="520" viewBox="0 0 1040 520" font-family="'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', -apple-system, sans-serif">
+  <!-- 背景 -->
+  <rect x="0" y="0" width="1040" height="520" fill="#ffffff"/>
+
+  <!-- 標題 -->
+  <text x="520" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1f2937">商品 Resource，Action 三種掛載位置</text>
+
+  <!-- 整體畫面外框：模擬 Resource 頁面 -->
+  <rect x="60" y="70" width="920" height="400" rx="10" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+
+  <!-- 頁首操作區 -->
+  <rect x="80" y="90" width="880" height="52" rx="8" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="100" y="112" font-size="13" font-weight="700" fill="#1e3a8a">頁首操作</text>
+  <rect x="700" y="100" width="100" height="30" rx="6" fill="#3b82f6"/>
+  <text x="750" y="120" text-anchor="middle" font-size="12" fill="#ffffff">新增商品</text>
+  <rect x="810" y="100" width="130" height="30" rx="6" fill="#93c5fd"/>
+  <text x="875" y="120" text-anchor="middle" font-size="12" fill="#1e3a8a">匯出商品清單</text>
+
+  <!-- 表格列操作區 -->
+  <rect x="80" y="158" width="880" height="180" rx="8" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+  <text x="100" y="180" font-size="13" font-weight="700" fill="#14532d">表格列操作</text>
+
+  <rect x="100" y="192" width="860" height="34" fill="#ffffff" stroke="#dcfce7"/>
+  <text x="115" y="214" font-size="11.5" fill="#374151">☑ 寵物潔牙骨 S 號</text>
+  <rect x="700" y="198" width="60" height="22" rx="11" fill="#22c55e"/>
+  <text x="730" y="213" text-anchor="middle" font-size="10" fill="#ffffff">下架</text>
+
+  <rect x="100" y="230" width="860" height="34" fill="#f9fafb" stroke="#dcfce7"/>
+  <text x="115" y="252" font-size="11.5" fill="#374151">☑ 寵物潔牙骨 M 號</text>
+  <rect x="700" y="236" width="60" height="22" rx="11" fill="#9ca3af"/>
+  <text x="730" y="251" text-anchor="middle" font-size="10" fill="#ffffff">上架</text>
+
+  <rect x="100" y="268" width="860" height="34" fill="#ffffff" stroke="#dcfce7"/>
+  <text x="115" y="290" font-size="11.5" fill="#374151">☑ 貓籠 加大款</text>
+  <rect x="700" y="274" width="60" height="22" rx="11" fill="#22c55e"/>
+  <text x="730" y="289" text-anchor="middle" font-size="10" fill="#ffffff">下架</text>
+
+  <rect x="770" y="230" width="160" height="30" rx="6" fill="#16a34a"/>
+  <text x="850" y="250" text-anchor="middle" font-size="12" fill="#ffffff">批次上架 選中 2 筆</text>
+
+  <!-- 表單內操作區 -->
+  <rect x="80" y="350" width="880" height="100" rx="8" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="100" y="372" font-size="13" font-weight="700" fill="#78350f">表單內操作</text>
+  <rect x="100" y="384" width="620" height="26" rx="4" fill="#ffffff" stroke="#fcd34d"/>
+  <text x="112" y="401" font-size="11" fill="#9ca3af">商品名稱、價格、庫存等表單欄位…</text>
+  <rect x="730" y="384" width="200" height="26" rx="6" fill="#f59e0b"/>
+  <text x="830" y="401" text-anchor="middle" font-size="11" fill="#ffffff">檢查是否需要進貨</text>
+  <rect x="100" y="416" width="120" height="28" rx="6" fill="#1f2937"/>
+  <text x="160" y="435" text-anchor="middle" font-size="11" fill="#ffffff">儲存表單</text>
+  <text x="240" y="435" font-size="11" fill="#9ca3af">← 表單送出，與上方操作互不干擾</text>
+
+  <!-- 底部三格對照 -->
+  <rect x="60" y="480" width="290" height="0" fill="none"/>
+  <text x="205" y="490" text-anchor="middle" font-size="12.5" font-weight="600" fill="#14532d">表格列操作 → 單筆或多筆資料列</text>
+  <text x="520" y="490" text-anchor="middle" font-size="12.5" font-weight="600" fill="#1e3a8a">頁首操作 → 整頁</text>
+  <text x="835" y="490" text-anchor="middle" font-size="12.5" font-weight="600" fill="#78350f">表單內操作 → 正在編輯的這一筆資料</text>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#9ca3af"/>
+    </marker>
+  </defs>
+</svg>
