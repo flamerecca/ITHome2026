@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="1260" viewBox="0 0 1280 1260" font-family="'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', -apple-system, sans-serif">
+  <!-- 背景 -->
+  <rect x="0" y="0" width="1280" height="1260" fill="#ffffff"/>
+
+  <!-- 標題 -->
+  <text x="640" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1f2937">一次訂單查詢請求：四個核心觀念如何協同運作</text>
+  <text x="640" y="64" text-anchor="middle" font-size="13.5" fill="#6b7280">同一條時間軸上，Coroutine Scope、Structured Concurrency、Dispatchers、Coroutine Context 各自登場的位置</text>
+
+  <!-- 主時間軸：請求進入 → launch 兩協程 → 分岔點 -->
+  <line x1="90" y1="150" x2="1010" y2="150" stroke="#9ca3af" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="1018" y="155" font-size="13" fill="#6b7280">時間</text>
+
+  <!-- ===== 節點 1：請求進入，建立 Coroutine Scope ===== -->
+  <circle cx="190" cy="150" r="9" fill="#3b82f6" stroke="#1e3a8a" stroke-width="2"/>
+  <text x="190" y="128" text-anchor="middle" font-size="13" font-weight="700" fill="#1e3a8a">① 請求進入</text>
+
+  <line x1="190" y1="159" x2="190" y2="196" stroke="#93c5fd" stroke-width="2"/>
+  <rect x="70" y="196" width="240" height="112" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="190" y="222" text-anchor="middle" font-size="14" font-weight="700" fill="#1e3a8a">訂單查詢請求進入</text>
+  <text x="190" y="244" text-anchor="middle" font-size="11.5" fill="#374151">對應建立一個</text>
+  <text x="190" y="262" text-anchor="middle" font-size="11.5" fill="#374151">Coroutine Scope</text>
+  <text x="190" y="284" text-anchor="middle" font-size="10.5" fill="#6b7280">生命週期與這次請求</text>
+  <text x="190" y="298" text-anchor="middle" font-size="10.5" fill="#6b7280">綁在一起</text>
+
+  <!-- Coroutine Scope 容器：貫穿全圖上半段，直到分岔點前，頂部留出足夠內距容納標題 -->
+  <rect x="330" y="150" width="640" height="450" rx="16" fill="#faf5ff" stroke="#8b5cf6" stroke-width="2.5" stroke-dasharray="6,4"/>
+  <text x="650" y="185" text-anchor="middle" font-size="14.5" font-weight="700" fill="#5b21b6">Coroutine Scope，框住這次請求的邊界</text>
+
+  <!-- 節點1 → coroutineScope 區塊 箭頭 -->
+  <line x1="310" y1="252" x2="358" y2="252" stroke="#9ca3af" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ===== 節點 2：Scope 內 launch 兩個子協程（結構化並發登記） ===== -->
+  <circle cx="470" cy="150" r="9" fill="#3b82f6" stroke="#1e3a8a" stroke-width="2"/>
+  <text x="470" y="128" text-anchor="middle" font-size="13" font-weight="700" fill="#1e3a8a">② 同時 launch</text>
+
+  <line x1="470" y1="159" x2="470" y2="206" stroke="#c4b5fd" stroke-width="2"/>
+
+  <!-- 結構化並發標註：置於兩個子協程框上方，與 Scope 標題、子協程框皆留出安全間距 -->
+  <text x="576" y="212" text-anchor="middle" font-size="11" font-weight="700" fill="#b45309">Structured Concurrency</text>
+
+  <!-- 子協程 1：查詢訂單詳情 -->
+  <rect x="366" y="232" width="200" height="150" rx="10" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+  <text x="466" y="258" text-anchor="middle" font-size="13" font-weight="700" fill="#14532d">查詢訂單詳情</text>
+  <text x="466" y="280" text-anchor="middle" font-size="10.5" font-family="Menlo, Consolas, monospace" fill="#334155">launch(Dispatchers.IO) {</text>
+  <text x="466" y="298" text-anchor="middle" font-size="10.5" font-family="Menlo, Consolas, monospace" fill="#334155">findOrderById()</text>
+  <text x="466" y="316" text-anchor="middle" font-size="10.5" font-family="Menlo, Consolas, monospace" fill="#334155">}</text>
+  <rect x="386" y="328" width="160" height="24" rx="12" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="466" y="344" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1e3a8a">Dispatchers.IO</text>
+  <text x="466" y="368" text-anchor="middle" font-size="10" fill="#6b7280">排入 IO 執行緒資源</text>
+
+  <!-- 子協程 2：確認庫存 -->
+  <rect x="586" y="232" width="200" height="150" rx="10" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+  <text x="686" y="258" text-anchor="middle" font-size="13" font-weight="700" fill="#14532d">確認庫存</text>
+  <text x="686" y="280" text-anchor="middle" font-size="10.5" font-family="Menlo, Consolas, monospace" fill="#334155">launch(Dispatchers.IO) {</text>
+  <text x="686" y="298" text-anchor="middle" font-size="10.5" font-family="Menlo, Consolas, monospace" fill="#334155">checkStockAvailability()</text>
+  <text x="686" y="316" text-anchor="middle" font-size="10.5" font-family="Menlo, Consolas, monospace" fill="#334155">}</text>
+  <rect x="606" y="328" width="160" height="24" rx="12" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="686" y="344" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1e3a8a">Dispatchers.IO</text>
+  <text x="686" y="368" text-anchor="middle" font-size="10" fill="#6b7280">排入 IO 執行緒資源</text>
+
+  <!-- 兩子協程之間的登記關係連結 -->
+  <line x1="566" y1="307" x2="586" y2="307" stroke="#f59e0b" stroke-width="2" stroke-dasharray="4,3"/>
+
+  <!-- 結構化並發、Dispatchers 說明文字：置於兩子協程框下方，與框下緣、彼此之間都留出安全間距 -->
+  <text x="576" y="410" text-anchor="middle" font-size="10.5" fill="#92400e">Structured Concurrency：兩者一 launch 即登記在父範圍，</text>
+  <text x="576" y="428" text-anchor="middle" font-size="10.5" fill="#92400e">父範圍需等兩者都有結果才收斂</text>
+  <text x="576" y="458" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1e3a8a">Dispatchers：兩者都指定 IO，決定跑在哪組執行緒資源上</text>
+
+  <!-- 節點2 → 分岔點 箭頭 -->
+  <line x1="786" y1="307" x2="900" y2="307" stroke="#9ca3af" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="843" y="295" text-anchor="middle" font-size="10.5" fill="#6b7280">執行結果</text>
+
+  <!-- ===== 節點 3：分岔點 ===== -->
+  <circle cx="990" cy="150" r="9" fill="#f59e0b" stroke="#78350f" stroke-width="2"/>
+  <text x="990" y="128" text-anchor="middle" font-size="13" font-weight="700" fill="#78350f">③ 分岔點</text>
+  <line x1="990" y1="159" x2="990" y2="232" stroke="#fcd34d" stroke-width="2"/>
+  <text x="1050" y="248" text-anchor="middle" font-size="11" fill="#92400e">確認庫存執行結果</text>
+  <text x="1050" y="264" text-anchor="middle" font-size="11" fill="#92400e">決定走哪條路徑</text>
+  <circle cx="990" cy="307" r="8" fill="#f59e0b" stroke="#78350f" stroke-width="2"/>
+
+  <!-- 分岔往下延伸的兩條路徑線，箭頭終點精準對齊分岔圓心正下方的分流點 -->
+  <line x1="990" y1="315" x2="990" y2="700" stroke="#ef4444" stroke-width="2.5" marker-end="url(#arrow-red)"/>
+  <path d="M 990 315 L 990 480 L 470 480 L 470 700" stroke="#22c55e" stroke-width="2.5" fill="none" marker-end="url(#arrow-green)"/>
+  <text x="850" y="470" text-anchor="middle" font-size="12" font-weight="700" fill="#15803d">正常路徑：兩者都完成</text>
+  <text x="1060" y="530" text-anchor="middle" font-size="12" font-weight="700" fill="#b91c1c">異常路徑：確認庫存</text>
+  <text x="1060" y="548" text-anchor="middle" font-size="12" font-weight="700" fill="#b91c1c">拋出例外</text>
+
+  <!-- ===== 正常路徑：往下走到收斂節點 ===== -->
+  <rect x="350" y="700" width="240" height="140" rx="12" fill="#f0fdf4" stroke="#22c55e" stroke-width="2.5"/>
+  <text x="470" y="726" text-anchor="middle" font-size="14" font-weight="700" fill="#14532d">正常結束</text>
+  <text x="470" y="750" text-anchor="middle" font-size="11.5" fill="#374151">查詢訂單詳情、確認庫存</text>
+  <text x="470" y="768" text-anchor="middle" font-size="11.5" fill="#374151">兩個子協程都成功完成</text>
+  <text x="470" y="794" text-anchor="middle" font-size="11" font-weight="700" fill="#5b21b6">父範圍收斂，組成回應</text>
+  <text x="470" y="814" text-anchor="middle" font-size="10" fill="#6b7280">Structured Concurrency：等待兩者</text>
+
+  <!-- ===== 異常路徑：往下依序展開四個子步驟 ===== -->
+  <!-- 異常步驟 1：確認庫存拋出例外 -->
+  <rect x="880" y="700" width="230" height="90" rx="10" fill="#fef2f2" stroke="#ef4444" stroke-width="2.5"/>
+  <text x="995" y="726" text-anchor="middle" font-size="13" font-weight="700" fill="#7f1d1d">確認庫存拋出例外</text>
+  <text x="995" y="748" text-anchor="middle" font-size="10.5" fill="#374151">例如資料庫連線出問題</text>
+  <text x="995" y="768" text-anchor="middle" font-size="10.5" fill="#374151">例外不會被靜靜吞掉</text>
+
+  <!-- 異常步驟 2：Job 標記為失敗（Coroutine Context） -->
+  <line x1="995" y1="790" x2="995" y2="826" stroke="#fca5a5" stroke-width="2" marker-end="url(#arrow-red)"/>
+  <rect x="880" y="826" width="230" height="94" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="995" y="850" text-anchor="middle" font-size="13" font-weight="700" fill="#78350f">Job 標記為失敗</text>
+  <text x="995" y="872" text-anchor="middle" font-size="10.5" fill="#92400e">Coroutine Context 底下</text>
+  <text x="995" y="890" text-anchor="middle" font-size="10.5" fill="#92400e">維護的父子結構開始運作</text>
+  <text x="995" y="908" text-anchor="middle" font-size="9.5" font-weight="700" fill="#b45309">Coroutine Context</text>
+
+  <!-- 異常步驟 3：例外往上傳播到父範圍 -->
+  <line x1="995" y1="920" x2="995" y2="956" stroke="#fcd34d" stroke-width="2" marker-end="url(#arrow-amber)"/>
+  <rect x="880" y="956" width="230" height="90" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="995" y="980" text-anchor="middle" font-size="12.5" font-weight="700" fill="#78350f">例外沿父子結構往上傳播</text>
+  <text x="995" y="1002" text-anchor="middle" font-size="10.5" fill="#92400e">傳到父範圍，父範圍收到</text>
+  <text x="995" y="1020" text-anchor="middle" font-size="10.5" fill="#92400e">底下有一個子協程失敗</text>
+
+  <!-- 異常步驟 4：父範圍對查詢訂單詳情送出取消訊號，四行文字需要更高容器 -->
+  <line x1="995" y1="1046" x2="995" y2="1082" stroke="#fca5a5" stroke-width="2" marker-end="url(#arrow-red)"/>
+  <rect x="860" y="1082" width="270" height="114" rx="10" fill="#fef2f2" stroke="#ef4444" stroke-width="2.5"/>
+  <text x="995" y="1108" text-anchor="middle" font-size="12.5" font-weight="700" fill="#7f1d1d">父範圍對查詢訂單詳情</text>
+  <text x="995" y="1126" text-anchor="middle" font-size="12.5" font-weight="700" fill="#7f1d1d">送出取消訊號</text>
+  <text x="995" y="1150" text-anchor="middle" font-size="10.5" fill="#374151">即使該協程本身沒有問題，也</text>
+  <text x="995" y="1168" text-anchor="middle" font-size="10.5" fill="#374151">一併被收掉，兩者一起結束</text>
+
+  <!-- 橫向對照虛線：從異常步驟 4 左側繞道畫布最外緣，避開請求進入框與正常路徑綠色收斂線，回連查詢訂單詳情框左緣中段 -->
+  <path d="M 860 1117 L 40 1117 L 40 370 L 366 370" stroke="#ef4444" stroke-width="1.75" stroke-dasharray="5,4" fill="none" marker-end="url(#arrow-red)"/>
+  <text x="128" y="1107" text-anchor="middle" font-size="10.5" font-weight="700" fill="#b91c1c">取消訊號指向查詢訂單詳情子協程</text>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#9ca3af"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#22c55e"/>
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#ef4444"/>
+    </marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+</svg>
