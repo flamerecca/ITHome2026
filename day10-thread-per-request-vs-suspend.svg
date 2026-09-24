@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" font-family="'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', -apple-system, sans-serif">
+  <!-- 背景 -->
+  <rect x="0" y="0" width="1280" height="760" fill="#ffffff"/>
+
+  <!-- 標題 -->
+  <text x="640" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1f2937">語法能動，但容器骨架未變</text>
+  <text x="640" y="64" text-anchor="middle" font-size="13.5" fill="#6b7280">Thread-per-Request 與 Spring MVC 底下 suspend function，兩種請求生命週期對照</text>
+
+  <!-- ===== 左欄：傳統 Thread-per-Request ===== -->
+  <rect x="60" y="96" width="500" height="40" rx="8" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="310" y="122" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1e3a8a">傳統 Thread-per-Request</text>
+
+  <!-- 左 節點1：請求進入，配置執行緒 -->
+  <rect x="110" y="166" width="400" height="64" rx="10" fill="#f8fafc" stroke="#64748b" stroke-width="2"/>
+  <text x="310" y="192" text-anchor="middle" font-size="13" font-weight="700" fill="#1e293b">請求進入</text>
+  <text x="310" y="212" text-anchor="middle" font-size="11.5" fill="#475569">Servlet 容器配置一條專屬執行緒</text>
+
+  <line x1="310" y1="230" x2="310" y2="266" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow-gray)"/>
+
+  <!-- 左 節點2：執行緒全程阻塞，強調節點，紅框，容器高度 104 已容納三行文字加徽章 -->
+  <rect x="110" y="266" width="400" height="104" rx="10" fill="#fef2f2" stroke="#ef4444" stroke-width="2.5"/>
+  <text x="310" y="290" text-anchor="middle" font-size="13" font-weight="700" fill="#7f1d1d">執行緒全程阻塞</text>
+  <text x="310" y="310" text-anchor="middle" font-size="11.5" fill="#374151">等待 I/O 完成期間，這條執行緒</text>
+  <text x="310" y="326" text-anchor="middle" font-size="11.5" fill="#374151">原地卡住，無法服務其他請求</text>
+  <rect x="200" y="340" width="220" height="22" rx="11" fill="#fee2e2" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="310" y="355" text-anchor="middle" font-size="10" font-weight="700" fill="#7f1d1d">執行緒被獨佔整段等待時間</text>
+
+  <line x1="310" y1="370" x2="310" y2="406" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow-gray)"/>
+
+  <!-- 左 節點3：執行緒釋放，回應送出 -->
+  <rect x="110" y="406" width="400" height="64" rx="10" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+  <text x="310" y="432" text-anchor="middle" font-size="13" font-weight="700" fill="#14532d">執行緒釋放</text>
+  <text x="310" y="452" text-anchor="middle" font-size="11.5" fill="#374151">回應送出後，執行緒才歸還執行緒池</text>
+
+  <!-- ===== 右欄：Spring MVC 底下 suspend function ===== -->
+  <rect x="720" y="96" width="500" height="40" rx="8" fill="#faf5ff" stroke="#8b5cf6" stroke-width="2"/>
+  <text x="970" y="122" text-anchor="middle" font-size="14.5" font-weight="700" fill="#5b21b6">Spring MVC 底下 suspend function</text>
+
+  <!-- 右 節點1：請求進入，啟動協程 -->
+  <rect x="770" y="166" width="400" height="64" rx="10" fill="#f8fafc" stroke="#64748b" stroke-width="2"/>
+  <text x="970" y="192" text-anchor="middle" font-size="13" font-weight="700" fill="#1e293b">請求進入</text>
+  <text x="970" y="212" text-anchor="middle" font-size="11.5" fill="#475569">Spring 適配層排程執行 suspend function</text>
+
+  <line x1="970" y1="230" x2="970" y2="266" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow-gray)"/>
+
+  <!-- 右 節點2：協程暫停，強調節點，橙框，標出暫停位置，容器高度 104 對齊左欄節點2 -->
+  <rect x="770" y="266" width="400" height="104" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="970" y="290" text-anchor="middle" font-size="13" font-weight="700" fill="#78350f">協程暫停</text>
+  <text x="970" y="310" text-anchor="middle" font-size="11.5" fill="#374151">等待 I/O 期間讓出執行權，執行緒</text>
+  <text x="970" y="326" text-anchor="middle" font-size="11.5" fill="#374151">是否因此空出，取決於容器機制</text>
+  <rect x="850" y="340" width="240" height="22" rx="11" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="970" y="355" text-anchor="middle" font-size="10" font-weight="700" fill="#78350f">暫停點：協程讓出，執行緒不必然讓出</text>
+
+  <line x1="970" y1="370" x2="970" y2="406" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow-gray)"/>
+
+  <!-- 右 節點3：協程恢復，續行處理 -->
+  <rect x="770" y="406" width="400" height="64" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="970" y="432" text-anchor="middle" font-size="13" font-weight="700" fill="#1e3a8a">協程恢復</text>
+  <text x="970" y="452" text-anchor="middle" font-size="11.5" fill="#374151">I/O 完成後在排程到的執行緒續行處理</text>
+
+  <line x1="970" y1="470" x2="970" y2="506" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow-gray)"/>
+
+  <!-- 右 節點4：處理完成，回應送出 -->
+  <rect x="770" y="506" width="400" height="64" rx="10" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+  <text x="970" y="532" text-anchor="middle" font-size="13" font-weight="700" fill="#14532d">處理完成</text>
+  <text x="970" y="552" text-anchor="middle" font-size="11.5" fill="#374151">回應送出，協程與請求生命週期一併結束</text>
+
+  <!-- 左欄補一段對齊用的間距說明，讓左右底部一起連到共同邊界容器；說明文字改置於虛線右側，避免壓在線上 -->
+  <line x1="310" y1="470" x2="310" y2="570" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="3,4"/>
+  <text x="330" y="516" text-anchor="start" font-size="10.5" fill="#94a3b8">此路徑僅三步驟，提前完成</text>
+
+  <!-- ===== 共同邊界：執行緒池容量上限，橫跨兩欄，兩種情境都存在 ===== -->
+  <line x1="310" y1="570" x2="310" y2="616" stroke="#c9971c" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arrow-amber)"/>
+  <line x1="970" y1="570" x2="970" y2="616" stroke="#c9971c" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arrow-amber)"/>
+
+  <rect x="110" y="616" width="1060" height="110" rx="12" fill="#fff3cd" stroke="#c9971c" stroke-width="2.5"/>
+  <text x="640" y="646" text-anchor="middle" font-size="14.5" font-weight="700" fill="#78350f">Servlet 容器執行緒池，容量上限這道邊界，兩種情境下都存在</text>
+  <text x="640" y="672" text-anchor="middle" font-size="11.5" fill="#57534e">左側執行緒全程卡在請求裡，右側執行緒是否提前釋出取決於容器機制，</text>
+  <text x="640" y="692" text-anchor="middle" font-size="11.5" fill="#57534e">但無論哪一種情境，執行緒池本身的容量上限都沒有被拆掉</text>
+  <text x="640" y="714" text-anchor="middle" font-size="11" font-weight="700" fill="#92400e">語法能動，容器骨架未變</text>
+
+  <defs>
+    <marker id="arrow-gray" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94a3b8"/>
+    </marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#c9971c"/>
+    </marker>
+  </defs>
+</svg>
