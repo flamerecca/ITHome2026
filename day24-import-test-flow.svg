@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="780" viewBox="0 0 1040 780" font-family="'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif">
+  <rect x="0" y="0" width="1040" height="780" fill="#ffffff"/>
+
+  <!-- 主標題 -->
+  <text x="520" y="32" font-size="20" font-weight="700" fill="#1f2933" text-anchor="middle">批次匯入商品測試涵蓋的兩種情境</text>
+
+  <!-- 起點框 -->
+  <rect x="340" y="60" width="360" height="60" rx="10" fill="#1f2933" stroke="#1f2933"/>
+  <text x="520" y="96" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">批次匯入商品，兩種測試情境</text>
+
+  <!-- 分岔線：起點框底部中心到左右欄標題上方 -->
+  <path d="M 520 120 L 520 150 L 230 150 L 230 168" fill="none" stroke="#8a94a6" stroke-width="2"/>
+  <path d="M 520 120 L 520 150 L 810 150 L 810 168" fill="none" stroke="#8a94a6" stroke-width="2"/>
+  <polygon points="230,168 224,158 236,158" fill="#8a94a6"/>
+  <polygon points="810,168 804,158 816,158" fill="#8a94a6"/>
+
+  <!-- 左欄標題：正確格式情境 -->
+  <text x="230" y="184" font-size="16" font-weight="700" fill="#0f766e" text-anchor="middle">正確格式情境</text>
+
+  <!-- 右欄標題：錯誤格式情境 -->
+  <text x="810" y="184" font-size="16" font-weight="700" fill="#b91c1c" text-anchor="middle">錯誤格式情境</text>
+
+  <!-- ===== 左欄：正確格式情境 ===== -->
+  <rect x="60" y="216" width="340" height="532" rx="12" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.5"/>
+
+  <!-- 步驟 1 -->
+  <rect x="84" y="240" width="292" height="68" rx="8" fill="#ffffff" stroke="#0f766e" stroke-width="1.5"/>
+  <text x="230" y="266" font-size="14" fill="#1f2933" text-anchor="middle">上傳格式正確的 CSV 檔案</text>
+  <text x="230" y="288" font-size="14" fill="#1f2933" text-anchor="middle">濕式狗糧罐頭、貓抓板 兩筆商品</text>
+
+  <!-- 箭頭 1→2 -->
+  <line x1="230" y1="308" x2="230" y2="353" stroke="#0f766e" stroke-width="2"/>
+  <polygon points="230,353 224,341 236,341" fill="#0f766e"/>
+
+  <!-- 步驟 2 -->
+  <rect x="84" y="353" width="292" height="68" rx="8" fill="#ffffff" stroke="#0f766e" stroke-width="1.5"/>
+  <text x="230" y="379" font-size="13" font-family="monospace" fill="#1f2933" text-anchor="middle">mountTableAction('import')</text>
+  <text x="230" y="399" font-size="12" font-family="monospace" fill="#1f2933" text-anchor="middle">setTableActionData(...)</text>
+
+  <!-- 箭頭 2→3 -->
+  <line x1="230" y1="421" x2="230" y2="466" stroke="#0f766e" stroke-width="2"/>
+  <polygon points="230,466 224,454 236,454" fill="#0f766e"/>
+
+  <!-- 步驟 3 -->
+  <rect x="84" y="466" width="292" height="68" rx="8" fill="#ffffff" stroke="#0f766e" stroke-width="1.5"/>
+  <text x="230" y="490" font-size="14" fill="#1f2933" text-anchor="middle">驗證通過，無表格動作錯誤</text>
+  <text x="230" y="511" font-size="12" font-family="monospace" fill="#1f2933" text-anchor="middle">assertHasNoTableActionErrors()</text>
+
+  <!-- 箭頭 3→4 -->
+  <line x1="230" y1="534" x2="230" y2="579" stroke="#0f766e" stroke-width="2"/>
+  <polygon points="230,579 224,567 236,567" fill="#0f766e"/>
+
+  <!-- 步驟 4 -->
+  <rect x="84" y="579" width="292" height="50" rx="8" fill="#ffffff" stroke="#0f766e" stroke-width="1.5"/>
+  <text x="230" y="610" font-size="14" fill="#1f2933" text-anchor="middle">斷言 Product::count() 為 2</text>
+
+  <!-- 箭頭 4→5 -->
+  <line x1="230" y1="629" x2="230" y2="674" stroke="#0f766e" stroke-width="2"/>
+  <polygon points="230,674 224,662 236,662" fill="#0f766e"/>
+
+  <!-- 步驟 5：結論 -->
+  <rect x="84" y="674" width="292" height="50" rx="8" fill="#0f766e" stroke="#0f766e" stroke-width="1.5"/>
+  <text x="230" y="705" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">正確資料確實寫入資料庫</text>
+
+  <!-- ===== 右欄：錯誤格式情境 ===== -->
+  <rect x="640" y="216" width="340" height="532" rx="12" fill="#fef2f2" stroke="#fecaca" stroke-width="1.5"/>
+
+  <!-- 步驟 1 -->
+  <rect x="664" y="240" width="292" height="68" rx="8" fill="#ffffff" stroke="#b91c1c" stroke-width="1.5"/>
+  <text x="810" y="266" font-size="14" fill="#1f2933" text-anchor="middle">上傳含錯誤欄位的 CSV 檔案</text>
+  <text x="810" y="288" font-size="14" fill="#1f2933" text-anchor="middle">price 欄位填入「免費」非 numeric</text>
+
+  <!-- 箭頭 1→2 -->
+  <line x1="810" y1="308" x2="810" y2="353" stroke="#b91c1c" stroke-width="2"/>
+  <polygon points="810,353 804,341 816,341" fill="#b91c1c"/>
+
+  <!-- 步驟 2 -->
+  <rect x="664" y="353" width="292" height="68" rx="8" fill="#ffffff" stroke="#b91c1c" stroke-width="1.5"/>
+  <text x="810" y="379" font-size="13" font-family="monospace" fill="#1f2933" text-anchor="middle">mountTableAction('import')</text>
+  <text x="810" y="399" font-size="12" font-family="monospace" fill="#1f2933" text-anchor="middle">setTableActionData(...)</text>
+
+  <!-- 箭頭 2→3 -->
+  <line x1="810" y1="421" x2="810" y2="466" stroke="#b91c1c" stroke-width="2"/>
+  <polygon points="810,466 804,454 816,454" fill="#b91c1c"/>
+
+  <!-- 步驟 3 -->
+  <rect x="664" y="466" width="292" height="68" rx="8" fill="#ffffff" stroke="#b91c1c" stroke-width="1.5"/>
+  <text x="810" y="490" font-size="14" fill="#1f2933" text-anchor="middle">numeric 驗證規則攔截</text>
+  <text x="810" y="511" font-size="14" fill="#1f2933" text-anchor="middle">該筆資料未通過驗證</text>
+
+  <!-- 箭頭 3→4 -->
+  <line x1="810" y1="534" x2="810" y2="579" stroke="#b91c1c" stroke-width="2"/>
+  <polygon points="810,579 804,567 816,567" fill="#b91c1c"/>
+
+  <!-- 步驟 4 -->
+  <rect x="664" y="579" width="292" height="50" rx="8" fill="#ffffff" stroke="#b91c1c" stroke-width="1.5"/>
+  <text x="810" y="610" font-size="14" fill="#1f2933" text-anchor="middle">斷言「過期優惠券」不存在</text>
+
+  <!-- 箭頭 4→5 -->
+  <line x1="810" y1="629" x2="810" y2="674" stroke="#b91c1c" stroke-width="2"/>
+  <polygon points="810,674 804,662 816,662" fill="#b91c1c"/>
+
+  <!-- 步驟 5：結論 -->
+  <rect x="664" y="674" width="292" height="50" rx="8" fill="#b91c1c" stroke="#b91c1c" stroke-width="1.5"/>
+  <text x="810" y="705" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">錯誤資料確實被攔下不寫入</text>
+
+</svg>

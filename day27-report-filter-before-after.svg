@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="560" viewBox="0 0 1040 560" font-family="'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', -apple-system, sans-serif">
+  <!-- 背景 -->
+  <rect x="0" y="0" width="1040" height="560" fill="#ffffff"/>
+
+  <!-- 標題 -->
+  <text x="520" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1f2937">報表篩選面板套用前後對照</text>
+
+  <!-- 欄標籤 -->
+  <text x="255" y="78" text-anchor="middle" font-size="15" font-weight="600" fill="#6b7280">套用前，全公司全部資料</text>
+  <text x="785" y="78" text-anchor="middle" font-size="15" font-weight="600" fill="#6b7280">套用後，時間區間 + 商品分類已篩選</text>
+
+  <!-- 左側面板 -->
+  <rect x="60" y="98" width="390" height="430" rx="10" fill="#fef2f2" stroke="#fca5a5" stroke-width="1.5"/>
+
+  <!-- 左側篩選列，未設定 -->
+  <rect x="80" y="116" width="350" height="46" rx="6" fill="#ffffff" stroke="#fca5a5"/>
+  <text x="100" y="134" font-size="11" fill="#7f1d1d">時間區間　未設定</text>
+  <text x="100" y="150" font-size="11" fill="#7f1d1d">商品分類　未設定</text>
+
+  <!-- 左側折線圖，全量資料 -->
+  <text x="100" y="184" font-size="12" font-weight="600" fill="#7f1d1d">銷售趨勢</text>
+  <polyline points="100,224 150,214 200,220 250,204 300,212 350,196 400,206"
+            fill="none" stroke="#ef4444" stroke-width="2"/>
+
+  <!-- 左側長條圖，三個分類都在 -->
+  <text x="100" y="256" font-size="12" font-weight="600" fill="#7f1d1d">商品分類銷售量</text>
+  <rect x="100" y="290" width="40" height="46" fill="#fca5a5"/>
+  <rect x="180" y="270" width="40" height="66" fill="#fca5a5"/>
+  <rect x="260" y="306" width="40" height="30" fill="#fca5a5"/>
+  <text x="120" y="350" text-anchor="middle" font-size="10" fill="#7f1d1d">飼料</text>
+  <text x="200" y="350" text-anchor="middle" font-size="10" fill="#7f1d1d">玩具</text>
+  <text x="280" y="350" text-anchor="middle" font-size="10" fill="#7f1d1d">清潔</text>
+
+  <!-- 左側表格，三個分類商品都在 -->
+  <rect x="80" y="372" width="350" height="26" fill="#ffffff" stroke="#fca5a5"/>
+  <text x="90" y="389" font-size="10.5" fill="#7f1d1d">寵物潔牙骨 S 號　飼料</text>
+  <rect x="80" y="398" width="350" height="26" fill="#fef2f2" stroke="#fca5a5"/>
+  <text x="90" y="415" font-size="10.5" fill="#7f1d1d">貓咪逗貓棒　　　玩具</text>
+  <rect x="80" y="424" width="350" height="26" fill="#ffffff" stroke="#fca5a5"/>
+  <text x="90" y="441" font-size="10.5" fill="#7f1d1d">寵物除臭噴劑　　清潔</text>
+
+  <text x="255" y="486" text-anchor="middle" font-size="12" fill="#991b1b">三個分類的資料同時彙總呈現</text>
+  <text x="255" y="504" text-anchor="middle" font-size="12" fill="#991b1b">看不出單一分類的表現</text>
+
+  <!-- 中央箭頭 -->
+  <line x1="450" y1="303" x2="590" y2="303" stroke="#9ca3af" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- 右側面板 -->
+  <rect x="590" y="98" width="390" height="430" rx="10" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+
+  <!-- 右側篩選列，已設定 -->
+  <rect x="610" y="116" width="350" height="46" rx="6" fill="#ffffff" stroke="#86efac"/>
+  <text x="630" y="134" font-size="11" fill="#14532d">時間區間　本月 1 日 ~ 今天</text>
+  <text x="630" y="150" font-size="11" fill="#14532d">商品分類　寵物玩具</text>
+
+  <!-- 右側折線圖，同步限縮 -->
+  <text x="630" y="184" font-size="12" font-weight="600" fill="#14532d">銷售趨勢</text>
+  <polyline points="630,222 660,218 690,224 720,210 750,216 780,206 810,212"
+            fill="none" stroke="#22c55e" stroke-width="2"/>
+
+  <!-- 右側長條圖，只剩玩具分類 -->
+  <text x="630" y="256" font-size="12" font-weight="600" fill="#14532d">商品分類銷售量</text>
+  <rect x="680" y="270" width="50" height="66" fill="#86efac"/>
+  <text x="705" y="350" text-anchor="middle" font-size="10" fill="#14532d">玩具</text>
+
+  <!-- 右側表格，只剩玩具分類商品 -->
+  <rect x="610" y="372" width="350" height="26" fill="#ffffff" stroke="#86efac"/>
+  <text x="620" y="389" font-size="10.5" fill="#14532d">貓咪逗貓棒　　　玩具</text>
+  <rect x="610" y="398" width="350" height="26" fill="#f0fdf4" stroke="#86efac"/>
+  <text x="620" y="415" font-size="10.5" fill="#14532d">狗狗發聲玩偶　　玩具</text>
+
+  <text x="785" y="486" text-anchor="middle" font-size="12" fill="#166534">圖表與表格同步只顯示寵物玩具分類</text>
+  <text x="785" y="504" text-anchor="middle" font-size="12" fill="#166534">且僅涵蓋本月時間區間的訂單</text>
+
+  <!-- 底部說明 -->
+  <text x="520" y="548" text-anchor="middle" font-size="13" fill="#6b7280">來源：Day 27 時間區間 Filter 與商品分類 SelectFilter 同時套用</text>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#9ca3af"/>
+    </marker>
+  </defs>
+</svg>

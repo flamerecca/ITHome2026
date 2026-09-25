@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="820" viewBox="0 0 1120 820" font-family="'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', -apple-system, sans-serif">
+  <!-- 背景 -->
+  <rect x="0" y="0" width="1120" height="820" fill="#ffffff"/>
+
+  <!-- 標題 -->
+  <text x="560" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1f2937">角色矩陣與 BranchScope 疊加判斷流程</text>
+  <text x="560" y="64" text-anchor="middle" font-size="13" fill="#6b7280">同一次請求，兩段獨立邏輯各自判斷，沒有互相依賴或呼叫</text>
+
+  <!-- 兩組帳號入口卡片，統一寬 420，統一高 64，統一 y 起點 90 -->
+  <rect x="70" y="90" width="420" height="64" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="280" y="116" text-anchor="middle" font-size="14" font-weight="700" fill="#1e3a8a">帳號 A</text>
+  <text x="280" y="138" text-anchor="middle" font-size="12.5" fill="#1e40af">高雄據點倉管，role=warehouse</text>
+
+  <rect x="630" y="90" width="420" height="64" rx="10" fill="#fdf2f8" stroke="#f9a8d4" stroke-width="1.5"/>
+  <text x="840" y="116" text-anchor="middle" font-size="14" font-weight="700" fill="#831843">帳號 B</text>
+  <text x="840" y="138" text-anchor="middle" font-size="12.5" fill="#be185d">台北據點財務，role=finance</text>
+
+  <!-- 分岔箭頭，從兩張入口卡片下緣分別下探到匯流說明條頂端 -->
+  <line x1="280" y1="154" x2="280" y2="192" stroke="#6b7280" stroke-width="2" marker-end="url(#arrow-gray)"/>
+  <line x1="840" y1="154" x2="840" y2="192" stroke="#6b7280" stroke-width="2" marker-end="url(#arrow-gray)"/>
+
+  <!-- 同一次請求橫向匯流說明條 -->
+  <rect x="70" y="192" width="980" height="34" rx="17" fill="#111827"/>
+  <text x="560" y="214" text-anchor="middle" font-size="12.5" fill="#ffffff">同一次請求　同時進入下列兩段互不呼叫的獨立判斷</text>
+
+  <!-- 匯流條下緣分岔到左右兩欄頂端，各自先垂直下探再水平分岔 -->
+  <line x1="280" y1="226" x2="280" y2="250" stroke="#6b7280" stroke-width="1.5"/>
+  <line x1="840" y1="226" x2="840" y2="250" stroke="#6b7280" stroke-width="1.5"/>
+  <line x1="220" y1="250" x2="900" y2="250" stroke="#6b7280" stroke-width="1.5"/>
+  <line x1="220" y1="250" x2="220" y2="264" stroke="#6b7280" stroke-width="2" marker-end="url(#arrow-gray)"/>
+  <line x1="900" y1="250" x2="900" y2="264" stroke="#6b7280" stroke-width="2" marker-end="url(#arrow-gray)"/>
+  <line x1="340" y1="250" x2="340" y2="264" stroke="#6b7280" stroke-width="2" marker-end="url(#arrow-gray)"/>
+  <line x1="780" y1="250" x2="780" y2="264" stroke="#6b7280" stroke-width="2" marker-end="url(#arrow-gray)"/>
+
+  <!-- 左欄：角色 Policy 判斷，寬 500，x 70 到 570，y 264 到 534 -->
+  <rect x="70" y="264" width="500" height="270" rx="12" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+  <rect x="70" y="264" width="500" height="40" rx="12" fill="#16a34a"/>
+  <rect x="70" y="284" width="500" height="20" fill="#16a34a"/>
+  <text x="320" y="290" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">角色 Policy 判斷，能不能操作</text>
+
+  <text x="90" y="330" font-size="12.5" fill="#14532d">依據：Day 16 角色權限矩陣</text>
+  <text x="90" y="350" font-size="12.5" fill="#14532d">寫在 ProductPolicy／OrderPolicy／</text>
+  <text x="90" y="368" font-size="12.5" fill="#14532d">OrderItemPolicy，比對 user-&gt;role</text>
+
+  <rect x="90" y="386" width="220" height="128" rx="8" fill="#ffffff" stroke="#bbf7d0" stroke-width="1.2"/>
+  <text x="106" y="408" font-size="12" font-weight="600" fill="#374151">帳號 A，倉管</text>
+  <text x="106" y="430" font-size="11.5" fill="#15803d">商品編輯　　可以</text>
+  <text x="106" y="450" font-size="11.5" fill="#15803d">訂單明細新增　可以</text>
+  <text x="106" y="470" font-size="11.5" fill="#15803d">訂單明細刪除　可以</text>
+  <text x="106" y="490" font-size="11.5" fill="#15803d">訂單建立編輯　不行</text>
+
+  <rect x="330" y="386" width="220" height="128" rx="8" fill="#ffffff" stroke="#bbf7d0" stroke-width="1.2"/>
+  <text x="346" y="408" font-size="12" font-weight="600" fill="#374151">帳號 B，財務</text>
+  <text x="346" y="430" font-size="11.5" fill="#15803d">訂單檢視　　可以</text>
+  <text x="346" y="450" font-size="11.5" fill="#15803d">訂單建立編輯　不行</text>
+  <text x="346" y="470" font-size="11.5" fill="#15803d">商品編輯　　不行</text>
+  <text x="346" y="490" font-size="11.5" fill="#15803d">訂單明細新增　不行</text>
+
+  <!-- 右欄：BranchScope 資料範圍判斷，寬 500，x 550 到 1050，y 264 到 534 -->
+  <rect x="550" y="264" width="500" height="270" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+  <rect x="550" y="264" width="500" height="40" rx="12" fill="#2563eb"/>
+  <rect x="550" y="284" width="500" height="20" fill="#2563eb"/>
+  <text x="800" y="290" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">BranchScope 判斷，查得到多少</text>
+
+  <text x="570" y="330" font-size="12.5" fill="#1e3a8a">依據：Day 17 多租戶隔離</text>
+  <text x="570" y="350" font-size="12.5" fill="#1e3a8a">掛在 Order／Customer 的 Global</text>
+  <text x="570" y="368" font-size="12.5" fill="#1e3a8a">Scope，比對 user-&gt;branch_id</text>
+
+  <rect x="570" y="386" width="220" height="128" rx="8" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.2"/>
+  <text x="586" y="408" font-size="12" font-weight="600" fill="#374151">帳號 A，高雄</text>
+  <text x="586" y="430" font-size="11.5" fill="#1e40af">訂單列表　只見高雄</text>
+  <text x="586" y="450" font-size="11.5" fill="#1e40af">客戶列表　只見高雄</text>
+  <text x="586" y="470" font-size="11.5" fill="#1e40af">訂單明細　依附訂單</text>
+  <text x="586" y="490" font-size="11.5" fill="#1e40af">　　　　自動同範圍</text>
+
+  <rect x="810" y="386" width="220" height="128" rx="8" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.2"/>
+  <text x="826" y="408" font-size="12" font-weight="600" fill="#374151">帳號 B，台北</text>
+  <text x="826" y="430" font-size="11.5" fill="#1e40af">訂單列表　只見台北</text>
+  <text x="826" y="450" font-size="11.5" fill="#1e40af">客戶列表　只見台北</text>
+  <text x="826" y="470" font-size="11.5" fill="#1e40af">訂單明細　依附訂單</text>
+  <text x="826" y="490" font-size="11.5" fill="#1e40af">　　　　自動同範圍</text>
+
+  <!-- 兩欄容器下緣各自垂直下探，匯流進入疊加結果卡片，中段留白處放置說明文字 -->
+  <line x1="320" y1="534" x2="320" y2="600" stroke="#6b7280" stroke-width="1.5"/>
+  <line x1="800" y1="534" x2="800" y2="600" stroke="#6b7280" stroke-width="1.5"/>
+  <line x1="320" y1="600" x2="800" y2="600" stroke="#6b7280" stroke-width="1.5"/>
+  <line x1="560" y1="600" x2="560" y2="664" stroke="#6b7280" stroke-width="2" marker-end="url(#arrow-gray)"/>
+  <text x="560" y="580" text-anchor="middle" font-size="12" fill="#9ca3af">兩欄結果各自獨立產生，在此處才第一次匯合成畫面</text>
+
+  <!-- 疊加結果，統一寬 980，x 70 到 1050，高 84，y 起點 664 -->
+  <rect x="70" y="664" width="980" height="84" rx="12" fill="#fef3c7" stroke="#fcd34d" stroke-width="1.5"/>
+  <text x="560" y="690" text-anchor="middle" font-size="13" font-weight="700" fill="#78350f">疊加後的畫面結果，兩段判斷同時成立</text>
+  <text x="560" y="712" text-anchor="middle" font-size="12" fill="#92400e">帳號 A　只看得到高雄訂單，且訂單明細新增刪除按鈕正常顯示</text>
+  <text x="560" y="732" text-anchor="middle" font-size="12" fill="#92400e">帳號 B　只看得到台北訂單，且找不到任何建立或編輯入口</text>
+
+  <!-- 底部說明 -->
+  <text x="560" y="782" text-anchor="middle" font-size="12" fill="#6b7280">來源：Day 16 角色權限矩陣、Day 17 BranchScope，兩段程式碼各自獨立，中間沒有互相呼叫或依賴執行結果</text>
+  <text x="560" y="800" text-anchor="middle" font-size="12" fill="#6b7280">今天示範高雄倉管與台北財務兩組樣本，用於確認疊加邏輯正確，非窮舉所有角色與據點組合</text>
+
+  <defs>
+    <marker id="arrow-gray" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#6b7280"/>
+    </marker>
+  </defs>
+</svg>

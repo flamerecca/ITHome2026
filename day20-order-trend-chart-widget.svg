@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="560" viewBox="0 0 1040 560" font-family="'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', -apple-system, sans-serif">
+  <!-- 背景 -->
+  <rect x="0" y="0" width="1040" height="560" fill="#ffffff"/>
+
+  <!-- 標題 -->
+  <text x="520" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1f2937">後台首頁，OrderTrendChart 掛載後畫面</text>
+
+  <!-- 整體畫面外框 -->
+  <rect x="60" y="70" width="920" height="450" rx="10" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+
+  <!-- 上方統計數字卡片區，呼應 Day 19 已掛載的兩張卡片 -->
+  <rect x="80" y="90" width="430" height="90" rx="8" fill="#fafafa" stroke="#d1d5db" stroke-width="1.5"/>
+  <text x="100" y="116" font-size="12.5" font-weight="600" fill="#374151">本月訂單數</text>
+  <text x="100" y="156" font-size="26" font-weight="700" fill="#111827">25</text>
+
+  <rect x="530" y="90" width="430" height="90" rx="8" fill="#fafafa" stroke="#d1d5db" stroke-width="1.5"/>
+  <text x="550" y="116" font-size="12.5" font-weight="600" fill="#374151">待處理訂單數</text>
+  <text x="550" y="156" font-size="26" font-weight="700" fill="#111827">6</text>
+
+  <!-- 下方圖表區塊：折線圖 OrderTrendChart -->
+  <rect x="80" y="200" width="880" height="300" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="100" y="228" font-size="14" font-weight="700" fill="#1e3a8a">近七天訂單趨勢</text>
+
+  <!-- 折線圖示意，橫軸近七天日期，縱軸每日訂單筆數 -->
+  <polyline points="130,420 240,400 350,430 460,360 570,380 680,320 790,340"
+            fill="none" stroke="#3b82f6" stroke-width="2.5"/>
+  <circle cx="130" cy="420" r="4" fill="#3b82f6"/>
+  <circle cx="240" cy="400" r="4" fill="#3b82f6"/>
+  <circle cx="350" cy="430" r="4" fill="#3b82f6"/>
+  <circle cx="460" cy="360" r="4" fill="#3b82f6"/>
+  <circle cx="570" cy="380" r="4" fill="#3b82f6"/>
+  <circle cx="680" cy="320" r="4" fill="#3b82f6"/>
+  <circle cx="790" cy="340" r="4" fill="#3b82f6"/>
+
+  <!-- 橫軸日期標籤，近七天示意 -->
+  <text x="130" y="460" text-anchor="middle" font-size="11" fill="#1e3a8a">9/20</text>
+  <text x="240" y="460" text-anchor="middle" font-size="11" fill="#1e3a8a">9/21</text>
+  <text x="350" y="460" text-anchor="middle" font-size="11" fill="#1e3a8a">9/22</text>
+  <text x="460" y="460" text-anchor="middle" font-size="11" fill="#1e3a8a">9/23</text>
+  <text x="570" y="460" text-anchor="middle" font-size="11" fill="#1e3a8a">9/24</text>
+  <text x="680" y="460" text-anchor="middle" font-size="11" fill="#1e3a8a">9/25</text>
+  <text x="790" y="460" text-anchor="middle" font-size="11" fill="#1e3a8a">9/26</text>
+
+  <line x1="100" y1="440" x2="850" y2="440" stroke="#93c5fd" stroke-width="1"/>
+  <text x="100" y="480" font-size="11.5" fill="#1e3a8a">橫軸，近七天日期</text>
+  <text x="700" y="480" font-size="11.5" fill="#1e3a8a">縱軸，每日訂單筆數</text>
+
+  <!-- 底部說明 -->
+  <text x="520" y="530" text-anchor="middle" font-size="13" fill="#6b7280">上方沿用 Day 19 統計數字卡片，下方新增折線圖，呈現近七天訂單量起伏走勢</text>
+</svg>

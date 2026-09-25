@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="760" viewBox="0 0 1040 760" font-family="'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', -apple-system, sans-serif">
+  <!-- 背景 -->
+  <rect x="0" y="0" width="1040" height="760" fill="#ffffff"/>
+
+  <!-- 標題 -->
+  <text x="520" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1f2937">Global Scope 掛載後的資料流向</text>
+  <text x="520" y="64" text-anchor="middle" font-size="13" fill="#6b7280">三個查詢入口統一經過 BranchScope 過濾，訂單明細依附訂單自動被限制</text>
+
+  <!-- 起點：登入使用者所屬據點 -->
+  <rect x="380" y="96" width="280" height="64" rx="10" fill="#111827"/>
+  <text x="520" y="122" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">登入使用者所屬據點</text>
+  <text x="520" y="144" text-anchor="middle" font-size="12.5" fill="#d1d5db">branch_id 決定查詢範圍</text>
+
+  <!-- 起點 -> 三入口 匯流線 -->
+  <line x1="520" y1="160" x2="170" y2="210" stroke="#9ca3af" stroke-width="2" marker-end="url(#arrow-gray)"/>
+  <line x1="520" y1="160" x2="520" y2="210" stroke="#9ca3af" stroke-width="2" marker-end="url(#arrow-gray)"/>
+  <line x1="520" y1="160" x2="870" y2="210" stroke="#9ca3af" stroke-width="2" marker-end="url(#arrow-gray)"/>
+
+  <!-- 三個查詢入口 -->
+  <rect x="40" y="210" width="260" height="70" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="170" y="236" text-anchor="middle" font-size="14" font-weight="700" fill="#1e3a8a">Resource 查詢</text>
+  <text x="170" y="258" text-anchor="middle" font-size="12" fill="#374151">Filament 列表頁直接查詢</text>
+
+  <rect x="390" y="210" width="260" height="70" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="520" y="236" text-anchor="middle" font-size="14" font-weight="700" fill="#1e3a8a">表單下拉選單</text>
+  <text x="520" y="258" text-anchor="middle" font-size="12" fill="#374151">關聯欄位選項來源查詢</text>
+
+  <rect x="740" y="210" width="260" height="70" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="870" y="236" text-anchor="middle" font-size="14" font-weight="700" fill="#1e3a8a">關聯資料</text>
+  <text x="870" y="258" text-anchor="middle" font-size="12" fill="#374151">透過訂單關聯取出的資料</text>
+
+  <!-- 三入口 -> BranchScope 匯流線 -->
+  <line x1="170" y1="280" x2="520" y2="330" stroke="#9ca3af" stroke-width="2" marker-end="url(#arrow-gray)"/>
+  <line x1="520" y1="280" x2="520" y2="330" stroke="#9ca3af" stroke-width="2" marker-end="url(#arrow-gray)"/>
+  <line x1="870" y1="280" x2="520" y2="330" stroke="#9ca3af" stroke-width="2" marker-end="url(#arrow-gray)"/>
+
+  <!-- BranchScope 核心過濾節點 -->
+  <rect x="330" y="330" width="380" height="90" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="520" y="364" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">BranchScope</text>
+  <text x="520" y="386" text-anchor="middle" font-size="13" fill="#1e40af">Global Scope 統一過濾查詢條件</text>
+  <text x="520" y="406" text-anchor="middle" font-size="11.5" fill="#3b82f6">where branch_id = 登入者所屬據點</text>
+
+  <!-- BranchScope -> 訂單/客戶 分流線 -->
+  <line x1="520" y1="420" x2="340" y2="470" stroke="#9ca3af" stroke-width="2" marker-end="url(#arrow-gray)"/>
+  <line x1="520" y1="420" x2="700" y2="470" stroke="#9ca3af" stroke-width="2" marker-end="url(#arrow-gray)"/>
+
+  <!-- 訂單、客戶 結果節點 -->
+  <rect x="190" y="470" width="300" height="70" rx="10" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+  <text x="340" y="496" text-anchor="middle" font-size="14" font-weight="700" fill="#14532d">訂單</text>
+  <text x="340" y="518" text-anchor="middle" font-size="12.5" fill="#374151">branch_id 過濾後的結果</text>
+
+  <rect x="550" y="470" width="300" height="70" rx="10" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+  <text x="700" y="496" text-anchor="middle" font-size="14" font-weight="700" fill="#14532d">客戶</text>
+  <text x="700" y="518" text-anchor="middle" font-size="12.5" fill="#374151">branch_id 過濾後的結果</text>
+
+  <!-- 訂單 -> 訂單明細 依附連接線 -->
+  <line x1="340" y1="540" x2="340" y2="590" stroke="#16a34a" stroke-width="2" marker-end="url(#arrow-green)"/>
+
+  <!-- 訂單明細節點 -->
+  <rect x="190" y="590" width="300" height="70" rx="10" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="340" y="616" text-anchor="middle" font-size="14" font-weight="700" fill="#14532d">訂單明細</text>
+  <text x="340" y="638" text-anchor="middle" font-size="12" fill="#374151">依附訂單，自動被限制在同一範圍</text>
+
+  <!-- 底部說明 -->
+  <text x="520" y="700" text-anchor="middle" font-size="12.5" fill="#6b7280">Order、Customer 模型掛上 BranchScope 後，Resource 本身不需再多寫一行條件判斷</text>
+  <text x="520" y="722" text-anchor="middle" font-size="12" fill="#9ca3af">訂單明細本身不記錄 branch_id，透過訂單關聯自動繼承同一層限制</text>
+
+  <defs>
+    <marker id="arrow-gray" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#9ca3af"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+</svg>

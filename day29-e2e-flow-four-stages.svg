@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="760" viewBox="0 0 1160 760" font-family="'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', -apple-system, sans-serif">
+  <!-- 背景 -->
+  <rect x="0" y="0" width="1160" height="760" fill="#ffffff"/>
+
+  <!-- 標題 -->
+  <text x="580" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1f2937">端到端整合驗收流程示意圖</text>
+  <text x="580" y="64" text-anchor="middle" font-size="13" fill="#6b7280">從新增商品到產生報表，四個階段依序觸發的既定錨點</text>
+
+  <!-- 案例主軸標註 -->
+  <rect x="380" y="82" width="400" height="30" rx="15" fill="#111827"/>
+  <text x="580" y="102" text-anchor="middle" font-size="12.5" fill="#ffffff">案例主軸：北歐風貓抓板　台北據點　業務／倉管／財務角色</text>
+
+  <!-- 四個階段容器，統一寬 252，統一內距 20，統一 y 起點 128，統一高度 560 -->
+
+  <!-- 階段一：新增商品 -->
+  <rect x="30" y="128" width="252" height="560" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+  <rect x="30" y="128" width="252" height="40" rx="12" fill="#2563eb"/>
+  <rect x="30" y="148" width="252" height="20" fill="#2563eb"/>
+  <text x="156" y="154" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">第一步　新增商品</text>
+
+  <text x="50" y="190" font-size="12.5" fill="#1e3a8a">倉管角色登入，新增</text>
+  <text x="50" y="208" font-size="12.5" fill="#1e3a8a">「北歐風貓抓板」</text>
+
+  <rect x="50" y="228" width="212" height="70" rx="8" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.2"/>
+  <text x="66" y="248" font-size="11.5" fill="#374151">觸發錨點</text>
+  <text x="66" y="266" font-size="11.5" fill="#1e40af">Day 04 表單欄位型別</text>
+  <text x="66" y="282" font-size="11.5" fill="#1e40af">Day 13 跨欄位驗證規則</text>
+
+  <rect x="50" y="322" width="212" height="70" rx="8" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.2"/>
+  <text x="66" y="342" font-size="11.5" fill="#374151">觸發錨點</text>
+  <text x="66" y="360" font-size="11.5" fill="#1e40af">Day 15 Policy 整合</text>
+  <text x="66" y="376" font-size="11.5" fill="#1e40af">Day 16 角色權限矩陣</text>
+
+  <rect x="50" y="630" width="212" height="34" rx="17" fill="#dbeafe"/>
+  <text x="156" y="651" text-anchor="middle" font-size="11.5" fill="#1e3a8a">商品成功存入資料庫</text>
+
+  <!-- 階段二：建立訂單明細 -->
+  <rect x="308" y="128" width="252" height="560" rx="12" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+  <rect x="308" y="128" width="252" height="40" rx="12" fill="#16a34a"/>
+  <rect x="308" y="148" width="252" height="20" fill="#16a34a"/>
+  <text x="434" y="154" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">第二步　建立訂單明細</text>
+
+  <text x="328" y="190" font-size="12.5" fill="#14532d">業務角色登入，建立</text>
+  <text x="328" y="208" font-size="12.5" fill="#14532d">訂單並新增明細</text>
+
+  <rect x="328" y="228" width="212" height="70" rx="8" fill="#ffffff" stroke="#bbf7d0" stroke-width="1.2"/>
+  <text x="344" y="248" font-size="11.5" fill="#374151">觸發錨點</text>
+  <text x="344" y="266" font-size="11.5" fill="#15803d">Day 09 關聯下拉選單</text>
+  <text x="344" y="282" font-size="11.5" fill="#15803d">relationship 即時查詢</text>
+
+  <rect x="328" y="322" width="212" height="70" rx="8" fill="#ffffff" stroke="#bbf7d0" stroke-width="1.2"/>
+  <text x="344" y="342" font-size="11.5" fill="#374151">觸發錨點</text>
+  <text x="344" y="360" font-size="11.5" fill="#15803d">Day 11 Relation Manager</text>
+  <text x="344" y="376" font-size="11.5" fill="#15803d">獨立子介面即時生效</text>
+
+  <rect x="328" y="416" width="212" height="52" rx="8" fill="#ffffff" stroke="#bbf7d0" stroke-width="1.2"/>
+  <text x="344" y="436" font-size="11.5" fill="#374151">觸發錨點</text>
+  <text x="344" y="454" font-size="11.5" fill="#15803d">Day 17 多租戶隔離</text>
+
+  <rect x="328" y="630" width="212" height="34" rx="17" fill="#dcfce7"/>
+  <text x="434" y="651" text-anchor="middle" font-size="11.5" fill="#14532d">新商品可被立即下單</text>
+
+  <!-- 階段三：切換據點與角色檢視 -->
+  <rect x="586" y="128" width="252" height="560" rx="12" fill="#fef3c7" stroke="#fcd34d" stroke-width="1.5"/>
+  <rect x="586" y="128" width="252" height="40" rx="12" fill="#d97706"/>
+  <rect x="586" y="148" width="252" height="20" fill="#d97706"/>
+  <text x="712" y="154" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">第三步　切換據點與角色</text>
+
+  <text x="606" y="190" font-size="12.5" fill="#78350f">高雄據點、財務、</text>
+  <text x="606" y="208" font-size="12.5" fill="#78350f">倉管帳號依序檢視</text>
+
+  <rect x="606" y="228" width="212" height="52" rx="8" fill="#ffffff" stroke="#fde68a" stroke-width="1.2"/>
+  <text x="622" y="248" font-size="11.5" fill="#374151">觸發錨點</text>
+  <text x="622" y="266" font-size="11.5" fill="#92400e">Day 17 多租戶隔離</text>
+
+  <rect x="606" y="304" width="212" height="52" rx="8" fill="#ffffff" stroke="#fde68a" stroke-width="1.2"/>
+  <text x="622" y="324" font-size="11.5" fill="#374151">觸發錨點</text>
+  <text x="622" y="342" font-size="11.5" fill="#92400e">Day 16 角色權限矩陣</text>
+
+  <rect x="606" y="380" width="212" height="88" rx="8" fill="#ffffff" stroke="#fde68a" stroke-width="1.2"/>
+  <text x="622" y="400" font-size="11.5" fill="#374151">觸發錨點</text>
+  <text x="622" y="418" font-size="11.5" fill="#92400e">Day 19 統計數字 Widget</text>
+  <text x="622" y="434" font-size="11.5" fill="#92400e">Day 20 圖表 Widget</text>
+  <text x="622" y="450" font-size="11.5" fill="#92400e">Day 21 Widget 權限呼應</text>
+
+  <rect x="606" y="630" width="212" height="34" rx="17" fill="#fde68a"/>
+  <text x="712" y="651" text-anchor="middle" font-size="11.5" fill="#78350f">各身分只見各自範圍</text>
+
+  <!-- 階段四：報表數字更新 -->
+  <rect x="864" y="128" width="252" height="560" rx="12" fill="#fce7f3" stroke="#f9a8d4" stroke-width="1.5"/>
+  <rect x="864" y="128" width="252" height="40" rx="12" fill="#db2777"/>
+  <rect x="864" y="148" width="252" height="20" fill="#db2777"/>
+  <text x="990" y="154" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">第四步　報表數字更新</text>
+
+  <text x="884" y="190" font-size="12.5" fill="#831843">打開報表模組，檢視</text>
+  <text x="884" y="208" font-size="12.5" fill="#831843">分類銷售與趨勢圖表</text>
+
+  <rect x="884" y="228" width="212" height="70" rx="8" fill="#ffffff" stroke="#fbcfe8" stroke-width="1.2"/>
+  <text x="900" y="248" font-size="11.5" fill="#374151">觸發錨點</text>
+  <text x="900" y="266" font-size="11.5" fill="#be185d">Day 26 報表 Resource 骨架</text>
+  <text x="900" y="282" font-size="11.5" fill="#be185d">Day 27 圖表與篩選條件</text>
+
+  <rect x="884" y="322" width="212" height="52" rx="8" fill="#ffffff" stroke="#fbcfe8" stroke-width="1.2"/>
+  <text x="900" y="342" font-size="11.5" fill="#374151">觸發錨點</text>
+  <text x="900" y="360" font-size="11.5" fill="#be185d">Day 28 報表權限租戶隔離</text>
+
+  <rect x="884" y="630" width="212" height="34" rx="17" fill="#fbcfe8"/>
+  <text x="990" y="651" text-anchor="middle" font-size="11.5" fill="#831843">銷售數量與金額即時反映</text>
+
+  <!-- 階段間箭頭，統一置於 y=560 空白帶，位於所有容器內容方塊之下、狀態徽章之上，不壓到任何文字 -->
+  <line x1="282" y1="560" x2="308" y2="560" stroke="#6b7280" stroke-width="2.5" marker-end="url(#arrow-gray)"/>
+  <line x1="560" y1="560" x2="586" y2="560" stroke="#6b7280" stroke-width="2.5" marker-end="url(#arrow-gray)"/>
+  <line x1="838" y1="560" x2="864" y2="560" stroke="#6b7280" stroke-width="2.5" marker-end="url(#arrow-gray)"/>
+
+  <!-- 底部說明 -->
+  <text x="580" y="700" text-anchor="middle" font-size="12" fill="#6b7280">四階段依序串接，每個階段標註的既定錨點於這一步被實際觸發並驗證彼此銜接無礙</text>
+  <text x="580" y="720" text-anchor="middle" font-size="12" fill="#6b7280">路徑具代表性，涵蓋最多既定錨點，非窮舉所有操作組合</text>
+
+  <defs>
+    <marker id="arrow-gray" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#6b7280"/>
+    </marker>
+  </defs>
+</svg>

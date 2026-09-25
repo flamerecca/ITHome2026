@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 784" width="900" height="784" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif">
+  <rect x="0" y="0" width="900" height="784" fill="#ffffff"/>
+
+  <!-- 主標題 -->
+  <text x="450" y="32" text-anchor="middle" font-size="20" font-weight="700" fill="#1f2937">報表 Resource 骨架建立流程</text>
+
+  <!-- Row1 標題 -->
+  <text x="450" y="56" text-anchor="middle" font-size="14" font-weight="600" fill="#6b7280">先問問題：三個業務問題</text>
+
+  <!-- Row1：三個業務問題卡片 -->
+  <g>
+    <rect x="100" y="68" width="220" height="92" rx="10" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
+    <text x="210" y="96" text-anchor="middle" font-size="14" font-weight="700" fill="#374151">問題一</text>
+    <text x="210" y="126" text-anchor="middle" font-size="14" fill="#374151">訂單總數與</text>
+    <text x="210" y="148" text-anchor="middle" font-size="14" fill="#374151">總金額</text>
+  </g>
+  <g>
+    <rect x="340" y="68" width="220" height="92" rx="10" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
+    <text x="450" y="96" text-anchor="middle" font-size="14" font-weight="700" fill="#374151">問題二</text>
+    <text x="450" y="126" text-anchor="middle" font-size="14" fill="#374151">哪些商品</text>
+    <text x="450" y="148" text-anchor="middle" font-size="14" fill="#374151">賣得最好</text>
+  </g>
+  <g>
+    <rect x="580" y="68" width="220" height="92" rx="10" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
+    <text x="690" y="96" text-anchor="middle" font-size="14" font-weight="700" fill="#374151">問題三</text>
+    <text x="690" y="126" text-anchor="middle" font-size="14" fill="#374151">哪些商品</text>
+    <text x="690" y="148" text-anchor="middle" font-size="14" fill="#374151">庫存偏低</text>
+  </g>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6b7280"/>
+    </marker>
+  </defs>
+
+  <!-- 箭頭 Row1 -> Row2，純箭頭窄縫，不含文字 -->
+  <line x1="210" y1="160" x2="210" y2="196" stroke="#6b7280" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="450" y1="160" x2="450" y2="196" stroke="#6b7280" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="690" y1="160" x2="690" y2="196" stroke="#6b7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Row2 標題 -->
+  <text x="450" y="212" text-anchor="middle" font-size="14" font-weight="600" fill="#6b7280">對應 SalesReport 的彙整方法</text>
+
+  <!-- Row2：三個彙整方法卡片，橘色標示因應報表特性調整 -->
+  <g>
+    <rect x="100" y="224" width="220" height="92" rx="10" fill="#fff7ed" stroke="#c2410c" stroke-width="1.5"/>
+    <text x="210" y="252" text-anchor="middle" font-size="13" font-family="monospace" font-weight="700" fill="#9a3412">summary()</text>
+    <text x="210" y="278" text-anchor="middle" font-size="13" fill="#7c2d12">彙整訂單總數</text>
+    <text x="210" y="300" text-anchor="middle" font-size="13" fill="#7c2d12">與總金額</text>
+  </g>
+  <g>
+    <rect x="340" y="224" width="220" height="92" rx="10" fill="#fff7ed" stroke="#c2410c" stroke-width="1.5"/>
+    <text x="450" y="252" text-anchor="middle" font-size="12" font-family="monospace" font-weight="700" fill="#9a3412">topSellingProducts()</text>
+    <text x="450" y="278" text-anchor="middle" font-size="13" fill="#7c2d12">依商品分組</text>
+    <text x="450" y="300" text-anchor="middle" font-size="13" fill="#7c2d12">加總銷售數量</text>
+  </g>
+  <g>
+    <rect x="580" y="224" width="220" height="92" rx="10" fill="#fff7ed" stroke="#c2410c" stroke-width="1.5"/>
+    <text x="690" y="252" text-anchor="middle" font-size="12" font-family="monospace" font-weight="700" fill="#9a3412">lowStockProducts()</text>
+    <text x="690" y="278" text-anchor="middle" font-size="13" fill="#7c2d12">篩選庫存偏低</text>
+    <text x="690" y="300" text-anchor="middle" font-size="13" fill="#7c2d12">的商品</text>
+  </g>
+
+  <!-- 橘色小圓標籤，標示因應報表特性調整，貼於各卡片右上角外側 -->
+  <circle cx="312" cy="216" r="9" fill="#c2410c"/>
+  <text x="312" y="220" text-anchor="middle" font-size="11" fill="#ffffff" font-weight="700">調</text>
+  <circle cx="552" cy="216" r="9" fill="#c2410c"/>
+  <text x="552" y="220" text-anchor="middle" font-size="11" fill="#ffffff" font-weight="700">調</text>
+  <circle cx="792" cy="216" r="9" fill="#c2410c"/>
+  <text x="792" y="220" text-anchor="middle" font-size="11" fill="#ffffff" font-weight="700">調</text>
+
+  <!-- 三條線匯流到 Resource 指令，純箭頭窄縫 -->
+  <line x1="210" y1="316" x2="210" y2="338" stroke="#6b7280" stroke-width="2"/>
+  <line x1="450" y1="316" x2="450" y2="338" stroke="#6b7280" stroke-width="2"/>
+  <line x1="690" y1="316" x2="690" y2="338" stroke="#6b7280" stroke-width="2"/>
+  <line x1="210" y1="338" x2="690" y2="338" stroke="#6b7280" stroke-width="2"/>
+  <line x1="450" y1="338" x2="450" y2="352" stroke="#6b7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Row3 標題 -->
+  <text x="450" y="368" text-anchor="middle" font-size="14" font-weight="600" fill="#6b7280">生成 Resource 骨架</text>
+
+  <!-- Row3：Resource 生成指令卡片，藍色標示直接沿用 Day 03 -->
+  <g>
+    <rect x="140" y="380" width="620" height="70" rx="10" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.5"/>
+    <text x="450" y="408" text-anchor="middle" font-size="14" font-family="monospace" fill="#1e3a8a">php artisan make:filament-resource SalesReport --view</text>
+    <text x="450" y="432" text-anchor="middle" font-size="13" fill="#1e40af">直接複製 Day 03 建立 Resource 的既有流程</text>
+  </g>
+  <circle cx="764" cy="390" r="9" fill="#1d4ed8"/>
+  <text x="764" y="394" text-anchor="middle" font-size="11" fill="#ffffff" font-weight="700">沿</text>
+
+  <!-- 箭頭 Row3 -> Row4，純箭頭窄縫 -->
+  <line x1="450" y1="450" x2="450" y2="486" stroke="#6b7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Row4 標題 -->
+  <text x="450" y="502" text-anchor="middle" font-size="14" font-weight="600" fill="#6b7280">列表頁表格欄位定義</text>
+
+  <!-- Row4：表格欄位定義卡片，混合藍橘兩段 -->
+  <g>
+    <rect x="100" y="514" width="700" height="130" rx="10" fill="#f9fafb" stroke="#9ca3af" stroke-width="1.5"/>
+
+    <rect x="120" y="532" width="660" height="42" rx="6" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.2"/>
+    <text x="450" y="558" text-anchor="middle" font-size="14" fill="#1e3a8a">欄位定義沿用 Day 05 Schema 機制</text>
+    <circle cx="764" cy="540" r="8" fill="#1d4ed8"/>
+    <text x="764" y="544" text-anchor="middle" font-size="10" fill="#ffffff" font-weight="700">沿</text>
+
+    <rect x="120" y="590" width="660" height="42" rx="6" fill="#fff7ed" stroke="#c2410c" stroke-width="1.2"/>
+    <text x="450" y="616" text-anchor="middle" font-size="14" fill="#7c2d12">query 資料來源改為彙整結果，因應調整</text>
+    <circle cx="764" cy="598" r="8" fill="#c2410c"/>
+    <text x="764" y="602" text-anchor="middle" font-size="10" fill="#ffffff" font-weight="700">調</text>
+  </g>
+
+  <!-- 圖例 -->
+  <g>
+    <rect x="100" y="684" width="700" height="78" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+    <circle cx="130" cy="710" r="9" fill="#1d4ed8"/>
+    <text x="130" y="714" text-anchor="middle" font-size="11" fill="#ffffff" font-weight="700">沿</text>
+    <text x="150" y="714" font-size="13" fill="#374151">直接沿用系列既有流程，Day 03、Day 05</text>
+
+    <circle cx="130" cy="740" r="9" fill="#c2410c"/>
+    <text x="130" y="744" text-anchor="middle" font-size="11" fill="#ffffff" font-weight="700">調</text>
+    <text x="150" y="744" font-size="13" fill="#374151">因應報表模組特性調整之處</text>
+  </g>
+</svg>

@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1950" height="610" viewBox="0 0 1950 610" font-family="'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif">
+  <rect x="0" y="0" width="1950" height="610" fill="#ffffff"/>
+
+  <!-- 標題 -->
+  <text x="975" y="42" text-anchor="middle" font-size="28" font-weight="700" fill="#1f2937">三十天成長軌跡，從一個空殼到一套完整系統</text>
+  <text x="975" y="70" text-anchor="middle" font-size="15" fill="#6b7280">陽春後台逐步加深，八個階段疊加而成的建置過程</text>
+
+  <!-- 主時間軸線，貫穿起點到終點 -->
+  <line x1="110" y1="340" x2="1840" y2="340" stroke="#cbd5e1" stroke-width="4"/>
+
+  <!-- 起點標記，Day 2 空 Panel -->
+  <g>
+    <circle cx="110" cy="340" r="14" fill="#f97316" stroke="#c2410c" stroke-width="3"/>
+    <text x="110" y="292" text-anchor="middle" font-size="15" font-weight="700" fill="#c2410c">起點</text>
+    <text x="110" y="313" text-anchor="middle" font-size="13" fill="#374151">Day 2</text>
+    <text x="110" y="378" text-anchor="middle" font-size="13" fill="#374151">空的 Panel</text>
+    <text x="110" y="397" text-anchor="middle" font-size="13" fill="#374151">容器，尚無</text>
+    <text x="110" y="416" text-anchor="middle" font-size="13" fill="#374151">任何內容</text>
+  </g>
+
+  <!-- 八個階段節點，統一寬度 170，高度 130，間距 30，起始 x=200 -->
+  <!-- 階段 1，上排 -->
+  <g>
+    <line x1="200" y1="340" x2="200" y2="245" stroke="#94a3b8" stroke-width="2"/>
+    <rect x="115" y="115" width="170" height="130" rx="10" fill="#eff6ff" stroke="#0284c7" stroke-width="2"/>
+    <text x="200" y="142" text-anchor="middle" font-size="13" font-weight="700" fill="#0284c7">階段一・Day 1-3</text>
+    <text x="200" y="166" text-anchor="middle" font-size="13" fill="#1f2937">動機與地基</text>
+    <text x="200" y="190" text-anchor="middle" font-size="12" fill="#4b5563">定案示範情境</text>
+    <text x="200" y="208" text-anchor="middle" font-size="12" fill="#4b5563">做出第一個</text>
+    <text x="200" y="226" text-anchor="middle" font-size="12" fill="#4b5563">Resource</text>
+    <circle cx="200" cy="340" r="8" fill="#0284c7"/>
+  </g>
+
+  <!-- 階段 2，下排 -->
+  <g>
+    <line x1="400" y1="340" x2="400" y2="435" stroke="#94a3b8" stroke-width="2"/>
+    <rect x="315" y="435" width="170" height="130" rx="10" fill="#eff6ff" stroke="#0284c7" stroke-width="2"/>
+    <text x="400" y="462" text-anchor="middle" font-size="13" font-weight="700" fill="#0284c7">階段二・Day 4-8</text>
+    <text x="400" y="486" text-anchor="middle" font-size="13" fill="#1f2937">表單與表格</text>
+    <text x="400" y="508" text-anchor="middle" font-size="12" fill="#4b5563">熟練日常最</text>
+    <text x="400" y="526" text-anchor="middle" font-size="12" fill="#4b5563">常用的建置</text>
+    <text x="400" y="544" text-anchor="middle" font-size="12" fill="#4b5563">技巧</text>
+    <circle cx="400" cy="340" r="8" fill="#0284c7"/>
+  </g>
+
+  <!-- 階段 3，上排 -->
+  <g>
+    <line x1="600" y1="340" x2="600" y2="245" stroke="#94a3b8" stroke-width="2"/>
+    <rect x="515" y="115" width="170" height="130" rx="10" fill="#eff6ff" stroke="#0284c7" stroke-width="2"/>
+    <text x="600" y="142" text-anchor="middle" font-size="13" font-weight="700" fill="#0284c7">階段三・Day 9-12</text>
+    <text x="600" y="166" text-anchor="middle" font-size="13" fill="#1f2937">資料關聯</text>
+    <text x="600" y="190" text-anchor="middle" font-size="12" fill="#4b5563">商品、訂單、</text>
+    <text x="600" y="208" text-anchor="middle" font-size="12" fill="#4b5563">客戶串成一</text>
+    <text x="600" y="226" text-anchor="middle" font-size="12" fill="#4b5563">個系統</text>
+    <circle cx="600" cy="340" r="8" fill="#0284c7"/>
+  </g>
+
+  <!-- 階段 4，下排 -->
+  <g>
+    <line x1="800" y1="340" x2="800" y2="435" stroke="#94a3b8" stroke-width="2"/>
+    <rect x="715" y="435" width="170" height="130" rx="10" fill="#eff6ff" stroke="#0284c7" stroke-width="2"/>
+    <text x="800" y="462" text-anchor="middle" font-size="13" font-weight="700" fill="#0284c7">階段四・Day 13-15</text>
+    <text x="800" y="486" text-anchor="middle" font-size="13" fill="#1f2937">驗證與生命</text>
+    <text x="800" y="506" text-anchor="middle" font-size="13" fill="#1f2937">週期鉤子</text>
+    <text x="800" y="528" text-anchor="middle" font-size="12" fill="#4b5563">讓資料本身</text>
+    <text x="800" y="546" text-anchor="middle" font-size="12" fill="#4b5563">站得住腳</text>
+    <circle cx="800" cy="340" r="8" fill="#0284c7"/>
+  </g>
+
+  <!-- 階段 5，上排 -->
+  <g>
+    <line x1="1000" y1="340" x2="1000" y2="245" stroke="#94a3b8" stroke-width="2"/>
+    <rect x="915" y="115" width="170" height="130" rx="10" fill="#eff6ff" stroke="#0284c7" stroke-width="2"/>
+    <text x="1000" y="142" text-anchor="middle" font-size="13" font-weight="700" fill="#0284c7">階段五・Day 16-18</text>
+    <text x="1000" y="166" text-anchor="middle" font-size="13" fill="#1f2937">多角色權限</text>
+    <text x="1000" y="186" text-anchor="middle" font-size="13" fill="#1f2937">與多租戶</text>
+    <text x="1000" y="208" text-anchor="middle" font-size="12" fill="#4b5563">讓身分與邊</text>
+    <text x="1000" y="226" text-anchor="middle" font-size="12" fill="#4b5563">界站得住腳</text>
+    <circle cx="1000" cy="340" r="8" fill="#0284c7"/>
+  </g>
+
+  <!-- 階段 6，下排 -->
+  <g>
+    <line x1="1200" y1="340" x2="1200" y2="435" stroke="#94a3b8" stroke-width="2"/>
+    <rect x="1115" y="435" width="170" height="130" rx="10" fill="#eff6ff" stroke="#0284c7" stroke-width="2"/>
+    <text x="1200" y="462" text-anchor="middle" font-size="13" font-weight="700" fill="#0284c7">階段六・Day 19-21</text>
+    <text x="1200" y="486" text-anchor="middle" font-size="13" fill="#1f2937">Widget 與</text>
+    <text x="1200" y="506" text-anchor="middle" font-size="13" fill="#1f2937">儀表板</text>
+    <text x="1200" y="528" text-anchor="middle" font-size="12" fill="#4b5563">讓管理者一</text>
+    <text x="1200" y="546" text-anchor="middle" font-size="12" fill="#4b5563">眼看懂現況</text>
+    <circle cx="1200" cy="340" r="8" fill="#0284c7"/>
+  </g>
+
+  <!-- 階段 7，上排 -->
+  <g>
+    <line x1="1400" y1="340" x2="1400" y2="245" stroke="#94a3b8" stroke-width="2"/>
+    <rect x="1315" y="115" width="170" height="130" rx="10" fill="#eff6ff" stroke="#0284c7" stroke-width="2"/>
+    <text x="1400" y="142" text-anchor="middle" font-size="13" font-weight="700" fill="#0284c7">階段七・Day 22-25</text>
+    <text x="1400" y="166" text-anchor="middle" font-size="13" fill="#1f2937">效能、測試</text>
+    <text x="1400" y="186" text-anchor="middle" font-size="13" fill="#1f2937">與部署</text>
+    <text x="1400" y="208" text-anchor="middle" font-size="12" fill="#4b5563">讓系統具備</text>
+    <text x="1400" y="226" text-anchor="middle" font-size="12" fill="#4b5563">上線資格</text>
+    <circle cx="1400" cy="340" r="8" fill="#0284c7"/>
+  </g>
+
+  <!-- 階段 8，下排 -->
+  <g>
+    <line x1="1600" y1="340" x2="1600" y2="435" stroke="#94a3b8" stroke-width="2"/>
+    <rect x="1515" y="435" width="170" height="130" rx="10" fill="#eff6ff" stroke="#0284c7" stroke-width="2"/>
+    <text x="1600" y="462" text-anchor="middle" font-size="13" font-weight="700" fill="#0284c7">階段八・Day 26-30</text>
+    <text x="1600" y="486" text-anchor="middle" font-size="13" fill="#1f2937">實戰整合</text>
+    <text x="1600" y="506" text-anchor="middle" font-size="13" fill="#1f2937">收尾</text>
+    <text x="1600" y="528" text-anchor="middle" font-size="12" fill="#4b5563">補上報表模組</text>
+    <text x="1600" y="546" text-anchor="middle" font-size="12" fill="#4b5563">並完成驗證</text>
+    <circle cx="1600" cy="340" r="8" fill="#0284c7"/>
+  </g>
+
+  <!-- 終點標記，Day 29 端到端驗證完成 -->
+  <g>
+    <circle cx="1840" cy="340" r="14" fill="#22c55e" stroke="#15803d" stroke-width="3"/>
+    <text x="1840" y="292" text-anchor="middle" font-size="15" font-weight="700" fill="#15803d">終點</text>
+    <text x="1840" y="313" text-anchor="middle" font-size="13" fill="#374151">Day 29</text>
+    <text x="1840" y="378" text-anchor="middle" font-size="13" fill="#374151">端到端驗證</text>
+    <text x="1840" y="397" text-anchor="middle" font-size="13" fill="#374151">完成的系統</text>
+    <text x="1840" y="416" text-anchor="middle" font-size="13" fill="#374151">完整樣貌</text>
+  </g>
+
+</svg>
