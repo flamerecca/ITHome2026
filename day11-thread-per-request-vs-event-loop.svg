@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" font-family="'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', -apple-system, sans-serif">
+  <!-- 背景 -->
+  <rect x="0" y="0" width="1280" height="800" fill="#ffffff"/>
+
+  <!-- 標題 -->
+  <text x="640" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1f2937">執行緒與連線數量之間的根本差異</text>
+  <text x="640" y="64" text-anchor="middle" font-size="13.5" fill="#6b7280">Thread-per-Request 模型與 WebFlux 事件循環模型，兩種底層模型對照</text>
+
+  <!-- ===== 左欄：Thread-per-Request 模型 ===== -->
+  <rect x="60" y="96" width="520" height="40" rx="8" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="320" y="122" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1e3a8a">Thread-per-Request 模型</text>
+
+  <!-- 左欄說明：執行緒數量隨請求數量一起增加 -->
+  <text x="320" y="158" text-anchor="middle" font-size="11.5" fill="#6b7280">每條執行緒各自對應一個請求，一對一綁定到底</text>
+
+  <!-- 左欄四條執行緒，每條各自綁定一個請求方塊，垂直排列，間距 46（框高 36 + 間距 10，遠大於字級 1.5 倍需求） -->
+  <!-- 執行緒 1：阻塞中 -->
+  <rect x="90" y="180" width="150" height="36" rx="8" fill="#f8fafc" stroke="#64748b" stroke-width="2"/>
+  <text x="165" y="203" text-anchor="middle" font-size="12" font-weight="700" fill="#1e293b">執行緒 1</text>
+  <line x1="240" y1="198" x2="288" y2="198" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow-gray)"/>
+  <rect x="290" y="180" width="260" height="36" rx="8" fill="#fef2f2" stroke="#ef4444" stroke-width="2.5"/>
+  <text x="420" y="203" text-anchor="middle" font-size="11.5" font-weight="700" fill="#7f1d1d">請求 A，等待 I/O 中，原地阻塞</text>
+
+  <!-- 執行緒 2：阻塞中 -->
+  <rect x="90" y="226" width="150" height="36" rx="8" fill="#f8fafc" stroke="#64748b" stroke-width="2"/>
+  <text x="165" y="249" text-anchor="middle" font-size="12" font-weight="700" fill="#1e293b">執行緒 2</text>
+  <line x1="240" y1="244" x2="288" y2="244" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow-gray)"/>
+  <rect x="290" y="226" width="260" height="36" rx="8" fill="#fef2f2" stroke="#ef4444" stroke-width="2.5"/>
+  <text x="420" y="249" text-anchor="middle" font-size="11.5" font-weight="700" fill="#7f1d1d">請求 B，等待 I/O 中，原地阻塞</text>
+
+  <!-- 執行緒 3：正常處理中 -->
+  <rect x="90" y="272" width="150" height="36" rx="8" fill="#f8fafc" stroke="#64748b" stroke-width="2"/>
+  <text x="165" y="295" text-anchor="middle" font-size="12" font-weight="700" fill="#1e293b">執行緒 3</text>
+  <line x1="240" y1="290" x2="288" y2="290" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow-gray)"/>
+  <rect x="290" y="272" width="260" height="36" rx="8" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+  <text x="420" y="295" text-anchor="middle" font-size="11.5" font-weight="700" fill="#14532d">請求 C，運算處理中</text>
+
+  <!-- 執行緒 N：已滿，無執行緒可用 -->
+  <rect x="90" y="318" width="150" height="36" rx="8" fill="#f8fafc" stroke="#64748b" stroke-width="2"/>
+  <text x="165" y="341" text-anchor="middle" font-size="12" font-weight="700" fill="#1e293b">執行緒 N</text>
+  <line x1="240" y1="336" x2="288" y2="336" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow-gray)"/>
+  <rect x="290" y="318" width="260" height="36" rx="8" fill="#fef2f2" stroke="#ef4444" stroke-width="2.5"/>
+  <text x="420" y="341" text-anchor="middle" font-size="11.5" font-weight="700" fill="#7f1d1d">請求 D，等待 I/O 中，原地阻塞</text>
+
+  <!-- 左欄底部強調框：執行緒池被打滿，其餘請求排隊，容器高度依內容反推：標題18+說明行20*2+留白約18=104 -->
+  <rect x="90" y="378" width="460" height="104" rx="10" fill="#fff3cd" stroke="#c9971c" stroke-width="2.5"/>
+  <text x="320" y="404" text-anchor="middle" font-size="13" font-weight="700" fill="#78350f">執行緒池容量與請求數量緊緊綁定</text>
+  <text x="320" y="426" text-anchor="middle" font-size="11.5" fill="#57534e">執行緒數量用完，多出來的請求</text>
+  <text x="320" y="446" text-anchor="middle" font-size="11.5" fill="#57534e">只能在容器層排隊，無法被接手</text>
+  <rect x="180" y="458" width="280" height="20" rx="10" fill="#fee2e2" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="320" y="472" text-anchor="middle" font-size="10" font-weight="700" fill="#7f1d1d">執行緒數 ≈ 同時可服務的請求數上限</text>
+
+  <!-- ===== 右欄：WebFlux 事件循環模型 ===== -->
+  <rect x="700" y="96" width="520" height="40" rx="8" fill="#faf5ff" stroke="#8b5cf6" stroke-width="2"/>
+  <text x="960" y="122" text-anchor="middle" font-size="14.5" font-weight="700" fill="#5b21b6">WebFlux 事件循環模型</text>
+
+  <text x="960" y="158" text-anchor="middle" font-size="11.5" fill="#6b7280">少數固定執行緒輪詢大量連線，事件發生時才短暫介入</text>
+
+  <!-- 右欄上方：固定數量事件循環執行緒，橫向並排兩個 -->
+  <rect x="730" y="180" width="220" height="40" rx="8" fill="#fffbeb" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="840" y="205" text-anchor="middle" font-size="12" font-weight="700" fill="#78350f">事件循環執行緒 1</text>
+
+  <rect x="970" y="180" width="220" height="40" rx="8" fill="#fffbeb" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="1080" y="205" text-anchor="middle" font-size="12" font-weight="700" fill="#78350f">事件循環執行緒 2</text>
+
+  <text x="960" y="238" text-anchor="middle" font-size="10.5" fill="#92400e">數量固定，通常與 CPU 核心數相關，不隨連線數增加</text>
+
+  <!-- 中段：輪詢箭頭，從兩條事件循環執行緒指向下方大量連線區塊 -->
+  <line x1="840" y1="220" x2="840" y2="260" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="1080" y1="220" x2="1080" y2="260" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="840" y1="260" x2="1080" y2="260" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="960" y1="260" x2="960" y2="284" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow-gray)"/>
+  <text x="960" y="276" text-anchor="middle" font-size="10" fill="#6b7280">輪詢</text>
+
+  <!-- 右欄下方：大量連線並排，5 個小方塊一列，模擬遠多於執行緒數量的連線，寬度依文字「連線 x」反推，留足緩衝 -->
+  <rect x="730" y="288" width="86" height="32" rx="6" fill="#f8fafc" stroke="#64748b" stroke-width="1.5"/>
+  <text x="773" y="309" text-anchor="middle" font-size="11" fill="#374151">連線 1</text>
+
+  <rect x="826" y="288" width="86" height="32" rx="6" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+  <text x="869" y="309" text-anchor="middle" font-size="11" font-weight="700" fill="#14532d">連線 2</text>
+
+  <rect x="922" y="288" width="86" height="32" rx="6" fill="#f8fafc" stroke="#64748b" stroke-width="1.5"/>
+  <text x="965" y="309" text-anchor="middle" font-size="11" fill="#374151">連線 3</text>
+
+  <rect x="1018" y="288" width="86" height="32" rx="6" fill="#f8fafc" stroke="#64748b" stroke-width="1.5"/>
+  <text x="1061" y="309" text-anchor="middle" font-size="11" fill="#374151">連線 4</text>
+
+  <rect x="1114" y="288" width="86" height="32" rx="6" fill="#f8fafc" stroke="#64748b" stroke-width="1.5"/>
+  <text x="1157" y="309" text-anchor="middle" font-size="11" fill="#374151">連線 …</text>
+
+  <!-- 短暫介入標註，指向連線 2，箭頭放在連線列下方，避免與上方輪詢線及文字重疊 -->
+  <line x1="869" y1="320" x2="869" y2="344" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrow-amber)"/>
+  <rect x="739" y="346" width="260" height="22" rx="11" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="869" y="361" text-anchor="middle" font-size="10" font-weight="700" fill="#78350f">事件發生，短暫介入處理後立刻抽身</text>
+
+  <!-- 右欄底部強調框：執行緒數量與連線數量脫鉤，垂直位置對齊左欄強調框頂端 y=378，容器高度依內容反推 -->
+  <rect x="730" y="378" width="460" height="104" rx="10" fill="#fff3cd" stroke="#c9971c" stroke-width="2.5"/>
+  <text x="960" y="404" text-anchor="middle" font-size="13" font-weight="700" fill="#78350f">執行緒數量與連線數量彼此脫鉤</text>
+  <text x="960" y="426" text-anchor="middle" font-size="11.5" fill="#57534e">少數執行緒不會因為連線數量暴增，</text>
+  <text x="960" y="446" text-anchor="middle" font-size="11.5" fill="#57534e">就跟著需要等量增加，也不會被單一連線占住</text>
+  <rect x="820" y="458" width="280" height="20" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="960" y="472" text-anchor="middle" font-size="10" font-weight="700" fill="#78350f">執行緒數 ≪ 同時服務的連線數</text>
+
+  <!-- 連接左右兩個底部強調框到下方共同結論的引導線 -->
+  <line x1="320" y1="482" x2="320" y2="528" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrow-gray)"/>
+  <line x1="960" y1="482" x2="960" y2="528" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrow-gray)"/>
+
+  <!-- ===== 共同結論：根本差異一句話收斂，橫跨兩欄，容器高度依三行文字反推 ===== -->
+  <rect x="110" y="536" width="1060" height="96" rx="12" fill="#eef2ff" stroke="#6366f1" stroke-width="2.5"/>
+  <text x="640" y="566" text-anchor="middle" font-size="14.5" font-weight="700" fill="#312e81">根本差異：執行緒是否與請求或連線數量綁在一起</text>
+  <text x="640" y="592" text-anchor="middle" font-size="11.5" fill="#4338ca">左側執行緒數量必須跟著請求數量一起長大，右側執行緒數量固定不變，</text>
+  <text x="640" y="612" text-anchor="middle" font-size="11.5" fill="#4338ca">用短暫介入取代全程陪同，才撐得住少量執行緒服務大量連線的吞吐量</text>
+
+  <defs>
+    <marker id="arrow-gray" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94a3b8"/>
+    </marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+</svg>

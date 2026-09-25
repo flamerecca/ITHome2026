@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="620" viewBox="0 0 900 620" font-family="'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', -apple-system, sans-serif">
+  <!-- 背景 -->
+  <rect x="0" y="0" width="900" height="620" fill="#ffffff"/>
+
+  <!-- 標題 -->
+  <text x="450" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1f2937">訂單編輯頁畫面示意圖</text>
+
+  <!-- 外層頁面容器 -->
+  <rect x="60" y="66" width="780" height="524" rx="12" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.5"/>
+  <text x="80" y="94" font-size="14" font-weight="700" fill="#374151">訂單編輯頁</text>
+
+  <!-- 上半部：訂單自身表單 -->
+  <rect x="84" y="110" width="732" height="140" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="104" y="136" font-size="14" font-weight="600" fill="#1e3a8a">上半部：訂單自身表單</text>
+
+  <!-- 四個欄位 -->
+  <rect x="104" y="152" width="150" height="50" rx="8" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.2"/>
+  <text x="179" y="181" text-anchor="middle" font-size="13" fill="#1e40af">訂單編號</text>
+
+  <rect x="270" y="152" width="150" height="50" rx="8" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.2"/>
+  <text x="345" y="181" text-anchor="middle" font-size="13" fill="#1e40af">所屬客戶</text>
+
+  <rect x="436" y="152" width="150" height="50" rx="8" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.2"/>
+  <text x="511" y="181" text-anchor="middle" font-size="13" fill="#1e40af">狀態</text>
+
+  <rect x="602" y="152" width="150" height="50" rx="8" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.2"/>
+  <text x="677" y="181" text-anchor="middle" font-size="13" fill="#1e40af">日期</text>
+
+  <!-- 儲存按鈕 -->
+  <rect x="104" y="216" width="200" height="26" rx="13" fill="#2563eb"/>
+  <text x="204" y="233" text-anchor="middle" font-size="12.5" fill="#ffffff">儲存按鈕（送出訂單表單）</text>
+
+  <!-- 虛線分隔箭頭，標示獨立關係，箭頭與說明文字左右錯開，避免線段壓在文字上 -->
+  <line x1="230" y1="252" x2="230" y2="288" stroke="#9ca3af" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arrow-gray)"/>
+  <rect x="330" y="260" width="240" height="26" rx="13" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="450" y="277" text-anchor="middle" font-size="12" fill="#4b5563">獨立運作，不受此流程影響</text>
+
+  <!-- 下半部：Relation Manager 區塊 -->
+  <rect x="84" y="298" width="732" height="270" rx="10" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+  <text x="104" y="326" font-size="14" font-weight="600" fill="#14532d">下半部：商品明細 Relation Manager 區塊</text>
+
+  <!-- 新增/編輯/刪除按鈕列 -->
+  <rect x="590" y="340" width="200" height="28" rx="14" fill="#16a34a"/>
+  <text x="690" y="358" text-anchor="middle" font-size="12" fill="#ffffff">新增 / 編輯 / 刪除按鈕</text>
+
+  <!-- 明細列表表頭 -->
+  <rect x="104" y="384" width="686" height="34" rx="6" fill="#dcfce7"/>
+  <text x="130" y="406" font-size="12.5" font-weight="600" fill="#14532d">商品名稱</text>
+  <text x="420" y="406" font-size="12.5" font-weight="600" fill="#14532d">數量</text>
+  <text x="620" y="406" font-size="12.5" font-weight="600" fill="#14532d">操作</text>
+
+  <!-- 明細列 1 -->
+  <line x1="104" y1="418" x2="790" y2="418" stroke="#bbf7d0"/>
+  <text x="130" y="444" font-size="13" fill="#166534">飼料</text>
+  <text x="420" y="444" font-size="13" font-family="Menlo, Consolas, monospace" fill="#166534">10</text>
+  <text x="620" y="444" font-size="12.5" fill="#15803d">編輯　刪除</text>
+
+  <!-- 明細列 2 -->
+  <line x1="104" y1="458" x2="790" y2="458" stroke="#bbf7d0" stroke-dasharray="2 2"/>
+  <text x="130" y="484" font-size="13" fill="#166534">玩具</text>
+  <text x="420" y="484" font-size="13" font-family="Menlo, Consolas, monospace" fill="#166534">5</text>
+  <text x="620" y="484" font-size="12.5" fill="#15803d">編輯　刪除</text>
+
+  <line x1="104" y1="498" x2="790" y2="498" stroke="#bbf7d0" stroke-dasharray="2 2"/>
+
+  <text x="104" y="538" font-size="12.5" fill="#166534">明細列表（商品名稱、數量），自己的一套列表、新增、編輯、刪除操作</text>
+  <text x="104" y="558" font-size="12.5" fill="#166534">新增或編輯明細即時生效，不需等到訂單本身表單被送出才儲存</text>
+
+  <defs>
+    <marker id="arrow-gray" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#9ca3af"/>
+    </marker>
+  </defs>
+</svg>

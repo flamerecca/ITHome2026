@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="960" viewBox="0 0 1180 960" font-family="'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', -apple-system, sans-serif">
+  <!-- 背景 -->
+  <rect x="0" y="0" width="1180" height="960" fill="#ffffff"/>
+
+  <!-- 標題 -->
+  <text x="590" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1f2937">父範圍底下的兩個子協程：正常收斂與取消訊號傳播</text>
+  <text x="590" y="64" text-anchor="middle" font-size="13.5" fill="#6b7280">確認優惠資格與發送通知同時啟動，父範圍等待兩者完成，其中一者失敗時取消訊號如何沿結構傳播</text>
+
+  <!-- ===== 父範圍容器：貫穿上半段，頂部留出足夠內距容納標題 ===== -->
+  <rect x="80" y="96" width="1020" height="350" rx="16" fill="#faf5ff" stroke="#8b5cf6" stroke-width="2.5" stroke-dasharray="6,4"/>
+  <text x="590" y="128" text-anchor="middle" font-size="14.5" font-weight="700" fill="#5b21b6">父範圍 coroutineScope，兩個子協程的登記邊界</text>
+  <rect x="424" y="142" width="332" height="26" rx="13" fill="#ede9fe" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="590" y="160" text-anchor="middle" font-size="11" font-weight="700" fill="#5b21b6">同時 async 啟動，兩者皆登記在父範圍</text>
+
+  <!-- 父範圍起點圓點 + 分岔到兩個子協程 -->
+  <circle cx="590" cy="196" r="8" fill="#8b5cf6" stroke="#5b21b6" stroke-width="2"/>
+  <path d="M 590 204 L 590 220 L 330 220 L 330 246" stroke="#c4b5fd" stroke-width="2" fill="none" marker-end="url(#arrow-purple)"/>
+  <path d="M 590 204 L 590 220 L 850 220 L 850 246" stroke="#c4b5fd" stroke-width="2" fill="none" marker-end="url(#arrow-purple)"/>
+
+  <!-- ===== 子協程 A：確認優惠資格 ===== -->
+  <rect x="210" y="246" width="240" height="150" rx="10" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+  <text x="330" y="272" text-anchor="middle" font-size="13" font-weight="700" fill="#14532d">子協程 A：確認優惠資格</text>
+  <text x="330" y="294" text-anchor="middle" font-size="10.5" font-family="Menlo, Consolas, monospace" fill="#334155">async {</text>
+  <text x="330" y="312" text-anchor="middle" font-size="10.5" font-family="Menlo, Consolas, monospace" fill="#334155">checkPromotionEligibility()</text>
+  <text x="330" y="330" text-anchor="middle" font-size="10.5" font-family="Menlo, Consolas, monospace" fill="#334155">}</text>
+  <rect x="240" y="342" width="180" height="24" rx="12" fill="#fef2f2" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="330" y="358" text-anchor="middle" font-size="10.5" font-weight="700" fill="#7f1d1d">拋出例外，執行失敗</text>
+  <text x="330" y="382" text-anchor="middle" font-size="10" fill="#6b7280">例外不會被靜靜吞掉</text>
+
+  <!-- ===== 子協程 B：發送通知 ===== -->
+  <rect x="730" y="246" width="240" height="150" rx="10" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+  <text x="850" y="272" text-anchor="middle" font-size="13" font-weight="700" fill="#14532d">子協程 B：發送通知</text>
+  <text x="850" y="294" text-anchor="middle" font-size="10.5" font-family="Menlo, Consolas, monospace" fill="#334155">async {</text>
+  <text x="850" y="312" text-anchor="middle" font-size="10.5" font-family="Menlo, Consolas, monospace" fill="#334155">sendOrderConfirmedNotification()</text>
+  <text x="850" y="330" text-anchor="middle" font-size="10.5" font-family="Menlo, Consolas, monospace" fill="#334155">}</text>
+  <rect x="760" y="342" width="180" height="24" rx="12" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="850" y="358" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1e3a8a">本身執行中，尚未完成</text>
+  <text x="850" y="382" text-anchor="middle" font-size="10" fill="#6b7280">操作本身完全沒有出錯</text>
+
+  <!-- 說明文字：父範圍等待兩者，置於兩子協程框下方，與框下緣留安全間距 -->
+  <text x="590" y="416" text-anchor="middle" font-size="10.5" fill="#92400e">父範圍必須等 A、B 兩者都有結果才收斂，不會有其中一個就緒就搶先往下走</text>
+
+  <!-- ===== 分岔點：A 失敗，往下觸發傳播鏈 ===== -->
+  <line x1="330" y1="396" x2="330" y2="480" stroke="#ef4444" stroke-width="2.5" fill="none" marker-end="url(#arrow-red)"/>
+  <text x="330" y="450" text-anchor="middle" font-size="11" font-weight="700" fill="#b91c1c">失敗路徑</text>
+
+  <!-- ===== 異常步驟 1：例外沿結構往上傳播到父範圍 ===== -->
+  <rect x="180" y="480" width="300" height="92" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="330" y="506" text-anchor="middle" font-size="12.5" font-weight="700" fill="#78350f">例外沿父子結構往上傳播</text>
+  <text x="330" y="528" text-anchor="middle" font-size="10.5" fill="#92400e">傳到父範圍，父範圍收到通知：</text>
+  <text x="330" y="546" text-anchor="middle" font-size="10.5" fill="#92400e">底下有一個子協程失敗</text>
+
+  <!-- ===== 異常步驟 2：父範圍對子協程 B 送出取消訊號 ===== -->
+  <!-- 橫向連接線：從步驟1框右緣中段走到步驟2框左緣中段，維持在兩框之間的水平帶，不與上方分岔線或下方文字重疊 -->
+  <path d="M 480 526 L 620 526" stroke="#ef4444" stroke-width="2.5" fill="none" marker-end="url(#arrow-red)"/>
+  <text x="550" y="510" text-anchor="middle" font-size="10.5" font-weight="700" fill="#b91c1c">父範圍送出</text>
+  <text x="550" y="546" text-anchor="middle" font-size="10.5" font-weight="700" fill="#b91c1c">取消訊號</text>
+
+  <rect x="620" y="480" width="300" height="92" rx="10" fill="#fef2f2" stroke="#ef4444" stroke-width="2.5"/>
+  <text x="770" y="506" text-anchor="middle" font-size="12.5" font-weight="700" fill="#7f1d1d">子協程 B 收到取消訊號</text>
+  <text x="770" y="528" text-anchor="middle" font-size="10.5" fill="#374151">發送通知即使本身沒有出錯，</text>
+  <text x="770" y="546" text-anchor="middle" font-size="10.5" fill="#374151">也一併被取消，兩者一起結束</text>
+
+  <!-- ===== 收斂節點：父範圍結束 ===== -->
+  <line x1="330" y1="572" x2="330" y2="628" stroke="#fca5a5" stroke-width="2" fill="none" marker-end="url(#arrow-red)"/>
+  <line x1="770" y1="572" x2="770" y2="628" stroke="#fca5a5" stroke-width="2" fill="none" marker-end="url(#arrow-red)"/>
+  <path d="M 330 628 L 330 650 L 590 650" stroke="#fca5a5" stroke-width="2" fill="none"/>
+  <path d="M 770 628 L 770 650 L 590 650" stroke="#fca5a5" stroke-width="2" fill="none" marker-end="url(#arrow-red)"/>
+
+  <rect x="440" y="680" width="300" height="120" rx="12" fill="#fef2f2" stroke="#ef4444" stroke-width="2.5"/>
+  <text x="590" y="708" text-anchor="middle" font-size="14" font-weight="700" fill="#7f1d1d">父範圍以失敗收斂</text>
+  <text x="590" y="732" text-anchor="middle" font-size="11" fill="#374151">A 失敗、B 被取消，父範圍</text>
+  <text x="590" y="750" text-anchor="middle" font-size="11" fill="#374151">兩者都有結果，且以例外告終</text>
+  <text x="590" y="774" text-anchor="middle" font-size="10.5" font-weight="700" fill="#5b21b6">結構化並發：父範圍對子協程生命週期負完整責任</text>
+
+  <!-- ===== 對照說明：另一種結局，若 A、B 皆成功 ===== -->
+  <rect x="80" y="840" width="1020" height="76" rx="10" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+  <text x="590" y="868" text-anchor="middle" font-size="12" font-weight="700" fill="#15803d">對照：若 A、B 皆執行成功，沒有例外發生</text>
+  <text x="590" y="890" text-anchor="middle" font-size="10.5" fill="#374151">父範圍會在等到兩者都完成後正常收斂，組成優惠資格與通知結果的整合回應，不會有取消訊號傳播</text>
+
+  <defs>
+    <marker id="arrow-purple" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#c4b5fd"/>
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#ef4444"/>
+    </marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+</svg>
