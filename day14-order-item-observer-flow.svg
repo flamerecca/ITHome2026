@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 460" font-family="'Noto Sans TC', 'Helvetica Neue', Arial, sans-serif" font-size="15">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4a4a4a"/>
+    </marker>
+  </defs>
+
+  <style>
+    .box { fill: #eef2ff; stroke: #6366f1; stroke-width: 1.5; }
+    .diamond { fill: #fff7ed; stroke: #f59e0b; stroke-width: 1.5; }
+    .terminal { fill: #ecfdf5; stroke: #10b981; stroke-width: 1.5; }
+    .skip { fill: #f3f4f6; stroke: #9ca3af; stroke-width: 1.5; }
+    .label { fill: #1f2937; text-anchor: middle; }
+    .edge-label { fill: #4b5563; text-anchor: middle; font-size: 13px; }
+    .edge { stroke: #4a4a4a; stroke-width: 1.5; fill: none; marker-end: url(#arrow); }
+  </style>
+
+  <!-- 標題 -->
+  <text x="480" y="28" class="label" font-size="18" font-weight="bold">訂單明細儲存與刪除，庫存自動異動流程</text>
+
+  <!-- === 上半：saved 事件路徑 === -->
+  <rect x="30" y="70" width="150" height="50" rx="8" class="box"/>
+  <text x="105" y="90" class="label">訂單明細</text>
+  <text x="105" y="108" class="label">儲存動作</text>
+
+  <rect x="230" y="70" width="150" height="50" rx="8" class="box"/>
+  <text x="305" y="90" class="label">saved 事件</text>
+  <text x="305" y="108" class="label">觸發</text>
+
+  <polygon points="480,55 570,95 480,135 390,95" class="diamond"/>
+  <text x="480" y="90" class="label">wasRecentlyCreated</text>
+  <text x="480" y="108" class="label">是否為新增</text>
+
+  <rect x="700" y="70" width="180" height="55" rx="8" class="box"/>
+  <text x="790" y="90" class="label">product 關聯</text>
+  <text x="790" y="108" class="label">decrement stock</text>
+
+  <rect x="700" y="165" width="180" height="50" rx="8" class="terminal"/>
+  <text x="790" y="185" class="label">商品庫存</text>
+  <text x="790" y="203" class="label">扣減完成</text>
+
+  <rect x="420" y="200" width="140" height="50" rx="8" class="skip"/>
+  <text x="490" y="225" class="label">不異動庫存</text>
+
+  <!-- 上半連線 -->
+  <path d="M180,95 H390" class="edge"/>
+  <path d="M570,95 H700" class="edge"/>
+  <text x="635" y="86" class="edge-label">是</text>
+  <path d="M480,135 V225 H420" class="edge"/>
+  <text x="490" y="165" class="edge-label">否</text>
+  <path d="M790,125 V165" class="edge"/>
+
+  <!-- === 下半：deleted 事件路徑 === -->
+  <rect x="30" y="330" width="150" height="50" rx="8" class="box"/>
+  <text x="105" y="350" class="label">訂單明細</text>
+  <text x="105" y="368" class="label">刪除動作</text>
+
+  <rect x="230" y="330" width="150" height="50" rx="8" class="box"/>
+  <text x="305" y="350" class="label">deleted 事件</text>
+  <text x="305" y="368" class="label">觸發</text>
+
+  <rect x="480" y="330" width="180" height="50" rx="8" class="box"/>
+  <text x="570" y="350" class="label">product 關聯</text>
+  <text x="570" y="368" class="label">increment stock</text>
+
+  <rect x="740" y="330" width="150" height="50" rx="8" class="terminal"/>
+  <text x="815" y="350" class="label">商品庫存</text>
+  <text x="815" y="368" class="label">還原完成</text>
+
+  <!-- 下半連線 -->
+  <path d="M180,355 H480" class="edge"/>
+  <path d="M660,355 H740" class="edge"/>
+
+</svg>
