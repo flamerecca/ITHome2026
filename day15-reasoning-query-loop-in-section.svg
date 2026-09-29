@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="800" viewBox="0 0 1160 800" font-family="'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', -apple-system, sans-serif">
+  <!-- 背景 -->
+  <rect x="0" y="0" width="1160" height="800" fill="#ffffff"/>
+
+  <!-- 標題 -->
+  <text x="580" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1f2937">推理與查詢反覆交錯，鑲嵌在逐段展開架構之中</text>
+  <text x="580" y="64" text-anchor="middle" font-size="13" fill="#6b7280">單一段落展開過程中，推理判斷、外部查詢、帶回推理脈絡三者循環運作</text>
+
+  <!-- 外層：逐段展開架構容器，y: 90 ~ 250 -->
+  <rect x="40" y="90" width="1080" height="160" rx="14" fill="#f9fafb" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="64" y="116" font-size="13.5" font-weight="700" fill="#374151">逐段展開架構，依序處理每一則段落規格</text>
+
+  <!-- 段落節點一：已完成，虛化 -->
+  <rect x="64" y="136" width="176" height="86" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1.2"/>
+  <text x="152" y="164" text-anchor="middle" font-size="12.5" fill="#9ca3af">段落節點</text>
+  <text x="152" y="182" text-anchor="middle" font-size="12.5" fill="#9ca3af">已完成撰寫</text>
+  <text x="152" y="205" text-anchor="middle" font-size="11" fill="#b0b5bd">依序處理下一則</text>
+
+  <!-- 箭頭：段落一 -> 段落二（放大） -->
+  <line x1="240" y1="179" x2="292" y2="179" stroke="#9ca3af" stroke-width="2.2" marker-end="url(#arrow-gray-light)"/>
+
+  <!-- 段落節點二：目前展開中，放大強調 -->
+  <rect x="292" y="122" width="288" height="114" rx="12" fill="#eef2ff" stroke="#4338ca" stroke-width="2.4"/>
+  <text x="436" y="150" text-anchor="middle" font-size="14.5" font-weight="700" fill="#312e81">目前展開中的段落節點</text>
+  <text x="436" y="172" text-anchor="middle" font-size="12" fill="#4338ca">依這則段落規格展開內容</text>
+  <text x="436" y="192" text-anchor="middle" font-size="12" fill="#4338ca">視需要在節點內部觸發</text>
+  <rect x="356" y="202" width="160" height="26" rx="13" fill="#4338ca"/>
+  <text x="436" y="220" text-anchor="middle" font-size="11.5" fill="#ffffff">推理查詢交錯循環</text>
+
+  <!-- 箭頭：段落二 -> 段落三（虛化） -->
+  <line x1="580" y1="179" x2="632" y2="179" stroke="#9ca3af" stroke-width="2.2" marker-end="url(#arrow-gray-light)"/>
+
+  <!-- 段落節點三：待處理，虛化 -->
+  <rect x="632" y="136" width="176" height="86" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1.2"/>
+  <text x="720" y="164" text-anchor="middle" font-size="12.5" fill="#9ca3af">下一則段落節點</text>
+  <text x="720" y="182" text-anchor="middle" font-size="12.5" fill="#9ca3af">尚待處理</text>
+  <text x="720" y="205" text-anchor="middle" font-size="11" fill="#b0b5bd">同樣依規格展開</text>
+
+  <!-- 省略號，表示逐段展開仍有更多節點 -->
+  <text x="850" y="185" font-size="20" font-weight="700" fill="#9ca3af">…</text>
+
+  <!-- 連接線：從段落二節點向下拉出，進入放大循環區塊，y: 236 ~ 278，與外框(284)保持 6 間距 -->
+  <line x1="436" y1="236" x2="436" y2="278" stroke="#4338ca" stroke-width="2.4" stroke-dasharray="5 4" marker-end="url(#arrow-indigo)"/>
+  <text x="452" y="262" font-size="11.5" fill="#4338ca">節點內部放大檢視</text>
+
+  <!-- 放大循環區塊外框，y: 284 ~ 610 -->
+  <rect x="90" y="284" width="980" height="326" rx="14" fill="#ffffff" stroke="#c7d2fe" stroke-width="1.6"/>
+  <text x="580" y="314" text-anchor="middle" font-size="14" font-weight="700" fill="#312e81">段落內部：推理與查詢反覆交錯的循環</text>
+
+  <!-- 節點①推理判斷，y: 350 ~ 500 -->
+  <rect x="132" y="350" width="270" height="150" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <rect x="132" y="350" width="270" height="40" rx="12" fill="#2563eb"/>
+  <rect x="132" y="370" width="270" height="20" fill="#2563eb"/>
+  <text x="267" y="376" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">① 推理判斷</text>
+
+  <text x="152" y="412" font-size="12.5" fill="#1e3a8a">寫到涉及觸發判準的</text>
+  <text x="152" y="430" font-size="12.5" fill="#1e3a8a">內容，例如 API 參數、</text>
+  <text x="152" y="448" font-size="12.5" fill="#1e3a8a">版本對應關係</text>
+
+  <rect x="152" y="460" width="230" height="30" rx="8" fill="#dbeafe" stroke="#93c5fd" stroke-width="1.2"/>
+  <text x="267" y="479" text-anchor="middle" font-size="11.5" fill="#1e3a8a">判斷需查證及查證對象</text>
+
+  <!-- 箭頭 ①->② -->
+  <line x1="402" y1="425" x2="454" y2="425" stroke="#6b7280" stroke-width="2.5" marker-end="url(#arrow-gray)"/>
+
+  <!-- 節點②外部查詢，y: 350 ~ 500 -->
+  <rect x="454" y="350" width="252" height="150" rx="12" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <rect x="454" y="350" width="252" height="40" rx="12" fill="#d97706"/>
+  <rect x="454" y="370" width="252" height="20" fill="#d97706"/>
+  <text x="580" y="376" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">② 外部查詢</text>
+
+  <text x="474" y="412" font-size="12.5" fill="#78350f">執行一次外部查詢</text>
+  <text x="474" y="430" font-size="12.5" fill="#78350f">動作，鎖定當下這</text>
+  <text x="474" y="448" font-size="12.5" fill="#78350f">個具體疑點</text>
+
+  <rect x="474" y="460" width="212" height="30" rx="8" fill="#fde68a" stroke="#fcd34d" stroke-width="1.2"/>
+  <text x="580" y="479" text-anchor="middle" font-size="11.5" fill="#78350f">取得查詢結果</text>
+
+  <!-- 箭頭 ②->③ -->
+  <line x1="706" y1="425" x2="758" y2="425" stroke="#6b7280" stroke-width="2.5" marker-end="url(#arrow-gray)"/>
+
+  <!-- 節點③帶回推理脈絡，y: 350 ~ 500 -->
+  <rect x="758" y="350" width="282" height="150" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <rect x="758" y="350" width="282" height="40" rx="12" fill="#16a34a"/>
+  <rect x="758" y="370" width="282" height="20" fill="#16a34a"/>
+  <text x="899" y="376" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">③ 帶回推理脈絡</text>
+
+  <text x="778" y="410" font-size="12" fill="#14532d">結果帶回原本推理，</text>
+  <text x="778" y="427" font-size="12" fill="#14532d">決定這段內容怎麼寫</text>
+
+  <rect x="778" y="437" width="242" height="26" rx="7" fill="#dcfce7" stroke="#86efac" stroke-width="1"/>
+  <text x="899" y="455" text-anchor="middle" font-size="11" fill="#14532d">與假設一致　順著寫下去</text>
+
+  <rect x="778" y="467" width="242" height="26" rx="7" fill="#dcfce7" stroke="#86efac" stroke-width="1"/>
+  <text x="899" y="485" text-anchor="middle" font-size="11" fill="#14532d">推翻假設　調整這段寫法</text>
+
+  <!-- 回頭折線：③ -> ①，表示循環反覆，水平段落在 y=524，與節點下緣(500)間距24，與下方說明文字(y=560)間距36 -->
+  <path d="M 899 500 L 899 524 L 267 524 L 267 500"
+        fill="none" stroke="#6b7280" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#arrow-gray)"/>
+  <text x="580" y="560" text-anchor="middle" font-size="12" fill="#4b5563">同一段落展開過程可能反覆多次，每次聚焦當下的具體疑點</text>
+
+  <!-- 跳出循環：從節點③下緣延伸直角折線，穿出外框下緣，進入外框外部的完成框 -->
+  <path d="M 970 500 L 970 638"
+        fill="none" stroke="#4338ca" stroke-width="2.2" stroke-dasharray="4 3" marker-end="url(#arrow-indigo)"/>
+  <text x="988" y="573" font-size="11" fill="#4338ca">查完離開循環</text>
+
+  <!-- 段落撰寫任務完成框，位於外框(610)外部下方，間距 28 -->
+  <rect x="800" y="638" width="270" height="60" rx="10" fill="#eef2ff" stroke="#4338ca" stroke-width="1.6"/>
+  <text x="935" y="662" text-anchor="middle" font-size="12.5" font-weight="700" fill="#312e81">查完仍回到同一段落</text>
+  <text x="935" y="680" text-anchor="middle" font-size="12.5" font-weight="700" fill="#312e81">的撰寫任務繼續往下走</text>
+
+  <!-- 說明文字：呼應回到逐段展開節奏，完成框下方留 34 間距 -->
+  <text x="580" y="732" text-anchor="middle" font-size="12" fill="#6b7280">直到該段落撰寫任務完成，才回到逐段展開節奏處理下一則段落</text>
+  <text x="580" y="752" text-anchor="middle" font-size="12" fill="#6b7280">不會跳出逐段展開的節奏，另外跑一輪獨立於外的查證流程</text>
+
+  <defs>
+    <marker id="arrow-gray" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#6b7280"/>
+    </marker>
+    <marker id="arrow-gray-light" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#9ca3af"/>
+    </marker>
+    <marker id="arrow-indigo" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4338ca"/>
+    </marker>
+  </defs>
+</svg>
