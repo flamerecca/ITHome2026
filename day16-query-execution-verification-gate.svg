@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="840" viewBox="0 0 1160 840" font-family="'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', -apple-system, sans-serif">
+  <!-- 背景 -->
+  <rect x="0" y="0" width="1160" height="840" fill="#ffffff"/>
+
+  <!-- 標題 -->
+  <text x="580" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1f2937">查詢與執行驗證，依序嵌入同一段落節點內部</text>
+  <text x="580" y="64" text-anchor="middle" font-size="13" fill="#6b7280">遇到程式碼片段時，查詢動作之後多一道執行驗證關卡，通過才繼續往下一段</text>
+
+  <!-- 外層：目前展開中的段落節點容器，y: 90 ~ 700 -->
+  <rect x="60" y="90" width="1040" height="610" rx="14" fill="#f9fafb" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="84" y="112" font-size="13.5" font-weight="700" fill="#374151">目前展開中的段落節點，內容涉及程式碼片段</text>
+
+  <!-- 第一排：①展開程式碼片段 -> ②查詢動作 -> ③執行驗證關卡，y: 150 ~ 260 -->
+
+  <!-- 節點①展開程式碼片段 -->
+  <rect x="94" y="150" width="230" height="110" rx="12" fill="#eef2ff" stroke="#4338ca" stroke-width="2"/>
+  <rect x="94" y="150" width="230" height="38" rx="12" fill="#4338ca"/>
+  <rect x="94" y="168" width="230" height="20" fill="#4338ca"/>
+  <text x="209" y="174" text-anchor="middle" font-size="13.5" font-weight="700" fill="#ffffff">① 展開程式碼片段</text>
+
+  <text x="114" y="210" font-size="12" fill="#312e81">依段落規格展開內容，</text>
+  <text x="114" y="228" font-size="12" fill="#312e81">內容涉及程式碼片段</text>
+  <text x="114" y="246" font-size="11" fill="#4338ca">視情況觸發 ②</text>
+
+  <!-- 箭頭：①->② -->
+  <line x1="324" y1="205" x2="372" y2="205" stroke="#6b7280" stroke-width="2.5" marker-end="url(#arrow-gray)"/>
+
+  <!-- 節點②查詢動作 -->
+  <rect x="372" y="150" width="230" height="110" rx="12" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <rect x="372" y="150" width="230" height="38" rx="12" fill="#d97706"/>
+  <rect x="372" y="168" width="230" height="20" fill="#d97706"/>
+  <text x="487" y="174" text-anchor="middle" font-size="13.5" font-weight="700" fill="#ffffff">② 查詢動作</text>
+
+  <text x="392" y="210" font-size="12" fill="#78350f">ReAct 模式查詢版本</text>
+  <text x="392" y="228" font-size="12" fill="#78350f">號、API 語法等細節</text>
+  <text x="392" y="246" font-size="11" fill="#92400e">回答：是否符合官方建議</text>
+
+  <!-- 箭頭：②->③ -->
+  <line x1="602" y1="205" x2="650" y2="205" stroke="#6b7280" stroke-width="2.5" marker-end="url(#arrow-gray)"/>
+
+  <!-- 節點③執行驗證關卡 -->
+  <rect x="650" y="150" width="250" height="110" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="2.4"/>
+  <rect x="650" y="150" width="250" height="38" rx="12" fill="#dc2626"/>
+  <rect x="650" y="168" width="250" height="20" fill="#dc2626"/>
+  <text x="775" y="174" text-anchor="middle" font-size="13.5" font-weight="700" fill="#ffffff">③ 執行驗證關卡</text>
+
+  <text x="670" y="210" font-size="12" fill="#7f1d1d">納入正文前，實際執行</text>
+  <text x="670" y="228" font-size="12" fill="#7f1d1d">或語法檢查這段程式碼</text>
+  <text x="670" y="246" font-size="11" fill="#991b1b">回答：這段能不能跑</text>
+
+  <!-- 箭頭：③向下 -> 判斷菱形 -->
+  <line x1="775" y1="260" x2="775" y2="310" stroke="#6b7280" stroke-width="2.5" marker-end="url(#arrow-gray)"/>
+
+  <!-- 判斷菱形：是否通過驗證，中心(775,364)，半寬112，半高54 -->
+  <polygon points="775,310 887,364 775,418 663,364" fill="#fff7ed" stroke="#ea580c" stroke-width="2.2"/>
+  <text x="775" y="360" text-anchor="middle" font-size="12.5" font-weight="700" fill="#7c2d12">是否通過</text>
+  <text x="775" y="378" text-anchor="middle" font-size="12.5" font-weight="700" fill="#7c2d12">驗證關卡</text>
+
+  <!-- 未通過分支：菱形下方 -> 垂直直線 -> 節點④，文字置於線右側，水平間距18px -->
+  <line x1="775" y1="418" x2="775" y2="478" stroke="#dc2626" stroke-width="2.6" stroke-dasharray="7 5" marker-end="url(#arrow-red)"/>
+  <text x="793" y="452" font-size="12" font-weight="700" fill="#dc2626">未通過</text>
+
+  <!-- 節點④回頭調整，y: 478 ~ 570，與判斷菱形下緣(418)間距60 -->
+  <rect x="640" y="478" width="270" height="92" rx="12" fill="#fef2f2" stroke="#dc2626" stroke-width="2" stroke-dasharray="5 4"/>
+  <text x="775" y="508" text-anchor="middle" font-size="13.5" font-weight="700" fill="#7f1d1d">④ 回頭調整這段程式碼</text>
+  <text x="660" y="532" font-size="12" fill="#7f1d1d">修改後回到節點③重新</text>
+  <text x="660" y="550" font-size="12" fill="#7f1d1d">執行驗證，直到站得住腳</text>
+
+  <!-- 回饋走廊：節點④左側 -> 沿容器最左內側乾淨走廊(x=76)上行 -> 節點①②③上方的空白帶(y=138)水平橫渡 -> 節點③正上方垂直下探 -->
+  <!-- 容器左邊界60，節點①左邊界94，走廊取x=76，與容器邊界間距16；水平橫渡段取y=138，與上方標題(y=112)間距26、與下方節點①②③頂緣(y=150)間距12，完全避開所有矩形與文字 -->
+  <line x1="640" y1="524" x2="76" y2="524" stroke="#dc2626" stroke-width="2.4" stroke-dasharray="7 5"/>
+  <line x1="76" y1="524" x2="76" y2="138" stroke="#dc2626" stroke-width="2.4" stroke-dasharray="7 5"/>
+  <line x1="76" y1="138" x2="775" y2="138" stroke="#dc2626" stroke-width="2.4" stroke-dasharray="7 5"/>
+  <line x1="775" y1="138" x2="775" y2="150" stroke="#dc2626" stroke-width="2.4" stroke-dasharray="7 5" marker-end="url(#arrow-red)"/>
+  <!-- 標籤置於左側走廊正上方的水平空白帶(y=280~478)，與垂直線(x=76)保持18px以上間距，文字靠左對齊在線右側 -->
+  <text x="94" y="300" font-size="11.5" fill="#dc2626">回頭調整後，</text>
+  <text x="94" y="316" font-size="11.5" fill="#dc2626">回到③重新驗證</text>
+
+  <!-- 通過分支：菱形右側 -> 水平出框 -> 垂直下拉至下一段落節點正上方，單純直角折線 -->
+  <line x1="887" y1="364" x2="974" y2="364" stroke="#16a34a" stroke-width="2.6"/>
+  <text x="930" y="347" text-anchor="middle" font-size="12" font-weight="700" fill="#16a34a">通過</text>
+
+  <path d="M 974 364 L 974 592" fill="none" stroke="#16a34a" stroke-width="2.6" marker-end="url(#arrow-green)"/>
+  <!-- 標籤置於通過路徑右側，水平間距18px，位於節點④右邊界(910)之外，避開一切矩形 -->
+  <text x="992" y="480" font-size="12" fill="#16a34a">通過才</text>
+  <text x="992" y="498" font-size="12" fill="#16a34a">繼續往</text>
+  <text x="992" y="516" font-size="12" fill="#16a34a">下一段</text>
+
+  <!-- 下一段落節點，虛化，y: 600 ~ 676 -->
+  <rect x="886" y="600" width="176" height="76" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1.2"/>
+  <text x="974" y="630" text-anchor="middle" font-size="12.5" fill="#9ca3af">下一則段落節點</text>
+  <text x="974" y="648" text-anchor="middle" font-size="12.5" fill="#9ca3af">依 Day 14 節奏處理</text>
+  <text x="974" y="666" text-anchor="middle" font-size="10.5" fill="#b0b5bd">同樣視情況觸發①②③</text>
+
+  <!-- 說明文字，位於外框內下緣，與下一段落節點(676)間距24 -->
+  <text x="580" y="676" text-anchor="middle" font-size="12" fill="#4b5563">關卡發生在同一個段落展開的節奏裡，不是撰寫完成後另外跑一輪獨立的檢查流程</text>
+
+  <!-- 說明文字，外框外部下方 -->
+  <text x="580" y="732" text-anchor="middle" font-size="12" fill="#6b7280">查詢回答「是否符合目前版本的官方建議」，執行驗證回答「這段程式碼實際上能不能跑」</text>
+  <text x="580" y="752" text-anchor="middle" font-size="12" fill="#6b7280">兩道關卡依序嵌入同一段落節點內部，詳見下一節查詢與驗證兩道防線的互補關係</text>
+
+  <defs>
+    <marker id="arrow-gray" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#6b7280"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#16a34a"/>
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#dc2626"/>
+    </marker>
+  </defs>
+</svg>
