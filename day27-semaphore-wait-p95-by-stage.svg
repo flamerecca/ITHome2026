@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" font-family="'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', -apple-system, sans-serif">
+  <rect x="0" y="0" width="1200" height="630" fill="#ffffff"/>
+  <text x="600.0" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1f2937">Semaphore 排隊行為：尖峰時墊高，但守在可接受範圍內</text>
+  <text x="600.0" y="64" text-anchor="middle" font-size="13.5" fill="#6b7280">流量攀升到 200 VUs 之後，超額的併發請求被擋在外面排隊，沒有一股腦打向確認庫存服務</text>
+  <rect x="110.0" y="120" width="367.5" height="400" fill="#f3f4f6"/>
+  <text x="293.75" y="140" text-anchor="middle" font-size="11.5" fill="#4b5563" font-weight="700">低併發</text>
+  <rect x="477.5" y="120" width="122.5" height="400" fill="#fef3c7"/>
+  <text x="538.75" y="140" text-anchor="middle" font-size="11.5" fill="#4b5563" font-weight="700">攀升</text>
+  <rect x="600.0" y="120" width="367.5" height="400" fill="#fde2d3"/>
+  <text x="783.75" y="140" text-anchor="middle" font-size="11.5" fill="#4b5563" font-weight="700">尖峰</text>
+  <rect x="967.5" y="120" width="122.5" height="400" fill="#e0f2fe"/>
+  <text x="1028.75" y="140" text-anchor="middle" font-size="11.5" fill="#4b5563" font-weight="700">回落</text>
+  <line x1="110" y1="520.0" x2="1090" y2="520.0" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="100" y="524.0" text-anchor="end" font-size="11" fill="#6b7280">0 ms</text>
+  <line x1="110" y1="453.33333333333337" x2="1090" y2="453.33333333333337" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="100" y="457.33333333333337" text-anchor="end" font-size="11" fill="#6b7280">100 ms</text>
+  <line x1="110" y1="386.6666666666667" x2="1090" y2="386.6666666666667" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="100" y="390.6666666666667" text-anchor="end" font-size="11" fill="#6b7280">200 ms</text>
+  <line x1="110" y1="320.0" x2="1090" y2="320.0" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="100" y="324.0" text-anchor="end" font-size="11" fill="#6b7280">300 ms</text>
+  <line x1="110" y1="253.33333333333337" x2="1090" y2="253.33333333333337" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="100" y="257.33333333333337" text-anchor="end" font-size="11" fill="#6b7280">400 ms</text>
+  <line x1="110" y1="186.66666666666663" x2="1090" y2="186.66666666666663" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="100" y="190.66666666666663" text-anchor="end" font-size="11" fill="#6b7280">500 ms</text>
+  <line x1="110" y1="120.0" x2="1090" y2="120.0" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="100" y="124.0" text-anchor="end" font-size="11" fill="#6b7280">600 ms</text>
+  <line x1="110" y1="520" x2="1090" y2="520" stroke="#9ca3af" stroke-width="1.2"/>
+  <line x1="110.0" y1="520" x2="110.0" y2="525" stroke="#9ca3af" stroke-width="1.2"/>
+  <text x="110.0" y="540" text-anchor="middle" font-size="11" fill="#6b7280">0 分</text>
+  <line x1="232.5" y1="520" x2="232.5" y2="525" stroke="#9ca3af" stroke-width="1.2"/>
+  <text x="232.5" y="540" text-anchor="middle" font-size="11" fill="#6b7280">1 分</text>
+  <line x1="355.0" y1="520" x2="355.0" y2="525" stroke="#9ca3af" stroke-width="1.2"/>
+  <text x="355.0" y="540" text-anchor="middle" font-size="11" fill="#6b7280">2 分</text>
+  <line x1="477.5" y1="520" x2="477.5" y2="525" stroke="#9ca3af" stroke-width="1.2"/>
+  <text x="477.5" y="540" text-anchor="middle" font-size="11" fill="#6b7280">3 分</text>
+  <line x1="600.0" y1="520" x2="600.0" y2="525" stroke="#9ca3af" stroke-width="1.2"/>
+  <text x="600.0" y="540" text-anchor="middle" font-size="11" fill="#6b7280">4 分</text>
+  <line x1="722.5" y1="520" x2="722.5" y2="525" stroke="#9ca3af" stroke-width="1.2"/>
+  <text x="722.5" y="540" text-anchor="middle" font-size="11" fill="#6b7280">5 分</text>
+  <line x1="845.0" y1="520" x2="845.0" y2="525" stroke="#9ca3af" stroke-width="1.2"/>
+  <text x="845.0" y="540" text-anchor="middle" font-size="11" fill="#6b7280">6 分</text>
+  <line x1="967.5" y1="520" x2="967.5" y2="525" stroke="#9ca3af" stroke-width="1.2"/>
+  <text x="967.5" y="540" text-anchor="middle" font-size="11" fill="#6b7280">7 分</text>
+  <line x1="1090.0" y1="520" x2="1090.0" y2="525" stroke="#9ca3af" stroke-width="1.2"/>
+  <text x="1090.0" y="540" text-anchor="middle" font-size="11" fill="#6b7280">8 分</text>
+  <text x="110" y="106" text-anchor="start" font-size="11.5" fill="#4b5563" font-weight="700">stock_check.semaphore.wait 的 p95，示意</text>
+  <text x="600.0" y="562" text-anchor="middle" font-size="11.5" fill="#4b5563" font-weight="700">測試執行時間</text>
+  <line x1="600.0" y1="186.66666666666663" x2="967.5" y2="186.66666666666663" stroke="#dc2626" stroke-width="1.8" stroke-dasharray="7 5"/>
+  <text x="608.0" y="176.66666666666663" text-anchor="start" font-size="11.5" fill="#b91c1c" font-weight="700">使用者可接受的等候上限，示意值，依團隊自訂</text>
+  <path d="M 110.0 519.3 L 171.2 519.3 L 232.5 518.7 L 355.0 518.7 L 477.5 518.0 L 538.8 480.0 L 600.0 360.0 L 722.5 300.0 L 845.0 286.7 L 967.5 293.3 L 1028.8 460.0 L 1090.0 516.7" fill="none" stroke="#2a78d6" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+  <text x="293.75" y="506.66666666666663" text-anchor="middle" font-size="11.5" fill="#4b5563">幾乎貼著零，20 個名額綽綽有餘</text>
+  <text x="783.75" y="272.66666666666663" text-anchor="middle" font-size="11.5" fill="#4b5563">墊高到數百毫秒，仍在上限之下</text>
+  <text x="600" y="600" text-anchor="middle" font-size="12" fill="#6b7280">示意走勢：排隊本身不是壞事，用可控的排隊延遲換取下游服務不被瞬間打爆</text>
+  <defs>
+    <marker id="ar-gray" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#6b7280"/></marker>
+    <marker id="ar-indigo" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4338ca"/></marker>
+    <marker id="ar-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d97706"/></marker>
+    <marker id="ar-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#dc2626"/></marker>
+    <marker id="ar-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#16a34a"/></marker>
+  </defs>
+</svg>

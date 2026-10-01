@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="710" viewBox="0 0 1200 710" font-family="'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', -apple-system, sans-serif">
+  <rect x="0" y="0" width="1200" height="710" fill="#ffffff"/>
+  <text x="600.0" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1f2937">促銷活動測試期間，四項指標在同一條時間軸上的走勢</text>
+  <text x="600.0" y="64" text-anchor="middle" font-size="13.5" fill="#6b7280">回應時間、錯誤率、Semaphore 等候時間、樂觀鎖版本衝突次數，隨爬升、尖峰、回落一起變化</text>
+  <rect x="150.0" y="132" width="270.0" height="80" fill="#f3f4f6"/>
+  <rect x="420.0" y="132" width="360.0" height="80" fill="#fde2d3"/>
+  <rect x="780.0" y="132" width="270.0" height="80" fill="#e0f2fe"/>
+  <line x1="150" y1="212.0" x2="1050" y2="212.0" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="140" y="216.0" text-anchor="end" font-size="11" fill="#6b7280">0 ms</text>
+  <line x1="150" y1="172.0" x2="1050" y2="172.0" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="140" y="176.0" text-anchor="end" font-size="11" fill="#6b7280">250 ms</text>
+  <line x1="150" y1="132.0" x2="1050" y2="132.0" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="140" y="136.0" text-anchor="end" font-size="11" fill="#6b7280">500 ms</text>
+  <line x1="150" y1="212" x2="1050" y2="212" stroke="#9ca3af" stroke-width="1.2"/>
+  <text x="150" y="122" text-anchor="start" font-size="12.5" fill="#1f2937" font-weight="700">回應時間 p95</text>
+  <path d="M 150.0 199.2 L 240.0 197.6 L 330.0 189.6 L 420.0 170.4 L 510.0 151.2 L 600.0 144.8 L 690.0 146.4 L 780.0 148.0 L 870.0 176.8 L 960.0 194.4 L 1050.0 198.4" fill="none" stroke="#2a78d6" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+  <rect x="150.0" y="257" width="270.0" height="80" fill="#f3f4f6"/>
+  <rect x="420.0" y="257" width="360.0" height="80" fill="#fde2d3"/>
+  <rect x="780.0" y="257" width="270.0" height="80" fill="#e0f2fe"/>
+  <line x1="150" y1="337.0" x2="1050" y2="337.0" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="140" y="341.0" text-anchor="end" font-size="11" fill="#6b7280">0%</text>
+  <line x1="150" y1="297.0" x2="1050" y2="297.0" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="140" y="301.0" text-anchor="end" font-size="11" fill="#6b7280">1.5%</text>
+  <line x1="150" y1="257.0" x2="1050" y2="257.0" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="140" y="261.0" text-anchor="end" font-size="11" fill="#6b7280">3%</text>
+  <line x1="150" y1="337" x2="1050" y2="337" stroke="#9ca3af" stroke-width="1.2"/>
+  <text x="150" y="247" text-anchor="start" font-size="12.5" fill="#1f2937" font-weight="700">錯誤率</text>
+  <path d="M 150.0 337.0 L 240.0 337.0 L 330.0 331.7 L 420.0 321.0 L 510.0 299.7 L 600.0 289.0 L 690.0 291.7 L 780.0 297.0 L 870.0 321.0 L 960.0 334.3 L 1050.0 337.0" fill="none" stroke="#2a78d6" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+  <rect x="150.0" y="382" width="270.0" height="80" fill="#f3f4f6"/>
+  <rect x="420.0" y="382" width="360.0" height="80" fill="#fde2d3"/>
+  <rect x="780.0" y="382" width="270.0" height="80" fill="#e0f2fe"/>
+  <line x1="150" y1="462.0" x2="1050" y2="462.0" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="140" y="466.0" text-anchor="end" font-size="11" fill="#6b7280">0 ms</text>
+  <line x1="150" y1="422.0" x2="1050" y2="422.0" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="140" y="426.0" text-anchor="end" font-size="11" fill="#6b7280">200 ms</text>
+  <line x1="150" y1="382.0" x2="1050" y2="382.0" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="140" y="386.0" text-anchor="end" font-size="11" fill="#6b7280">400 ms</text>
+  <line x1="150" y1="462" x2="1050" y2="462" stroke="#9ca3af" stroke-width="1.2"/>
+  <text x="150" y="372" text-anchor="start" font-size="12.5" fill="#1f2937" font-weight="700">Semaphore 等候時間 p95</text>
+  <path d="M 150.0 461.6 L 240.0 461.6 L 330.0 458.0 L 420.0 438.0 L 510.0 410.0 L 600.0 396.0 L 690.0 394.0 L 780.0 398.0 L 870.0 438.0 L 960.0 460.0 L 1050.0 461.6" fill="none" stroke="#2a78d6" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+  <rect x="150.0" y="507" width="270.0" height="80" fill="#f3f4f6"/>
+  <rect x="420.0" y="507" width="360.0" height="80" fill="#fde2d3"/>
+  <rect x="780.0" y="507" width="270.0" height="80" fill="#e0f2fe"/>
+  <line x1="150" y1="587.0" x2="1050" y2="587.0" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="140" y="591.0" text-anchor="end" font-size="11" fill="#6b7280">0</text>
+  <line x1="150" y1="547.0" x2="1050" y2="547.0" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="140" y="551.0" text-anchor="end" font-size="11" fill="#6b7280">100</text>
+  <line x1="150" y1="507.0" x2="1050" y2="507.0" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="140" y="511.0" text-anchor="end" font-size="11" fill="#6b7280">200</text>
+  <line x1="150" y1="587" x2="1050" y2="587" stroke="#9ca3af" stroke-width="1.2"/>
+  <line x1="150.0" y1="587" x2="150.0" y2="592" stroke="#9ca3af" stroke-width="1.2"/>
+  <text x="150.0" y="607" text-anchor="middle" font-size="11" fill="#6b7280">0 分</text>
+  <line x1="330.0" y1="587" x2="330.0" y2="592" stroke="#9ca3af" stroke-width="1.2"/>
+  <text x="330.0" y="607" text-anchor="middle" font-size="11" fill="#6b7280">2 分</text>
+  <line x1="510.0" y1="587" x2="510.0" y2="592" stroke="#9ca3af" stroke-width="1.2"/>
+  <text x="510.0" y="607" text-anchor="middle" font-size="11" fill="#6b7280">4 分</text>
+  <line x1="690.0" y1="587" x2="690.0" y2="592" stroke="#9ca3af" stroke-width="1.2"/>
+  <text x="690.0" y="607" text-anchor="middle" font-size="11" fill="#6b7280">6 分</text>
+  <line x1="870.0" y1="587" x2="870.0" y2="592" stroke="#9ca3af" stroke-width="1.2"/>
+  <text x="870.0" y="607" text-anchor="middle" font-size="11" fill="#6b7280">8 分</text>
+  <line x1="1050.0" y1="587" x2="1050.0" y2="592" stroke="#9ca3af" stroke-width="1.2"/>
+  <text x="1050.0" y="607" text-anchor="middle" font-size="11" fill="#6b7280">10 分</text>
+  <text x="600.0" y="629" text-anchor="middle" font-size="11.5" fill="#4b5563" font-weight="700">促銷活動測試時間</text>
+  <text x="150" y="497" text-anchor="start" font-size="12.5" fill="#1f2937" font-weight="700">樂觀鎖版本衝突次數，每分鐘</text>
+  <path d="M 150.0 587.0 L 240.0 587.0 L 330.0 585.0 L 420.0 571.0 L 510.0 543.0 L 600.0 527.0 L 690.0 529.0 L 780.0 535.0 L 870.0 575.0 L 960.0 586.2 L 1050.0 587.0" fill="none" stroke="#2a78d6" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+  <text x="285.0" y="104" text-anchor="middle" font-size="12" fill="#4b5563" font-weight="700">爬升</text>
+  <text x="600.0" y="104" text-anchor="middle" font-size="12" fill="#4b5563" font-weight="700">尖峰</text>
+  <text x="915.0" y="104" text-anchor="middle" font-size="12" fill="#4b5563" font-weight="700">回落</text>
+  <rect x="1070" y="270" width="115" height="118" rx="8" fill="#ffffff" stroke="#c7d2fe" stroke-width="1.4"/>
+  <text x="1127" y="298" text-anchor="middle" font-size="12" fill="#312e81">四條曲線</text>
+  <text x="1127" y="320" text-anchor="middle" font-size="12" fill="#312e81">同一時間墊高、</text>
+  <text x="1127" y="342" text-anchor="middle" font-size="12" fill="#312e81">同一時間回落，</text>
+  <text x="1127" y="364" text-anchor="middle" font-size="12" fill="#312e81" font-weight="700">走勢彼此吻合</text>
+  <text x="600" y="680" text-anchor="middle" font-size="12" fill="#6b7280">示意走勢，並非實測結果：四項指標分開成獨立面板，共用同一條時間軸，不疊在同一個 Y 軸上</text>
+  <defs>
+    <marker id="ar-gray" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#6b7280"/></marker>
+    <marker id="ar-indigo" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4338ca"/></marker>
+    <marker id="ar-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d97706"/></marker>
+    <marker id="ar-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#dc2626"/></marker>
+    <marker id="ar-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#16a34a"/></marker>
+  </defs>
+</svg>

@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" font-family="'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', -apple-system, sans-serif">
+  <rect x="0" y="0" width="1200" height="700" fill="#ffffff"/>
+  <text x="600.0" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1f2937">一次查詢訂單請求，從進入到回應結束的完整時間軸</text>
+  <text x="600.0" y="64" text-anchor="middle" font-size="13.5" fill="#6b7280">Coroutine Scope、Coroutine Context、Dispatchers、Semaphore 與逾時，在同一個請求裡一起運作</text>
+  <rect x="40" y="110" width="140" height="96" rx="10" fill="#eef2ff" stroke="#4338ca" stroke-width="2"/>
+  <text x="110.0" y="136" text-anchor="middle" font-size="13" fill="#4338ca" font-weight="700">請求進入</text>
+  <text x="110.0" y="162" text-anchor="middle" font-size="10.5" fill="#334155" font-family="Menlo, Consolas, monospace">OrderController</text>
+  <text x="110.0" y="180" text-anchor="middle" font-size="10.5" fill="#334155" font-family="Menlo, Consolas, monospace">.getOrder</text>
+  <text x="110.0" y="230" text-anchor="middle" font-size="11" fill="#6b7280">Day 10、11</text>
+  <line x1="182" y1="158" x2="200" y2="158" stroke="#6b7280" stroke-width="2" marker-end="url(#ar-gray)"/>
+  <rect x="202" y="110" width="140" height="96" rx="10" fill="#eef2ff" stroke="#4338ca" stroke-width="2"/>
+  <text x="272.0" y="136" text-anchor="middle" font-size="13" fill="#4338ca" font-weight="700">Scope 建立</text>
+  <text x="272.0" y="162" text-anchor="middle" font-size="10.5" fill="#334155">生命週期與</text>
+  <text x="272.0" y="180" text-anchor="middle" font-size="10.5" fill="#334155">請求綁在一起</text>
+  <text x="272.0" y="230" text-anchor="middle" font-size="11" fill="#6b7280">Day 05</text>
+  <line x1="344" y1="158" x2="362" y2="158" stroke="#6b7280" stroke-width="2" marker-end="url(#ar-gray)"/>
+  <rect x="364" y="110" width="140" height="96" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="434.0" y="136" text-anchor="middle" font-size="13" fill="#7c3aed" font-weight="700">掛入 RequestId</text>
+  <text x="434.0" y="162" text-anchor="middle" font-size="10.5" fill="#334155" font-family="Menlo, Consolas, monospace">withContext(</text>
+  <text x="434.0" y="180" text-anchor="middle" font-size="10.5" fill="#334155" font-family="Menlo, Consolas, monospace">requestId) { }</text>
+  <text x="434.0" y="230" text-anchor="middle" font-size="11" fill="#6b7280">Day 25、08</text>
+  <line x1="506" y1="158" x2="524" y2="158" stroke="#6b7280" stroke-width="2" marker-end="url(#ar-gray)"/>
+  <rect x="526" y="110" width="140" height="96" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="596.0" y="136" text-anchor="middle" font-size="13" fill="#16a34a" font-weight="700">查詢訂單</text>
+  <text x="596.0" y="162" text-anchor="middle" font-size="10.5" fill="#334155" font-family="Menlo, Consolas, monospace">orderRepository</text>
+  <text x="596.0" y="180" text-anchor="middle" font-size="10.5" fill="#334155" font-family="Menlo, Consolas, monospace">.findById</text>
+  <text x="596.0" y="230" text-anchor="middle" font-size="11" fill="#6b7280">Day 12</text>
+  <line x1="668" y1="158" x2="686" y2="158" stroke="#6b7280" stroke-width="2" marker-end="url(#ar-gray)"/>
+  <rect x="688" y="110" width="140" height="96" rx="10" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+  <text x="758.0" y="136" text-anchor="middle" font-size="13" fill="#ea580c" font-weight="700">確認庫存</text>
+  <text x="758.0" y="162" text-anchor="middle" font-size="10.5" fill="#334155" font-family="Menlo, Consolas, monospace">withPermit {</text>
+  <text x="758.0" y="180" text-anchor="middle" font-size="10.5" fill="#334155" font-family="Menlo, Consolas, monospace">withTimeout {…} }</text>
+  <text x="758.0" y="230" text-anchor="middle" font-size="11" fill="#6b7280">Day 15、16、23</text>
+  <line x1="830" y1="158" x2="848" y2="158" stroke="#6b7280" stroke-width="2" marker-end="url(#ar-gray)"/>
+  <rect x="850" y="110" width="140" height="96" rx="10" fill="#eef2ff" stroke="#4338ca" stroke-width="2"/>
+  <text x="920.0" y="136" text-anchor="middle" font-size="13" fill="#4338ca" font-weight="700">組裝回應</text>
+  <text x="920.0" y="162" text-anchor="middle" font-size="10.5" fill="#334155" font-family="Menlo, Consolas, monospace">OrderDetail</text>
+  <text x="920.0" y="180" text-anchor="middle" font-size="10.5" fill="#334155" font-family="Menlo, Consolas, monospace">Response</text>
+  <text x="920.0" y="230" text-anchor="middle" font-size="11" fill="#6b7280">Day 22</text>
+  <line x1="992" y1="158" x2="1010" y2="158" stroke="#6b7280" stroke-width="2" marker-end="url(#ar-gray)"/>
+  <rect x="1012" y="110" width="140" height="96" rx="10" fill="#eef2ff" stroke="#4338ca" stroke-width="2"/>
+  <text x="1082.0" y="136" text-anchor="middle" font-size="13" fill="#4338ca" font-weight="700">離開 Scope</text>
+  <text x="1082.0" y="162" text-anchor="middle" font-size="10.5" fill="#334155">請求結束，</text>
+  <text x="1082.0" y="180" text-anchor="middle" font-size="10.5" fill="#334155">Scope 收掉</text>
+  <text x="1082.0" y="230" text-anchor="middle" font-size="11" fill="#6b7280">Day 05、06</text>
+  <rect x="194" y="258" width="966" height="30" rx="8" fill="#eef2ff" stroke="#4338ca" stroke-width="1.4"/>
+  <text x="677.0" y="278" text-anchor="middle" font-size="12" fill="#312e81" font-weight="700">Coroutine Scope 存在的期間，與這次請求的生命週期相同</text>
+  <rect x="356" y="298" width="642" height="30" rx="8" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.4"/>
+  <text x="677.0" y="318" text-anchor="middle" font-size="11.5" fill="#5b21b6" font-weight="700">RequestId 落在 Coroutine Context 裡，沿途日誌都能透過 coroutineContext[RequestId] 串回同一個請求</text>
+  <text x="40" y="372" text-anchor="start" font-size="13" fill="#1f2937" font-weight="700">Dispatcher 管理的執行緒，等待期間被讓出去處理其他工作</text>
+  <text x="40" y="415" text-anchor="start" font-size="11.5" fill="#6b7280" font-family="Menlo, Consolas, monospace">Thread-1</text>
+  <line x1="130" y1="410" x2="1160" y2="410" stroke="#e5e7eb" stroke-width="1.2"/>
+  <text x="40" y="455" text-anchor="start" font-size="11.5" fill="#6b7280" font-family="Menlo, Consolas, monospace">Thread-2</text>
+  <line x1="130" y1="450" x2="1160" y2="450" stroke="#e5e7eb" stroke-width="1.2"/>
+  <text x="40" y="495" text-anchor="start" font-size="11.5" fill="#6b7280" font-family="Menlo, Consolas, monospace">Thread-3</text>
+  <line x1="130" y1="490" x2="1160" y2="490" stroke="#e5e7eb" stroke-width="1.2"/>
+  <rect x="140" y="400" width="426" height="20" rx="4" fill="#a5b4fc"/>
+  <rect x="566" y="444" width="80" height="12" rx="3" fill="none" stroke="#9ca3af" stroke-width="1.2" stroke-dasharray="3 3"/>
+  <rect x="646" y="440" width="62" height="20" rx="4" fill="#86efac"/>
+  <rect x="708" y="404" width="50" height="12" rx="3" fill="none" stroke="#9ca3af" stroke-width="1.2" stroke-dasharray="3 3"/>
+  <rect x="758" y="484" width="50" height="12" rx="3" fill="none" stroke="#9ca3af" stroke-width="1.2" stroke-dasharray="3 3"/>
+  <rect x="808" y="480" width="334" height="20" rx="4" fill="#fdba74"/>
+  <text x="606" y="434" text-anchor="middle" font-size="10.5" fill="#6b7280">等待資料庫，暫停</text>
+  <text x="733" y="394" text-anchor="middle" font-size="10.5" fill="#6b7280">排隊等名額</text>
+  <text x="783" y="516" text-anchor="middle" font-size="10.5" fill="#6b7280">等待下游，暫停</text>
+  <text x="650" y="470" text-anchor="start" font-size="10.5" fill="#166534">恢復時換到 Thread-2</text>
+  <text x="860" y="470" text-anchor="start" font-size="10.5" fill="#9a3412">恢復時換到 Thread-3，RequestId 仍跟著協程</text>
+  <rect x="40" y="548" width="1120" height="92" rx="12" fill="#fff7ed" stroke="#ea580c" stroke-width="1.6"/>
+  <text x="60" y="576" text-anchor="start" font-size="13" fill="#9a3412" font-weight="700">確認庫存這一段的兩層保護，順序沿用 Day 23</text>
+  <text x="60" y="600" text-anchor="start" font-size="12" fill="#7c2d12" font-family="Menlo, Consolas, monospace">stockCheckSemaphore.withPermit { withTimeout(2_000) { stockClient.checkStock(orderId) } }</text>
+  <text x="60" y="624" text-anchor="start" font-size="12" fill="#4b5563">permits = 20 控制同時執行的呼叫數量；排隊等候名額的時間不算進 2 秒逾時倒數；逾時就回應庫存暫時不可用</text>
+  <text x="600" y="674" text-anchor="middle" font-size="12" fill="#6b7280">執行緒軌道為示意，實際排到哪一條執行緒由 Dispatcher 決定</text>
+  <defs>
+    <marker id="ar-gray" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#6b7280"/></marker>
+    <marker id="ar-indigo" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4338ca"/></marker>
+    <marker id="ar-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d97706"/></marker>
+    <marker id="ar-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#dc2626"/></marker>
+    <marker id="ar-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#16a34a"/></marker>
+  </defs>
+</svg>

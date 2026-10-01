@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" font-family="'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', -apple-system, sans-serif">
+  <rect x="0" y="0" width="1200" height="680" fill="#ffffff"/>
+  <text x="600.0" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1f2937">同樣的 MDC 日誌關聯，換到協程情境就斷了</text>
+  <text x="600.0" y="64" text-anchor="middle" font-size="13.5" fill="#6b7280">MDC 的儲存空間綁在執行緒上，Thread-per-Request 沒問題，協程換執行緒與平行子協程都會讓關聯失效</text>
+  <rect x="40" y="96" width="500" height="520" rx="12" fill="#f8fafc" stroke="#64748b" stroke-width="2"/>
+  <text x="290" y="126" text-anchor="middle" font-size="15" fill="#1f2937" font-weight="700">Thread-per-Request 模型</text>
+  <text x="290" y="148" text-anchor="middle" font-size="12" fill="#6b7280">一個請求從頭到尾綁在同一條執行緒上</text>
+  <rect x="80" y="176" width="420" height="44" rx="10" fill="#e0e7ff" stroke="#4338ca" stroke-width="1.6"/>
+  <text x="100" y="203" text-anchor="start" font-size="13" fill="#312e81" font-weight="700">請求 req-A</text>
+  <text x="480" y="203" text-anchor="end" font-size="12" fill="#312e81">Thread-1 全程處理</text>
+  <rect x="80" y="238" width="420" height="40" rx="10" fill="#ecfdf5" stroke="#10b981" stroke-width="1.4"/>
+  <text x="290" y="263" text-anchor="middle" font-size="12" fill="#065f46">Thread-1 的 MDC：requestId = req-A，直到請求結束</text>
+  <rect x="80" y="306" width="420" height="34" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+  <text x="98" y="328" text-anchor="start" font-size="12" fill="#334155" font-family="Menlo, Consolas, monospace">[Thread-1] [req-A] 查詢訂單…</text>
+  <rect x="80" y="350" width="420" height="34" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+  <text x="98" y="372" text-anchor="start" font-size="12" fill="#334155" font-family="Menlo, Consolas, monospace">[Thread-1] [req-A] 確認庫存…</text>
+  <rect x="80" y="394" width="420" height="34" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+  <text x="98" y="416" text-anchor="start" font-size="12" fill="#334155" font-family="Menlo, Consolas, monospace">[Thread-1] [req-A] 確認優惠資格…</text>
+  <rect x="80" y="438" width="420" height="34" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+  <text x="98" y="460" text-anchor="start" font-size="12" fill="#334155" font-family="Menlo, Consolas, monospace">[Thread-1] [req-A] 發送通知…</text>
+  <rect x="80" y="500" width="420" height="92" rx="12" fill="#ecfdf5" stroke="#10b981" stroke-width="2"/>
+  <text x="290" y="534" text-anchor="middle" font-size="14" fill="#065f46" font-weight="700">✓ 日誌能被正確關聯回同一個請求</text>
+  <text x="290" y="560" text-anchor="middle" font-size="12" fill="#4b5563">拿 req-A 搜尋日誌，就能拼出完整軌跡</text>
+  <rect x="580" y="96" width="580" height="520" rx="12" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="870" y="126" text-anchor="middle" font-size="15" fill="#1f2937" font-weight="700">協程情境</text>
+  <text x="870" y="148" text-anchor="middle" font-size="12" fill="#6b7280">同一個請求的協程，在 Dispatcher 的執行緒之間輪流借用</text>
+  <rect x="600" y="176" width="540" height="76" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.2"/>
+  <text x="616" y="200" text-anchor="start" font-size="12.5" fill="#1f2937" font-weight="700">Thread-1</text>
+  <rect x="616" y="212" width="120" height="26" rx="13" fill="#ecfdf5" stroke="#065f46" stroke-width="1.1"/>
+  <text x="676" y="230" text-anchor="middle" font-size="11" fill="#065f46" font-weight="700">MDC：req-A</text>
+  <rect x="600" y="268" width="540" height="76" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.2"/>
+  <text x="616" y="292" text-anchor="start" font-size="12.5" fill="#1f2937" font-weight="700">Thread-2</text>
+  <rect x="616" y="304" width="120" height="26" rx="13" fill="#f3f4f6" stroke="#4b5563" stroke-width="1.1"/>
+  <text x="676" y="322" text-anchor="middle" font-size="11" fill="#4b5563" font-weight="700">MDC：空的</text>
+  <rect x="600" y="360" width="540" height="76" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.2"/>
+  <text x="616" y="384" text-anchor="start" font-size="12.5" fill="#1f2937" font-weight="700">Thread-3</text>
+  <rect x="616" y="396" width="120" height="26" rx="13" fill="#fef2f2" stroke="#991b1b" stroke-width="1.1"/>
+  <text x="676" y="414" text-anchor="middle" font-size="11" fill="#991b1b" font-weight="700">MDC：req-Z，殘留</text>
+  <rect x="760" y="186" width="170" height="30" rx="8" fill="#ffffff" stroke="#10b981" stroke-width="1.6"/>
+  <text x="845" y="206" text-anchor="middle" font-size="11" fill="#334155" font-family="Menlo, Consolas, monospace">[req-A] 查詢訂單</text>
+  <rect x="950" y="278" width="170" height="30" rx="8" fill="#ffffff" stroke="#ef4444" stroke-width="1.6"/>
+  <text x="1035" y="298" text-anchor="middle" font-size="11" fill="#334155" font-family="Menlo, Consolas, monospace">[ ??? ] 確認庫存</text>
+  <rect x="760" y="370" width="170" height="30" rx="8" fill="#ffffff" stroke="#ef4444" stroke-width="1.6"/>
+  <text x="845" y="390" text-anchor="middle" font-size="11" fill="#334155" font-family="Menlo, Consolas, monospace">[req-Z] 確認優惠</text>
+  <rect x="950" y="370" width="170" height="30" rx="8" fill="#ffffff" stroke="#ef4444" stroke-width="1.6"/>
+  <text x="1035" y="390" text-anchor="middle" font-size="11" fill="#334155" font-family="Menlo, Consolas, monospace">[ ??? ] 發送通知</text>
+  <path d="M 930 201 C 960 201, 960 266, 990 276" stroke="#d97706" stroke-width="1.8" fill="none" stroke-dasharray="5 4" marker-end="url(#ar-amber)"/>
+  <text x="965" y="228" text-anchor="start" font-size="10.5" fill="#92400e">暫停後恢復，換了執行緒</text>
+  <path d="M 845 216 C 845 300, 845 330, 845 366" stroke="#d97706" stroke-width="1.8" fill="none" stroke-dasharray="5 4" marker-end="url(#ar-amber)"/>
+  <text x="838" y="300" text-anchor="end" font-size="10.5" fill="#92400e">async 平行子協程</text>
+  <text x="838" y="316" text-anchor="end" font-size="10.5" fill="#92400e">一開始就排到別條</text>
+  <rect x="600" y="500" width="540" height="92" rx="12" fill="#fef2f2" stroke="#ef4444" stroke-width="2"/>
+  <text x="870" y="534" text-anchor="middle" font-size="14" fill="#7f1d1d" font-weight="700">✕ 日誌無法被正確關聯回同一個請求</text>
+  <text x="870" y="560" text-anchor="middle" font-size="12" fill="#4b5563">MDC 跟著執行緒走，協程不跟著任何一條執行緒走</text>
+  <text x="600" y="650" text-anchor="middle" font-size="12" fill="#6b7280">解法在 Day 25 正文：把請求識別碼放進 Coroutine Context，讓它跟著協程走，而不是跟著執行緒走</text>
+  <defs>
+    <marker id="ar-gray" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#6b7280"/></marker>
+    <marker id="ar-indigo" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4338ca"/></marker>
+    <marker id="ar-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d97706"/></marker>
+    <marker id="ar-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#dc2626"/></marker>
+    <marker id="ar-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#16a34a"/></marker>
+  </defs>
+</svg>
