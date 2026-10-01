@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="870" viewBox="0 0 1240 870" font-family="'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', -apple-system, sans-serif">
+  <!-- 背景 -->
+  <rect x="0" y="0" width="1240" height="870" fill="#ffffff"/>
+
+  <!-- 標題 -->
+  <text x="620" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1f2937">長篇論證的逐步展開，每一步先站穩才往下走</text>
+  <text x="620" y="64" text-anchor="middle" font-size="13" fill="#6b7280">逐段展開架構的粒度收斂，展開的最小單位從段落再往下收斂到論證步驟</text>
+
+  <!-- 外層：逐段展開節奏容器，y: 90 ~ 250 -->
+  <rect x="40" y="90" width="1160" height="160" rx="14" fill="#f9fafb" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="64" y="116" font-size="13.5" font-weight="700" fill="#374151">同一條時間軸：Day 14 定案的逐段展開節奏</text>
+
+  <!-- 段落節點一：一般內容，虛化 -->
+  <rect x="64" y="136" width="200" height="86" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1.2"/>
+  <text x="164" y="164" text-anchor="middle" font-size="12.5" fill="#9ca3af">一般敘述段落</text>
+  <text x="164" y="182" text-anchor="middle" font-size="12.5" fill="#9ca3af">已完成撰寫</text>
+  <text x="164" y="205" text-anchor="middle" font-size="11" fill="#b0b5bd">展開單位＝段落</text>
+
+  <!-- 箭頭：段落一 -> 段落二 -->
+  <line x1="264" y1="179" x2="316" y2="179" stroke="#9ca3af" stroke-width="2.2" marker-end="url(#arrow-gray-light)"/>
+
+  <!-- 段落節點二：目前展開中，長篇論證 -->
+  <rect x="316" y="122" width="320" height="114" rx="12" fill="#eef2ff" stroke="#4338ca" stroke-width="2.4"/>
+  <text x="476" y="150" text-anchor="middle" font-size="14.5" font-weight="700" fill="#312e81">目前展開中：長篇論證段落</text>
+  <text x="476" y="172" text-anchor="middle" font-size="12" fill="#4338ca">邏輯密度遠高於一般敘述，</text>
+  <text x="476" y="192" text-anchor="middle" font-size="12" fill="#4338ca">展開單位再收斂到論證步驟</text>
+  <rect x="381" y="202" width="190" height="26" rx="13" fill="#4338ca"/>
+  <text x="476" y="220" text-anchor="middle" font-size="11.5" fill="#ffffff">逐步展開＋步驟間檢查點</text>
+
+  <!-- 箭頭：段落二 -> 段落三 -->
+  <line x1="636" y1="179" x2="688" y2="179" stroke="#9ca3af" stroke-width="2.2" marker-end="url(#arrow-gray-light)"/>
+
+  <!-- 段落節點三：待處理，虛化 -->
+  <rect x="688" y="136" width="200" height="86" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1.2"/>
+  <text x="788" y="164" text-anchor="middle" font-size="12.5" fill="#9ca3af">下一則段落節點</text>
+  <text x="788" y="182" text-anchor="middle" font-size="12.5" fill="#9ca3af">尚待處理</text>
+  <text x="788" y="205" text-anchor="middle" font-size="11" fill="#b0b5bd">依內容決定展開單位</text>
+
+  <!-- 省略號 -->
+  <text x="912" y="185" font-size="20" font-weight="700" fill="#9ca3af">…</text>
+
+  <!-- 右側註記 -->
+  <text x="1176" y="170" text-anchor="end" font-size="11.5" fill="#6b7280">切分原則不變，</text>
+  <text x="1176" y="188" text-anchor="end" font-size="11.5" fill="#6b7280">只是切得更細</text>
+
+  <!-- 連接線：從段落二節點向下拉出 -->
+  <line x1="476" y1="236" x2="476" y2="278" stroke="#4338ca" stroke-width="2.4" stroke-dasharray="5 4" marker-end="url(#arrow-indigo)"/>
+  <text x="492" y="262" font-size="11.5" fill="#4338ca">同一節點內部放大檢視</text>
+
+  <!-- 放大區塊外框，y: 284 ~ 770 -->
+  <rect x="40" y="284" width="1160" height="486" rx="14" fill="#ffffff" stroke="#c7d2fe" stroke-width="1.6"/>
+  <text x="620" y="314" text-anchor="middle" font-size="14" font-weight="700" fill="#312e81">段落節點內部：以 API 端點改為非同步處理的論證為例</text>
+
+  <!-- 步驟①，x 65 ~ 275，y 340 ~ 540 -->
+  <rect x="65" y="340" width="210" height="200" rx="12" fill="#eef2ff" stroke="#4338ca" stroke-width="2"/>
+  <rect x="65" y="340" width="210" height="34" rx="12" fill="#4338ca"/>
+  <rect x="65" y="356" width="210" height="18" fill="#4338ca"/>
+  <text x="170" y="362" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">步驟 ① 起點觀察</text>
+  <text x="81" y="396" font-size="11" font-weight="700" fill="#6b7280">立足前提</text>
+  <text x="81" y="416" font-size="12" fill="#312e81">觀察到端點的</text>
+  <text x="81" y="434" font-size="12" fill="#312e81">回應時間偏高</text>
+  <line x1="81" y1="450" x2="259" y2="450" stroke="#c7d2fe" stroke-width="1.2"/>
+  <text x="81" y="472" font-size="11" font-weight="700" fill="#6b7280">這一步的結論</text>
+  <text x="81" y="492" font-size="12" fill="#312e81">需要先找出耗時</text>
+  <text x="81" y="510" font-size="12" fill="#312e81">究竟花在哪裡</text>
+
+  <!-- 檢查點 ①->② -->
+  <line x1="277" y1="445" x2="363" y2="445" stroke="#d97706" stroke-width="2.2" marker-end="url(#arrow-amber)"/>
+  <rect x="284" y="408" width="72" height="24" rx="12" fill="#fef3c7" stroke="#d97706" stroke-width="1.4"/>
+  <text x="320" y="425" text-anchor="middle" font-size="11.5" font-weight="700" fill="#92400e">檢查點</text>
+  <text x="320" y="468" text-anchor="middle" font-size="11" fill="#92400e">依據：</text>
+  <text x="320" y="484" text-anchor="middle" font-size="11" fill="#92400e">① 的結論</text>
+
+  <!-- 步驟②，x 365 ~ 575 -->
+  <rect x="365" y="340" width="210" height="200" rx="12" fill="#eef2ff" stroke="#4338ca" stroke-width="2"/>
+  <rect x="365" y="340" width="210" height="34" rx="12" fill="#4338ca"/>
+  <rect x="365" y="356" width="210" height="18" fill="#4338ca"/>
+  <text x="470" y="362" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">步驟 ② 確認關鍵前提</text>
+  <text x="381" y="396" font-size="11" font-weight="700" fill="#6b7280">立足前提</text>
+  <text x="381" y="416" font-size="12" fill="#312e81">步驟 ① 已成立：</text>
+  <text x="381" y="434" font-size="12" fill="#312e81">要先定位耗時來源</text>
+  <line x1="381" y1="450" x2="559" y2="450" stroke="#c7d2fe" stroke-width="1.2"/>
+  <text x="381" y="472" font-size="11" font-weight="700" fill="#6b7280">這一步的結論</text>
+  <text x="381" y="492" font-size="12" fill="#312e81">耗時集中在等待外部</text>
+  <text x="381" y="510" font-size="12" fill="#312e81">資源，而非本地運算</text>
+
+  <!-- 檢查點 ②->③ -->
+  <line x1="577" y1="445" x2="663" y2="445" stroke="#d97706" stroke-width="2.2" marker-end="url(#arrow-amber)"/>
+  <rect x="584" y="408" width="72" height="24" rx="12" fill="#fef3c7" stroke="#d97706" stroke-width="1.4"/>
+  <text x="620" y="425" text-anchor="middle" font-size="11.5" font-weight="700" fill="#92400e">檢查點</text>
+  <text x="620" y="468" text-anchor="middle" font-size="11" fill="#92400e">依據：</text>
+  <text x="620" y="484" text-anchor="middle" font-size="11" fill="#92400e">② 的結論</text>
+
+  <!-- 步驟③，x 665 ~ 875 -->
+  <rect x="665" y="340" width="210" height="200" rx="12" fill="#eef2ff" stroke="#4338ca" stroke-width="2"/>
+  <rect x="665" y="340" width="210" height="34" rx="12" fill="#4338ca"/>
+  <rect x="665" y="356" width="210" height="18" fill="#4338ca"/>
+  <text x="770" y="362" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">步驟 ③ 套用規則</text>
+  <text x="681" y="396" font-size="11" font-weight="700" fill="#6b7280">立足前提</text>
+  <text x="681" y="416" font-size="12" fill="#312e81">步驟 ② 已成立：</text>
+  <text x="681" y="434" font-size="12" fill="#312e81">耗時在等待外部資源</text>
+  <line x1="681" y1="450" x2="859" y2="450" stroke="#c7d2fe" stroke-width="1.2"/>
+  <text x="681" y="472" font-size="11" font-weight="700" fill="#6b7280">這一步的結論</text>
+  <text x="681" y="492" font-size="12" fill="#312e81">這類等待耗時，適合</text>
+  <text x="681" y="510" font-size="12" fill="#312e81">用非同步處理改善</text>
+
+  <!-- 檢查點 ③->④ -->
+  <line x1="877" y1="445" x2="963" y2="445" stroke="#d97706" stroke-width="2.2" marker-end="url(#arrow-amber)"/>
+  <rect x="884" y="408" width="72" height="24" rx="12" fill="#fef3c7" stroke="#d97706" stroke-width="1.4"/>
+  <text x="920" y="425" text-anchor="middle" font-size="11.5" font-weight="700" fill="#92400e">檢查點</text>
+  <text x="920" y="468" text-anchor="middle" font-size="11" fill="#92400e">依據：</text>
+  <text x="920" y="484" text-anchor="middle" font-size="11" fill="#92400e">③ 的結論</text>
+
+  <!-- 最終建議，x 965 ~ 1175 -->
+  <rect x="965" y="340" width="210" height="200" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <rect x="965" y="340" width="210" height="34" rx="12" fill="#16a34a"/>
+  <rect x="965" y="356" width="210" height="18" fill="#16a34a"/>
+  <text x="1070" y="362" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">最終架構建議</text>
+  <text x="981" y="396" font-size="11" font-weight="700" fill="#6b7280">立足前提</text>
+  <text x="981" y="416" font-size="12" fill="#14532d">步驟 ③ 已成立：</text>
+  <text x="981" y="434" font-size="12" fill="#14532d">非同步能改善等待耗時</text>
+  <line x1="981" y1="450" x2="1159" y2="450" stroke="#bbf7d0" stroke-width="1.2"/>
+  <text x="981" y="472" font-size="11" font-weight="700" fill="#6b7280">結論</text>
+  <text x="981" y="492" font-size="12" fill="#14532d">把這個端點改為</text>
+  <text x="981" y="510" font-size="12" fill="#14532d">非同步處理</text>
+
+  <!-- 被封住的捷徑：從步驟①直接跳到最終建議 -->
+  <path d="M 170 544 C 170 612, 1070 612, 1070 548" fill="none" stroke="#dc2626" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow-red)"/>
+  <rect x="330" y="582" width="580" height="28" rx="14" fill="#ffffff" stroke="#fecaca" stroke-width="1.2"/>
+  <text x="620" y="601" text-anchor="middle" font-size="12" fill="#b91c1c"><tspan font-weight="700">✕ 一次寫完的捷徑：</tspan>從觀察直接用「因此」跳到建議，跳過 ② ③，這條路被封住</text>
+
+  <!-- 對應三種鬆脫型態 -->
+  <text x="620" y="642" text-anchor="middle" font-size="12.5" font-weight="700" fill="#374151">逐步展開與檢查點，對應前一節的三種鬆脫型態</text>
+
+  <rect x="70" y="656" width="340" height="88" rx="10" fill="#fef2f2" stroke="#fca5a5" stroke-width="1.4"/>
+  <text x="240" y="682" text-anchor="middle" font-size="12.5" font-weight="700" fill="#991b1b">跳過推論步驟</text>
+  <text x="240" y="706" text-anchor="middle" font-size="12" fill="#374151">步驟被拆細，每一步交代清楚</text>
+  <text x="240" y="726" text-anchor="middle" font-size="12" fill="#374151">才能進入下一步，無處可跳</text>
+
+  <rect x="450" y="656" width="340" height="88" rx="10" fill="#fef2f2" stroke="#fca5a5" stroke-width="1.4"/>
+  <text x="620" y="682" text-anchor="middle" font-size="12.5" font-weight="700" fill="#991b1b">推導缺乏依據</text>
+  <text x="620" y="706" text-anchor="middle" font-size="12" fill="#374151">每個檢查點顯式交代根據哪個結論、</text>
+  <text x="620" y="726" text-anchor="middle" font-size="12" fill="#374151">套用哪個條件或規則</text>
+
+  <rect x="830" y="656" width="340" height="88" rx="10" fill="#fef2f2" stroke="#fca5a5" stroke-width="1.4"/>
+  <text x="1000" y="682" text-anchor="middle" font-size="12.5" font-weight="700" fill="#991b1b">前提被默默置換</text>
+  <text x="1000" y="706" text-anchor="middle" font-size="12" fill="#374151">每一步回頭確認立足的明確前提，</text>
+  <text x="1000" y="726" text-anchor="middle" font-size="12" fill="#374151">置換一發生就在銜接處露出破綻</text>
+
+  <!-- 底部說明 -->
+  <text x="620" y="806" text-anchor="middle" font-size="12" fill="#4b5563">拆解發生在寫作代理人展開內容的過程與檢查點上，最終呈現給讀者的文字依然可以是流暢的敘述</text>
+  <text x="620" y="830" text-anchor="middle" font-size="12" fill="#6b7280">差別只在這份流暢，建立在每一步都先站穩的基礎上</text>
+
+  <defs>
+    <marker id="arrow-gray-light" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#9ca3af"/>
+    </marker>
+    <marker id="arrow-indigo" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4338ca"/>
+    </marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#d97706"/>
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#dc2626"/>
+    </marker>
+  </defs>
+</svg>

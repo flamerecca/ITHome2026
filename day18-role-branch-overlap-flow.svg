@@ -32,58 +32,58 @@
   <line x1="340" y1="250" x2="340" y2="264" stroke="#6b7280" stroke-width="2" marker-end="url(#arrow-gray)"/>
   <line x1="780" y1="250" x2="780" y2="264" stroke="#6b7280" stroke-width="2" marker-end="url(#arrow-gray)"/>
 
-  <!-- 左欄：角色 Policy 判斷，寬 500，x 70 到 570，y 264 到 534 -->
-  <rect x="70" y="264" width="500" height="270" rx="12" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
-  <rect x="70" y="264" width="500" height="40" rx="12" fill="#16a34a"/>
-  <rect x="70" y="284" width="500" height="20" fill="#16a34a"/>
-  <text x="320" y="290" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">角色 Policy 判斷，能不能操作</text>
+  <!-- 左欄：角色 Policy 判斷，寬 470，x 70 到 540，y 264 到 534 -->
+  <rect x="70" y="264" width="470" height="270" rx="12" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+  <rect x="70" y="264" width="470" height="40" rx="12" fill="#16a34a"/>
+  <rect x="70" y="284" width="470" height="20" fill="#16a34a"/>
+  <text x="305" y="290" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">角色 Policy 判斷，能不能操作</text>
 
   <text x="90" y="330" font-size="12.5" fill="#14532d">依據：Day 16 角色權限矩陣</text>
   <text x="90" y="350" font-size="12.5" fill="#14532d">寫在 ProductPolicy／OrderPolicy／</text>
   <text x="90" y="368" font-size="12.5" fill="#14532d">OrderItemPolicy，比對 user-&gt;role</text>
 
-  <rect x="90" y="386" width="220" height="128" rx="8" fill="#ffffff" stroke="#bbf7d0" stroke-width="1.2"/>
+  <rect x="90" y="386" width="205" height="128" rx="8" fill="#ffffff" stroke="#bbf7d0" stroke-width="1.2"/>
   <text x="106" y="408" font-size="12" font-weight="600" fill="#374151">帳號 A，倉管</text>
   <text x="106" y="430" font-size="11.5" fill="#15803d">商品編輯　　可以</text>
   <text x="106" y="450" font-size="11.5" fill="#15803d">訂單明細新增　可以</text>
   <text x="106" y="470" font-size="11.5" fill="#15803d">訂單明細刪除　可以</text>
   <text x="106" y="490" font-size="11.5" fill="#15803d">訂單建立編輯　不行</text>
 
-  <rect x="330" y="386" width="220" height="128" rx="8" fill="#ffffff" stroke="#bbf7d0" stroke-width="1.2"/>
-  <text x="346" y="408" font-size="12" font-weight="600" fill="#374151">帳號 B，財務</text>
-  <text x="346" y="430" font-size="11.5" fill="#15803d">訂單檢視　　可以</text>
-  <text x="346" y="450" font-size="11.5" fill="#15803d">訂單建立編輯　不行</text>
-  <text x="346" y="470" font-size="11.5" fill="#15803d">商品編輯　　不行</text>
-  <text x="346" y="490" font-size="11.5" fill="#15803d">訂單明細新增　不行</text>
+  <rect x="315" y="386" width="205" height="128" rx="8" fill="#ffffff" stroke="#bbf7d0" stroke-width="1.2"/>
+  <text x="331" y="408" font-size="12" font-weight="600" fill="#374151">帳號 B，財務</text>
+  <text x="331" y="430" font-size="11.5" fill="#15803d">訂單檢視　　可以</text>
+  <text x="331" y="450" font-size="11.5" fill="#15803d">訂單建立編輯　不行</text>
+  <text x="331" y="470" font-size="11.5" fill="#15803d">商品編輯　　不行</text>
+  <text x="331" y="490" font-size="11.5" fill="#15803d">訂單明細新增　不行</text>
 
-  <!-- 右欄：BranchScope 資料範圍判斷，寬 500，x 550 到 1050，y 264 到 534 -->
-  <rect x="550" y="264" width="500" height="270" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
-  <rect x="550" y="264" width="500" height="40" rx="12" fill="#2563eb"/>
-  <rect x="550" y="284" width="500" height="20" fill="#2563eb"/>
-  <text x="800" y="290" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">BranchScope 判斷，查得到多少</text>
+  <!-- 右欄：BranchScope 資料範圍判斷，寬 470，x 580 到 1050，y 264 到 534，與左欄間距 40 -->
+  <rect x="580" y="264" width="470" height="270" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+  <rect x="580" y="264" width="470" height="40" rx="12" fill="#2563eb"/>
+  <rect x="580" y="284" width="470" height="20" fill="#2563eb"/>
+  <text x="815" y="290" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">BranchScope 判斷，查得到多少</text>
 
-  <text x="570" y="330" font-size="12.5" fill="#1e3a8a">依據：Day 17 多租戶隔離</text>
-  <text x="570" y="350" font-size="12.5" fill="#1e3a8a">掛在 Order／Customer 的 Global</text>
-  <text x="570" y="368" font-size="12.5" fill="#1e3a8a">Scope，比對 user-&gt;branch_id</text>
+  <text x="600" y="330" font-size="12.5" fill="#1e3a8a">依據：Day 17 多租戶隔離</text>
+  <text x="600" y="350" font-size="12.5" fill="#1e3a8a">掛在 Order／Customer 的 Global</text>
+  <text x="600" y="368" font-size="12.5" fill="#1e3a8a">Scope，比對 user-&gt;branch_id</text>
 
-  <rect x="570" y="386" width="220" height="128" rx="8" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.2"/>
-  <text x="586" y="408" font-size="12" font-weight="600" fill="#374151">帳號 A，高雄</text>
-  <text x="586" y="430" font-size="11.5" fill="#1e40af">訂單列表　只見高雄</text>
-  <text x="586" y="450" font-size="11.5" fill="#1e40af">客戶列表　只見高雄</text>
-  <text x="586" y="470" font-size="11.5" fill="#1e40af">訂單明細　依附訂單</text>
-  <text x="586" y="490" font-size="11.5" fill="#1e40af">　　　　自動同範圍</text>
+  <rect x="600" y="386" width="205" height="128" rx="8" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.2"/>
+  <text x="616" y="408" font-size="12" font-weight="600" fill="#374151">帳號 A，高雄</text>
+  <text x="616" y="430" font-size="11.5" fill="#1e40af">訂單列表　只見高雄</text>
+  <text x="616" y="450" font-size="11.5" fill="#1e40af">客戶列表　只見高雄</text>
+  <text x="616" y="470" font-size="11.5" fill="#1e40af">訂單明細　依附訂單</text>
+  <text x="616" y="490" font-size="11.5" fill="#1e40af">　　　　自動同範圍</text>
 
-  <rect x="810" y="386" width="220" height="128" rx="8" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.2"/>
-  <text x="826" y="408" font-size="12" font-weight="600" fill="#374151">帳號 B，台北</text>
-  <text x="826" y="430" font-size="11.5" fill="#1e40af">訂單列表　只見台北</text>
-  <text x="826" y="450" font-size="11.5" fill="#1e40af">客戶列表　只見台北</text>
-  <text x="826" y="470" font-size="11.5" fill="#1e40af">訂單明細　依附訂單</text>
-  <text x="826" y="490" font-size="11.5" fill="#1e40af">　　　　自動同範圍</text>
+  <rect x="825" y="386" width="205" height="128" rx="8" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.2"/>
+  <text x="841" y="408" font-size="12" font-weight="600" fill="#374151">帳號 B，台北</text>
+  <text x="841" y="430" font-size="11.5" fill="#1e40af">訂單列表　只見台北</text>
+  <text x="841" y="450" font-size="11.5" fill="#1e40af">客戶列表　只見台北</text>
+  <text x="841" y="470" font-size="11.5" fill="#1e40af">訂單明細　依附訂單</text>
+  <text x="841" y="490" font-size="11.5" fill="#1e40af">　　　　自動同範圍</text>
 
   <!-- 兩欄容器下緣各自垂直下探，匯流進入疊加結果卡片，中段留白處放置說明文字 -->
-  <line x1="320" y1="534" x2="320" y2="600" stroke="#6b7280" stroke-width="1.5"/>
-  <line x1="800" y1="534" x2="800" y2="600" stroke="#6b7280" stroke-width="1.5"/>
-  <line x1="320" y1="600" x2="800" y2="600" stroke="#6b7280" stroke-width="1.5"/>
+  <line x1="305" y1="534" x2="305" y2="600" stroke="#6b7280" stroke-width="1.5"/>
+  <line x1="815" y1="534" x2="815" y2="600" stroke="#6b7280" stroke-width="1.5"/>
+  <line x1="305" y1="600" x2="815" y2="600" stroke="#6b7280" stroke-width="1.5"/>
   <line x1="560" y1="600" x2="560" y2="664" stroke="#6b7280" stroke-width="2" marker-end="url(#arrow-gray)"/>
   <text x="560" y="580" text-anchor="middle" font-size="12" fill="#9ca3af">兩欄結果各自獨立產生，在此處才第一次匯合成畫面</text>
 
