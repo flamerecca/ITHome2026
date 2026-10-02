@@ -139,7 +139,7 @@
 
   <rect x="450" y="656" width="340" height="88" rx="10" fill="#fef2f2" stroke="#fca5a5" stroke-width="1.4"/>
   <text x="620" y="682" text-anchor="middle" font-size="12.5" font-weight="700" fill="#991b1b">推導缺乏依據</text>
-  <text x="620" y="706" text-anchor="middle" font-size="12" fill="#374151">每個檢查點顯式交代根據哪個結論、</text>
+  <text x="620" y="706" text-anchor="middle" font-size="12" fill="#374151">每個檢查點明確交代根據哪個結論、</text>
   <text x="620" y="726" text-anchor="middle" font-size="12" fill="#374151">套用哪個條件或規則</text>
 
   <rect x="830" y="656" width="340" height="88" rx="10" fill="#fef2f2" stroke="#fca5a5" stroke-width="1.4"/>
