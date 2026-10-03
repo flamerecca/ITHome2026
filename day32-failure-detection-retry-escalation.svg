@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" font-family="'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', -apple-system, sans-serif">
+  <rect x="0" y="0" width="1200" height="640" fill="#ffffff"/>
+  <text x="600.0" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1f2937">兩種失敗的偵測、重試與中止：先分類，再決定值不值得重試</text>
+  <text x="600.0" y="64" text-anchor="middle" font-size="13.5" fill="#6b7280">架在 Day 31 的狀態旗標與進度標記之上運作，重試範圍沿用局部保留精神，超過上限就停損並交給人</text>
+  <rect x="40" y="96" width="1120" height="40" rx="10" fill="#f9fafb" stroke="#9ca3af" stroke-width="1.4"/>
+  <text x="600" y="121" text-anchor="middle" font-size="13" fill="#1f2937" font-weight="700">某個環節的 Agent 呼叫結束，偵測結果</text>
+  <line x1="300" y1="136" x2="300" y2="162" stroke="#6b7280" stroke-width="2.2" marker-end="url(#ar-gray)"/>
+  <line x1="900" y1="136" x2="900" y2="162" stroke="#6b7280" stroke-width="2.2" marker-end="url(#ar-gray)"/>
+  <rect x="60" y="164" width="480" height="110" rx="12" fill="#eef2ff" stroke="#4338ca" stroke-width="2"/>
+  <rect x="60" y="164" width="480" height="34" rx="12" fill="#4338ca"/>
+  <rect x="60" y="184" width="480" height="14" fill="#4338ca"/>
+  <text x="300.0" y="186" text-anchor="middle" font-size="13" fill="#ffffff" font-weight="700">失敗類型一：Agent 呼叫本身失敗</text>
+  <text x="76" y="222" text-anchor="start" font-size="12" fill="#312e81">逾時、服務無回應，連產出內容都不存在</text>
+  <text x="76" y="242" text-anchor="start" font-size="12" fill="#312e81">偵測：合理時間內是否收到任何回應</text>
+  <rect x="660" y="164" width="480" height="110" rx="12" fill="#fdf2f8" stroke="#db2777" stroke-width="2"/>
+  <rect x="660" y="164" width="480" height="34" rx="12" fill="#db2777"/>
+  <rect x="660" y="184" width="480" height="14" fill="#db2777"/>
+  <text x="900.0" y="186" text-anchor="middle" font-size="13" fill="#ffffff" font-weight="700">失敗類型二：有回應，但產出不符規格</text>
+  <text x="676" y="222" text-anchor="start" font-size="12" fill="#831843">例如缺漏規格書要求的段落、結構不符預期</text>
+  <text x="676" y="242" text-anchor="start" font-size="12" fill="#831843">偵測：拿產出對照規格書的結構與段落清單</text>
+  <line x1="300" y1="274" x2="300" y2="304" stroke="#6b7280" stroke-width="2.2" marker-end="url(#ar-gray)"/>
+  <line x1="900" y1="274" x2="900" y2="304" stroke="#6b7280" stroke-width="2.2" marker-end="url(#ar-gray)"/>
+  <rect x="60" y="306" width="480" height="70" rx="10" fill="#ffffff" stroke="#4338ca" stroke-width="1.6"/>
+  <text x="300" y="332" text-anchor="middle" font-size="12.5" fill="#312e81" font-weight="700">重試方式：直接重試整次呼叫</text>
+  <text x="300" y="354" text-anchor="middle" font-size="11.5" fill="#4b5563">沒有任何已完成的部分可以保留</text>
+  <rect x="660" y="306" width="480" height="70" rx="10" fill="#ffffff" stroke="#db2777" stroke-width="1.6"/>
+  <text x="900" y="330" text-anchor="middle" font-size="12.5" fill="#831843" font-weight="700">重試方式：附上前一次不符規格之處作為提示</text>
+  <text x="900" y="350" text-anchor="middle" font-size="11" fill="#4b5563">可定位到某個段落單元 → 只重試該段，其餘保留</text>
+  <text x="900" y="368" text-anchor="middle" font-size="11" fill="#4b5563">涉及整體結構或核心目標 → 整次重新呼叫</text>
+  <path d="M 300 376 L 300 410 L 520 430" fill="none" stroke="#6b7280" stroke-width="2" marker-end="url(#ar-gray)"/>
+  <path d="M 900 376 L 900 410 L 680 430" fill="none" stroke="#6b7280" stroke-width="2" marker-end="url(#ar-gray)"/>
+  <polygon points="600,412 720,452 600,492 480,452" fill="#ffffff" stroke="#d97706" stroke-width="2"/>
+  <text x="600" y="448" text-anchor="middle" font-size="12" fill="#78350f" font-weight="700">重試後仍失敗？</text>
+  <text x="600" y="466" text-anchor="middle" font-size="11.5" fill="#78350f">是否超過次數上限</text>
+  <path d="M 480 452 L 60 452 L 40 452 L 40 220 L 56 220" fill="none" stroke="#16a34a" stroke-width="1.8" stroke-dasharray="6 4" marker-end="url(#ar-green)"/>
+  <text x="260" y="444" text-anchor="middle" font-size="11.5" fill="#14532d" font-weight="700">未超過上限：暫時性失敗，再試一次</text>
+  <text x="260" y="476" text-anchor="middle" font-size="11" fill="#6b7280">成因與輸入無關，例如一時塞車</text>
+  <line x1="600" y1="492" x2="600" y2="522" stroke="#dc2626" stroke-width="2.2" marker-end="url(#ar-red)"/>
+  <text x="612" y="512" text-anchor="start" font-size="11.5" fill="#7f1d1d" font-weight="700">超過上限</text>
+  <rect x="160" y="526" width="520" height="76" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="420" y="550" text-anchor="middle" font-size="13" fill="#7f1d1d" font-weight="700">判定為永久性失敗，中止自動重試</text>
+  <text x="420" y="572" text-anchor="middle" font-size="11" fill="#4b5563">同樣輸入反覆不符規格，問題可能出在輸入或規格描述本身</text>
+  <text x="420" y="590" text-anchor="middle" font-size="11" fill="#6b7280">好比地址寫錯，重新出發幾次都到不了</text>
+  <line x1="680" y1="564" x2="718" y2="564" stroke="#dc2626" stroke-width="2.2" marker-end="url(#ar-red)"/>
+  <rect x="720" y="506" width="440" height="112" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="940" y="530" text-anchor="middle" font-size="13" fill="#78350f" font-weight="700">⚠ 標記異常狀態，交由人類介入</text>
+  <text x="940" y="552" text-anchor="middle" font-size="11.5" fill="#4b5563">記在所有角色都查得到的共享位置，</text>
+  <text x="940" y="571" text-anchor="middle" font-size="11.5" fill="#4b5563">內容：哪個環節、哪一種失敗類型、已重試幾次</text>
+  <text x="940" y="594" text-anchor="middle" font-size="11" fill="#92400e">Human-in-the-loop：系統自己判斷不出下一步的節點</text>
+  <defs>
+    <marker id="ar-gray" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#6b7280"/></marker>
+    <marker id="ar-indigo" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4338ca"/></marker>
+    <marker id="ar-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d97706"/></marker>
+    <marker id="ar-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#dc2626"/></marker>
+    <marker id="ar-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#16a34a"/></marker>
+  </defs>
+</svg>

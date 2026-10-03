@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" font-family="'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', -apple-system, sans-serif">
+  <rect x="0" y="0" width="1200" height="630" fill="#ffffff"/>
+  <text x="600.0" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1f2937">同一套三層轉譯，代入資料視覺化：佔位符多帶一件行李</text>
+  <text x="600.0" y="64" text-anchor="middle" font-size="13.5" fill="#6b7280">沿用 Day 22 的判斷依據、轉譯輸入、轉譯輸出，差別在佔位描述還要點出數據從哪裡來</text>
+  <rect x="40" y="100" width="300" height="250" rx="12" fill="#f9fafb" stroke="#9ca3af" stroke-width="1.6" stroke-dasharray="6 4"/>
+  <text x="190" y="126" text-anchor="middle" font-size="13" fill="#1f2937" font-weight="700">輸入：一則圖表佔位描述</text>
+  <rect x="58" y="140" width="264" height="160" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="1.2"/>
+  <text x="70" y="162" text-anchor="start" font-size="11" fill="#334155" font-family="Menlo, Consolas, monospace">&lt;!-- 圖表佔位：</text>
+  <text x="70" y="181" text-anchor="start" font-size="11" fill="#334155">呈現三個方案的效能差異，</text>
+  <text x="70" y="200" text-anchor="start" font-size="11" fill="#334155">比較項目：方案 A、B、C，</text>
+  <text x="70" y="219" text-anchor="start" font-size="11" fill="#334155"></text>
+  <text x="70" y="238" text-anchor="start" font-size="11" fill="#334155">數據來源：</text>
+  <text x="70" y="257" text-anchor="start" font-size="11" fill="#334155">知識庫切分單元裡的原始數據段落，</text>
+  <text x="70" y="276" text-anchor="start" font-size="11" fill="#334155">或正文已經提過的數字 --&gt;</text>
+  <text x="190" y="328" text-anchor="middle" font-size="11" fill="#6b7280">由規劃代理人或寫作代理人預留</text>
+  <line x1="340" y1="225" x2="376" y2="225" stroke="#6b7280" stroke-width="2.2" marker-end="url(#ar-gray)"/>
+  <rect x="380" y="100" width="240" height="250" rx="12" fill="#eef2ff" stroke="#4338ca" stroke-width="2"/>
+  <rect x="380" y="100" width="240" height="34" rx="12" fill="#4338ca"/>
+  <rect x="380" y="120" width="240" height="14" fill="#4338ca"/>
+  <text x="500.0" y="122" text-anchor="middle" font-size="13" fill="#ffffff" font-weight="700">① 判斷依據</text>
+  <text x="396" y="158" text-anchor="start" font-size="11.5" fill="#312e81">描述裡是否點出</text>
+  <text x="396" y="178" text-anchor="start" font-size="11.5" fill="#312e81">可量化的數值關係</text>
+  <text x="396" y="198" text-anchor="start" font-size="11.5" fill="#312e81"></text>
+  <text x="396" y="218" text-anchor="start" font-size="11.5" fill="#312e81">・幾個項目之間的數量比較</text>
+  <text x="396" y="238" text-anchor="start" font-size="11.5" fill="#312e81">・某個指標隨時間的變化</text>
+  <text x="396" y="258" text-anchor="start" font-size="11.5" fill="#312e81">・幾個選項各自佔整體的比例</text>
+  <text x="396" y="278" text-anchor="start" font-size="11.5" fill="#312e81">→ 適合轉譯成統計或比較圖表</text>
+  <rect x="640" y="100" width="240" height="250" rx="12" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+  <rect x="640" y="100" width="240" height="34" rx="12" fill="#d97706"/>
+  <rect x="640" y="120" width="240" height="14" fill="#d97706"/>
+  <text x="760.0" y="122" text-anchor="middle" font-size="13" fill="#ffffff" font-weight="700">② 轉譯輸入</text>
+  <text x="656" y="158" text-anchor="start" font-size="11.5" fill="#78350f">呈現需求＋數據來源兩類線索</text>
+  <text x="656" y="178" text-anchor="start" font-size="11.5" fill="#78350f"></text>
+  <text x="656" y="198" text-anchor="start" font-size="11.5" fill="#78350f">數據來源只有兩種合法形式：</text>
+  <text x="656" y="218" text-anchor="start" font-size="11.5" fill="#78350f">・知識庫切分單元裡的</text>
+  <text x="656" y="238" text-anchor="start" font-size="11.5" fill="#78350f">　原始數據段落</text>
+  <text x="656" y="258" text-anchor="start" font-size="11.5" fill="#78350f">・文章正文裡已經提過的</text>
+  <text x="656" y="278" text-anchor="start" font-size="11.5" fill="#78350f">　具體數字</text>
+  <rect x="900" y="100" width="240" height="250" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <rect x="900" y="100" width="240" height="34" rx="12" fill="#16a34a"/>
+  <rect x="900" y="120" width="240" height="14" fill="#16a34a"/>
+  <text x="1020.0" y="122" text-anchor="middle" font-size="13" fill="#ffffff" font-weight="700">③ 轉譯輸出</text>
+  <text x="916" y="158" text-anchor="start" font-size="11.5" fill="#14532d">忠實呈現數據來源裡的</text>
+  <text x="916" y="178" text-anchor="start" font-size="11.5" fill="#14532d">實際數字</text>
+  <text x="916" y="198" text-anchor="start" font-size="11.5" fill="#14532d"></text>
+  <text x="916" y="218" text-anchor="start" font-size="11.5" fill="#14532d">每一個數字都要有</text>
+  <text x="916" y="238" text-anchor="start" font-size="11.5" fill="#14532d">真實出處可以回頭核對</text>
+  <text x="916" y="258" text-anchor="start" font-size="11.5" fill="#14532d"></text>
+  <text x="916" y="278" text-anchor="start" font-size="11.5" fill="#14532d">取代佔位符原本所在的位置</text>
+  <line x1="620" y1="225" x2="638" y2="225" stroke="#6b7280" stroke-width="2.2" marker-end="url(#ar-gray)"/>
+  <line x1="880" y1="225" x2="898" y2="225" stroke="#6b7280" stroke-width="2.2" marker-end="url(#ar-gray)"/>
+  <path d="M 500 350 L 500 392" fill="none" stroke="#6b7280" stroke-width="1.8" stroke-dasharray="5 4" marker-end="url(#ar-gray)"/>
+  <rect x="395" y="396" width="210" height="54" rx="8" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.3" stroke-dasharray="4 3"/>
+  <text x="500" y="418" text-anchor="middle" font-size="11.5" fill="#4b5563" font-weight="700">線索不足，不轉譯成這類圖表</text>
+  <text x="500" y="437" text-anchor="middle" font-size="10.5" fill="#6b7280">該交給哪種呈現，不在本篇範圍</text>
+  <line x1="1020" y1="350" x2="1020" y2="392" stroke="#6b7280" stroke-width="2.2" marker-end="url(#ar-gray)"/>
+  <rect x="880" y="396" width="280" height="74" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="1020" y="422" text-anchor="middle" font-size="13" fill="#14532d" font-weight="700">一張統計或比較圖表</text>
+  <text x="1020" y="443" text-anchor="middle" font-size="11" fill="#4b5563">數據點與數值都可回頭核對</text>
+  <rect x="380" y="494" width="780" height="64" rx="10" fill="#fef2f2" stroke="#fca5a5" stroke-width="1.6"/>
+  <text x="400" y="520" text-anchor="start" font-size="12.5" fill="#7f1d1d" font-weight="700">✕ 轉譯輸出的邊界</text>
+  <text x="400" y="544" text-anchor="start" font-size="12" fill="#4b5563">紅線：不得自行編造或估算數據；不自行增減數據點、不自行調整數值大小</text>
+  <path d="M 1020 470 L 1020 494" fill="none" stroke="#fca5a5" stroke-width="1.5"/>
+  <text x="600" y="600" text-anchor="middle" font-size="12" fill="#6b7280">範例佔位描述為示意寫法；佔位描述缺少可用數據來源時該怎麼處理，正文說明不在本篇範圍</text>
+  <defs>
+    <marker id="ar-gray" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#6b7280"/></marker>
+    <marker id="ar-indigo" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4338ca"/></marker>
+    <marker id="ar-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d97706"/></marker>
+    <marker id="ar-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#dc2626"/></marker>
+    <marker id="ar-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#16a34a"/></marker>
+  </defs>
+</svg>

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" font-family="'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', -apple-system, sans-serif">
+  <rect x="0" y="0" width="1200" height="650" fill="#ffffff"/>
+  <text x="600.0" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1f2937">生產線末端：收斂成統一格式，轉換後先讓人看一眼再發佈</text>
+  <text x="600.0" y="64" text-anchor="middle" font-size="13.5" fill="#6b7280">三類內容收斂成一份成品，格式轉換是工作流的下游流程步驟，發佈前保留 HITL 確認節點</text>
+  <rect x="40" y="96" width="430" height="520" rx="14" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4" stroke-dasharray="6 4"/>
+  <text x="255" y="120" text-anchor="middle" font-size="12" fill="#6b7280" font-weight="700">四類 Agent 的職責範圍到這裡為止</text>
+  <rect x="60" y="140" width="230" height="48" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.6"/>
+  <text x="175" y="169" text-anchor="middle" font-size="12" fill="#1f2937" font-weight="700">通過審查的正文文字</text>
+  <line x1="290" y1="164" x2="318" y2="280" stroke="#6b7280" stroke-width="2.2" marker-end="url(#ar-gray)"/>
+  <rect x="60" y="202" width="230" height="48" rx="10" fill="#fdf2f8" stroke="#db2777" stroke-width="1.6"/>
+  <text x="175" y="231" text-anchor="middle" font-size="12" fill="#1f2937" font-weight="700">對應位置的圖表與配圖素材</text>
+  <line x1="290" y1="226" x2="318" y2="280" stroke="#6b7280" stroke-width="2.2" marker-end="url(#ar-gray)"/>
+  <rect x="60" y="264" width="230" height="48" rx="10" fill="#eef2ff" stroke="#4338ca" stroke-width="1.6"/>
+  <text x="175" y="293" text-anchor="middle" font-size="12" fill="#1f2937" font-weight="700">結構性中繼資料</text>
+  <line x1="290" y1="288" x2="318" y2="280" stroke="#6b7280" stroke-width="2.2" marker-end="url(#ar-gray)"/>
+  <text x="175" y="352" text-anchor="middle" font-size="10.5" fill="#6b7280">標題、目標讀者、系列定位，</text>
+  <text x="175" y="368" text-anchor="middle" font-size="10.5" fill="#6b7280">延續 Section Spec 既有欄位</text>
+  <rect x="322" y="230" width="132" height="100" rx="12" fill="#ffffff" stroke="#1f2937" stroke-width="2.2"/>
+  <text x="388" y="262" text-anchor="middle" font-size="13" fill="#1f2937" font-weight="700">統一格式</text>
+  <text x="388" y="282" text-anchor="middle" font-size="13" fill="#1f2937" font-weight="700">完整成品</text>
+  <text x="388" y="306" text-anchor="middle" font-size="10.5" fill="#6b7280">不預設任何平台</text>
+  <rect x="60" y="410" width="394" height="186" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.2"/>
+  <text x="80" y="436" text-anchor="start" font-size="12.5" fill="#1f2937" font-weight="700">為什麼先收斂成一份</text>
+  <text x="80" y="462" text-anchor="start" font-size="11.5" fill="#4b5563">上游各角色只專心產出忠於內容的一份成品，</text>
+  <text x="80" y="481" text-anchor="start" font-size="11.5" fill="#4b5563">不承擔平台適配工作；</text>
+  <text x="80" y="500" text-anchor="start" font-size="11.5" fill="#4b5563">格式轉換集中到下游單一環節處理，</text>
+  <text x="80" y="519" text-anchor="start" font-size="11.5" fill="#4b5563">延續單一職責與集中管理的設計精神。</text>
+  <text x="80" y="538" text-anchor="start" font-size="11.5" fill="#6b7280"></text>
+  <text x="80" y="557" text-anchor="start" font-size="11.5" fill="#6b7280">好比工廠先產出統一規格成品，</text>
+  <text x="80" y="576" text-anchor="start" font-size="11.5" fill="#6b7280">再由出貨端依通路需求重新包裝。</text>
+  <line x1="454" y1="280" x2="498" y2="280" stroke="#6b7280" stroke-width="2.2" marker-end="url(#ar-gray)"/>
+  <rect x="500" y="96" width="400" height="520" rx="14" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+  <text x="700" y="122" text-anchor="middle" font-size="13.5" fill="#78350f" font-weight="700">工作流下游流程步驟：格式轉換</text>
+  <text x="700" y="142" text-anchor="middle" font-size="11" fill="#92400e">接在生產線末端的程序，沒有新增第五類 Agent</text>
+  <rect x="520" y="158" width="360" height="80" rx="8" fill="#ffffff" stroke="#fcd34d" stroke-width="1.3"/>
+  <text x="536" y="182" text-anchor="start" font-size="12.5" fill="#78350f" font-weight="700">圖片插入語法</text>
+  <text x="536" y="204" text-anchor="start" font-size="11" fill="#4b5563">相對或本地路徑 → 目標平台可辨識的引用方式，</text>
+  <text x="536" y="222" text-anchor="start" font-size="11" fill="#4b5563">必要時先上傳到平台圖床</text>
+  <rect x="520" y="250" width="360" height="80" rx="8" fill="#ffffff" stroke="#fcd34d" stroke-width="1.3"/>
+  <text x="536" y="274" text-anchor="start" font-size="12.5" fill="#78350f" font-weight="700">標題階層</text>
+  <text x="536" y="296" text-anchor="start" font-size="11" fill="#4b5563">依平台規則統一升降階，</text>
+  <text x="536" y="314" text-anchor="start" font-size="11" fill="#4b5563">避免和文章標題重複或錯亂</text>
+  <rect x="520" y="342" width="360" height="80" rx="8" fill="#ffffff" stroke="#fcd34d" stroke-width="1.3"/>
+  <text x="536" y="366" text-anchor="start" font-size="12.5" fill="#78350f" font-weight="700">程式碼語法高亮</text>
+  <text x="536" y="388" text-anchor="start" font-size="11" fill="#4b5563">對照平台支援清單標註語言，</text>
+  <text x="536" y="406" text-anchor="start" font-size="11" fill="#4b5563">不支援時採用最接近的替代標註</text>
+  <rect x="520" y="434" width="360" height="80" rx="8" fill="#ffffff" stroke="#fcd34d" stroke-width="1.3"/>
+  <text x="536" y="458" text-anchor="start" font-size="12.5" fill="#78350f" font-weight="700">內部雙向連結</text>
+  <text x="536" y="480" text-anchor="start" font-size="11" fill="#4b5563">對外公開網站 → 轉成完整網址；</text>
+  <text x="536" y="498" text-anchor="start" font-size="11" fill="#4b5563">封閉的個人知識庫 → 可保留原語法</text>
+  <rect x="520" y="530" width="360" height="70" rx="8" fill="#ffffff" stroke="#dc2626" stroke-width="1.6"/>
+  <text x="700" y="556" text-anchor="middle" font-size="12.5" fill="#7f1d1d" font-weight="700">原則：只改語法形式，不改內容意思</text>
+  <text x="700" y="578" text-anchor="middle" font-size="11" fill="#4b5563">不支援就退化成樸素但不失真的呈現</text>
+  <line x1="900" y1="300" x2="938" y2="300" stroke="#6b7280" stroke-width="2.2" marker-end="url(#ar-gray)"/>
+  <rect x="940" y="230" width="220" height="140" rx="12" fill="#fef3c7" stroke="#d97706" stroke-width="2.2"/>
+  <text x="1050" y="260" text-anchor="middle" font-size="13.5" fill="#78350f" font-weight="700">HITL 確認節點</text>
+  <text x="1050" y="286" text-anchor="middle" font-size="11.5" fill="#4b5563">人類確認轉換後的成品</text>
+  <text x="1050" y="305" text-anchor="middle" font-size="11.5" fill="#4b5563">呈現正確、沒有失真，</text>
+  <text x="1050" y="324" text-anchor="middle" font-size="11.5" fill="#4b5563">才真正執行發佈</text>
+  <text x="1050" y="352" text-anchor="middle" font-size="10.5" fill="#92400e">呼應 Day 28 的 HITL 精神</text>
+  <line x1="1050" y1="370" x2="1050" y2="420" stroke="#16a34a" stroke-width="2.2" marker-end="url(#ar-green)"/>
+  <rect x="940" y="424" width="220" height="96" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="1050" y="452" text-anchor="middle" font-size="14" fill="#14532d" font-weight="700">對外發佈</text>
+  <text x="1050" y="476" text-anchor="middle" font-size="11" fill="#4b5563">唯一一個公開到讀者面前、</text>
+  <text x="1050" y="494" text-anchor="middle" font-size="11" fill="#4b5563">公開後難以完全收回的動作</text>
+  <defs>
+    <marker id="ar-gray" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#6b7280"/></marker>
+    <marker id="ar-indigo" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4338ca"/></marker>
+    <marker id="ar-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d97706"/></marker>
+    <marker id="ar-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#dc2626"/></marker>
+    <marker id="ar-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#16a34a"/></marker>
+  </defs>
+</svg>
