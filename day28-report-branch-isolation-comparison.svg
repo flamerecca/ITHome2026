@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="600" viewBox="0 0 1040 600" font-family="'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', -apple-system, sans-serif">
+  <!-- 背景 -->
+  <rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+
+  <!-- 標題 -->
+  <text x="520" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1f2937">台北與高雄據點業務帳號，報表兩張圖表的據點隔離來源</text>
+  <text x="520" y="64" text-anchor="middle" font-size="13" fill="#6b7280">趨勢圖表靠 BranchScope 自動套用，分類圖表需在彙整查詢裡手動帶入據點條件</text>
+
+  <!-- 左側面板：台北 -->
+  <rect x="40" y="88" width="460" height="196" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="270" y="116" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">台北據點業務帳號，登入 Panel</text>
+
+  <!-- 台北：分類圖表 -->
+  <rect x="60" y="140" width="200" height="124" rx="8" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="160" y="168" text-anchor="middle" font-size="11.5" font-weight="700" font-family="Menlo, Consolas, monospace" fill="#1e3a8a">SalesReportByCategoryChart</text>
+  <text x="160" y="200" text-anchor="middle" font-size="13" fill="#1e40af">長條圖</text>
+  <text x="160" y="222" text-anchor="middle" font-size="13" fill="#1e40af">只計入台北據點</text>
+  <text x="160" y="244" text-anchor="middle" font-size="13" fill="#1e40af">各分類銷售數量</text>
+
+  <!-- 台北：趨勢圖表 -->
+  <rect x="280" y="140" width="200" height="124" rx="8" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="380" y="168" text-anchor="middle" font-size="11.5" font-weight="700" font-family="Menlo, Consolas, monospace" fill="#1e3a8a">SalesReportTrendChart</text>
+  <text x="380" y="200" text-anchor="middle" font-size="13" fill="#1e40af">折線圖</text>
+  <text x="380" y="222" text-anchor="middle" font-size="13" fill="#1e40af">只計入台北據點</text>
+  <text x="380" y="244" text-anchor="middle" font-size="13" fill="#1e40af">每日訂單金額</text>
+
+  <!-- 右側面板：高雄 -->
+  <rect x="540" y="88" width="460" height="196" rx="10" fill="#fff7ed" stroke="#fdba74" stroke-width="1.5"/>
+  <text x="770" y="116" text-anchor="middle" font-size="15" font-weight="700" fill="#9a3412">高雄據點業務帳號，登入 Panel</text>
+
+  <!-- 高雄：趨勢圖表 -->
+  <rect x="560" y="140" width="200" height="124" rx="8" fill="#ffffff" stroke="#fed7aa" stroke-width="1.5"/>
+  <text x="660" y="168" text-anchor="middle" font-size="11.5" font-weight="700" font-family="Menlo, Consolas, monospace" fill="#7c2d12">SalesReportTrendChart</text>
+  <text x="660" y="200" text-anchor="middle" font-size="13" fill="#9a3412">折線圖</text>
+  <text x="660" y="222" text-anchor="middle" font-size="13" fill="#9a3412">只計入高雄據點</text>
+  <text x="660" y="244" text-anchor="middle" font-size="13" fill="#9a3412">每日訂單金額</text>
+
+  <!-- 高雄：分類圖表 -->
+  <rect x="780" y="140" width="200" height="124" rx="8" fill="#ffffff" stroke="#fed7aa" stroke-width="1.5"/>
+  <text x="880" y="168" text-anchor="middle" font-size="11.5" font-weight="700" font-family="Menlo, Consolas, monospace" fill="#7c2d12">SalesReportByCategoryChart</text>
+  <text x="880" y="200" text-anchor="middle" font-size="13" fill="#9a3412">長條圖</text>
+  <text x="880" y="222" text-anchor="middle" font-size="13" fill="#9a3412">只計入高雄據點</text>
+  <text x="880" y="244" text-anchor="middle" font-size="13" fill="#9a3412">各分類銷售數量</text>
+
+  <!-- 自動生效：SCOPE -> 兩張趨勢圖表 -->
+  <line x1="450" y1="368" x2="390" y2="288" stroke="#16a34a" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <line x1="590" y1="368" x2="650" y2="288" stroke="#16a34a" stroke-width="2" marker-end="url(#arrow-green)"/>
+
+  <!-- SCOPE 節點 -->
+  <rect x="340" y="368" width="360" height="80" rx="12" fill="#f0fdf4" stroke="#22c55e" stroke-width="2.5"/>
+  <text x="520" y="396" text-anchor="middle" font-size="15" font-weight="700" fill="#14532d">Order 掛載 BranchScope</text>
+  <text x="520" y="418" text-anchor="middle" font-size="13" fill="#166534">Order::query() 自動套用，自動生效</text>
+  <text x="520" y="438" text-anchor="middle" font-size="11.5" fill="#16a34a">不需要在圖表類別裡額外寫條件</text>
+
+  <!-- 手動帶入：FILTER -> 兩張分類圖表 -->
+  <line x1="160" y1="500" x2="160" y2="288" stroke="#f9a825" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrow-amber)"/>
+  <line x1="880" y1="500" x2="880" y2="288" stroke="#f9a825" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrow-amber)"/>
+  <text x="172" y="400" font-size="12.5" font-weight="700" fill="#b45309">手動帶入</text>
+  <text x="810" y="400" font-size="12.5" font-weight="700" fill="#b45309">手動帶入</text>
+
+  <!-- FILTER 節點 -->
+  <rect x="60" y="500" width="920" height="64" rx="10" fill="#fff8e1" stroke="#f9a825" stroke-width="2"/>
+  <text x="520" y="526" text-anchor="middle" font-size="14" font-weight="700" fill="#78350f">OrderItem 明細 join orders 之後，加上 where branch_id = auth 使用者 branch_id</text>
+  <text x="520" y="548" text-anchor="middle" font-size="12.5" fill="#92400e">OrderItem 本身沒有 branch_id 欄位，也沒有掛載 BranchScope，彙整查詢必須明確寫出據點篩選條件</text>
+
+  <defs>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#16a34a"/>
+    </marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#f9a825"/>
+    </marker>
+  </defs>
+</svg>
